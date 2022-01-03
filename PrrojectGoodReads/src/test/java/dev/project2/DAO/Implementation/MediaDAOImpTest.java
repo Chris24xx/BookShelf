@@ -30,27 +30,48 @@ public class MediaDAOImpTest {
 
     @Test
     public void testGetAllBooks() {
+        List<Media> allBooks = mediaDAO.getAllBooks();
+        Assert.assertTrue(allBooks.size() >= 1);
     }
+
 
     @Test
     public void testGetAllMovies() {
+        List<Media> allMovies = mediaDAO.getAllMovies();
+        Assert.assertTrue(allMovies.size() >= 0);
     }
+
+
 
     @Test
     public void testGetAllGames() {
+        List<Media> allGames = mediaDAO.getAllGames();
+        Assert.assertTrue(allGames.size() >= 0);
     }
 
     @Test
     public void testGetMediaByTitle() {
+        Media mediaTitle = mediaDAO.getMediaByTitle("Harry Potter");
+        Assert.assertEquals(mediaTitle.getTitle(), "Harry Potter");
     }
+
+
 
     @Test
     public void testGetAllMediaPerUser() {
+        List<Media> userMedia = mediaDAO.getAllMediaPerUser(1);
+        Assert.assertTrue(userMedia.size() >= 1);
     }
+
+
 
     @Test
     public void testGetPendingMedia() {
+        List<Media> pendingMedia = mediaDAO.getPendingMedia();
+        Assert.assertTrue(pendingMedia.size() >= 1);
     }
+
+
 
     @Test
     public void testApproveDenyMedia() {

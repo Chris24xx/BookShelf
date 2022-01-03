@@ -13,7 +13,7 @@ public class Media {
     private String synopsis;
     private String mediaType;
     private String genre;
-    private boolean status;
+    private Boolean status;
     private int userId;
 
 
@@ -22,7 +22,7 @@ public class Media {
 
     // Also, the constructor that sets all the properties.
     public Media(int mediaId, String title, String creator, String synopsis, String mediaType, String genre,
-                 boolean status, int userId) {
+                 Boolean status, int userId) {
         this.mediaId = mediaId;
         this.title = title;
         this.creator = creator;
