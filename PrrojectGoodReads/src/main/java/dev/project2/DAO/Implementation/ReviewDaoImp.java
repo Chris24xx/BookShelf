@@ -105,4 +105,70 @@ public class ReviewDaoImp implements ReviewAbstract  {
             return false;
         }
     }
+
+    @Override
+    public Review updateReview(Review review) {
+        try(Connection connection = DBConn.createConnection()) {
+            String sql;
+            sql ="update project2.review set status = ? where review_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setBoolean(1,review.isStatus() );
+            preparedStatement.setInt(2, review.getReviewId());
+            preparedStatement.execute();
+            return review;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Review> getPendingReviews() {
+        try(Connection connection = DBConn.createConnection()) {
+            String sql;
+            sql = "select status, user_review from project2.review where status is null";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<Review> reviewList = new ArrayList<>();
+            while (resultSet.next()){
+                Review review = new Review(
+                        resultSet.getObject("status", Boolean.class),
+                        resultSet.getString("user_review")
+                );
+                reviewList.add(review);
+            }
+            return reviewList;
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Review> notNullReviews() {
+        try(Connection connection = DBConn.createConnection()) {
+            String sql;
+            sql = "select status, user_review from project2.review where status is not null";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<Review> reviewList= new ArrayList<>();
+            while (resultSet.next()){
+                Review review = new Review(
+                        resultSet.getBoolean("status"),
+                        resultSet.getString("user_review")
+                );
+
+                reviewList.add(review);
+            }
+            return reviewList;
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

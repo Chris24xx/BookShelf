@@ -16,6 +16,11 @@ public class Review {
 
     public Review(){}
 
+    public Review(Boolean status, String user_review){
+        this.status = status;
+        this.user_review = user_review;
+    }
+
     public Review(int reviewId, Boolean status, Instant createdAt, int mediaId, int userId, int rating, String user_review) {
         this.reviewId = reviewId;
         this.status = status;
@@ -34,11 +39,11 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public boolean isStatus() {
+    public Boolean isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 

@@ -47,4 +47,26 @@ public class ReviewDaoImpTest {
         boolean result = dao.deleteReview(8);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void testUpdateReview() {
+        Review review = new Review(9,true,Instant.now(),2,1,5,"test");
+        Review updateReview = dao.updateReview(review);
+        Assert.assertTrue(updateReview.isStatus());
+    }
+
+    @Test
+    public void testGetPendingReviews() {
+        List<Review> reviews = dao.getPendingReviews();
+        for(Review r: reviews){
+            System.out.println(r);
+        }
+        Assert.assertTrue(reviews.size() >= 2);
+    }
+
+    @Test
+    public void testNotNullReviews() {
+        List<Review> reviews = dao.notNullReviews();
+        Assert.assertTrue(reviews.size() >= 2);
+    }
 }
