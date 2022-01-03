@@ -4,20 +4,25 @@ import java.util.Objects;
 
 public class ContactUs {
     private int contactId;
+    private Boolean status;
     private String email;
     private String fullName;
     private String issueMessage;
 
 
+
     public ContactUs() {
     }
 
-    public ContactUs(int contactId, String email, String fullName, String issueMessage) {
+    public ContactUs(int contactId,  Boolean status, String email, String fullName, String issueMessage) {
         this.contactId = contactId;
+        this.status = status;
         this.email = email;
         this.fullName = fullName;
         this.issueMessage = issueMessage;
+
     }
+
 
     public int getContactId() {
         return contactId;
@@ -51,17 +56,25 @@ public class ContactUs {
         this.issueMessage = issueMessage;
     }
 
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ContactUs contactUs = (ContactUs) o;
-        return contactId == contactUs.contactId && Objects.equals(email, contactUs.email) && Objects.equals(fullName, contactUs.fullName) && Objects.equals(issueMessage, contactUs.issueMessage);
+        return contactId == contactUs.contactId && Objects.equals(email, contactUs.email) && Objects.equals(fullName, contactUs.fullName) && Objects.equals(issueMessage, contactUs.issueMessage) && Objects.equals(status, contactUs.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(contactId, email, fullName, issueMessage);
+        return Objects.hash(contactId, email, fullName, issueMessage, status);
     }
 
     @Override
@@ -71,6 +84,7 @@ public class ContactUs {
                 ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", issueMessage='" + issueMessage + '\'' +
+                ", status=" + status +
                 '}';
     }
 }
