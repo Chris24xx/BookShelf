@@ -1,22 +1,29 @@
 package dev.project2.Entities;
 
+
+import java.time.*;
+import java.util.List;
 import java.util.Objects;
 
 public class Review {
     private int reviewId;
-    private boolean status;
-    private String createdAt;
+    private Boolean status;
+    private Instant createdAt;
     private int mediaId;
     private int userId;
+    private int rating;
+    private String user_review;
 
     public Review(){}
 
-    public Review(int reviewId, boolean status, String createdAt, int mediaId, int userId) {
+    public Review(int reviewId, Boolean status, Instant createdAt, int mediaId, int userId, int rating, String user_review) {
         this.reviewId = reviewId;
         this.status = status;
         this.createdAt = createdAt;
         this.mediaId = mediaId;
         this.userId = userId;
+        this.rating = rating;
+        this.user_review = user_review;
     }
 
     public int getReviewId() {
@@ -35,11 +42,11 @@ public class Review {
         this.status = status;
     }
 
-    public String getCreatedAt() {
+    public Instant getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -59,27 +66,44 @@ public class Review {
         this.userId = userId;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getUserReview() {
+        return user_review;
+    }
+
+    public void setReview(String review) {
+        this.user_review = review;
+    }
+
     @Override
     public String toString() {
         return "Review{" +
                 "reviewId=" + reviewId +
                 ", status=" + status +
-                ", createdAt='" + createdAt + '\'' +
+                ", createdAt=" + createdAt +
                 ", mediaId=" + mediaId +
                 ", userId=" + userId +
+                ", rating=" + rating +
+                ", review='" + user_review + '\'' +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Review)) return false;
-        Review review = (Review) o;
-        return getReviewId() == review.getReviewId() && isStatus() == review.isStatus() && getMediaId() == review.getMediaId() && getUserId() == review.getUserId() && getCreatedAt().equals(review.getCreatedAt());
+        if (!(o instanceof Review review1)) return false;
+        return getReviewId() == review1.getReviewId() && isStatus() == review1.isStatus() && getMediaId() == review1.getMediaId() && getUserId() == review1.getUserId() && getRating() == review1.getRating() && getCreatedAt().equals(review1.getCreatedAt()) && getUserReview().equals(review1.getUserReview());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getReviewId(), isStatus(), getCreatedAt(), getMediaId(), getUserId());
+        return Objects.hash(getReviewId(), isStatus(), getCreatedAt(), getMediaId(), getUserId(), getRating(), getUserReview());
     }
 }
