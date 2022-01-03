@@ -287,8 +287,20 @@ public class MediaDAOImp implements MediaDAO {
     }
 
 
+
     @Override
     public boolean deleteMedia(int mediaId) {
-        return false;
+        try (Connection connection = DBConn.createConnection()) {
+            String sql = "delete from project2.media where media_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, mediaId);
+            ResultSet rs = preparedStatement.executeQuery();
+            rs.next();
+            boolean approved = rs.getBoolean("status");
+            return approved;
+        } catch (SQLException q) {
+            q.printStackTrace();
+            return false;
+        }
     }
 }
