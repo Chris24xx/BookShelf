@@ -294,13 +294,16 @@ public class MediaDAOImp implements MediaDAO {
             String sql = "delete from project2.media where media_id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, mediaId);
-            ResultSet rs = preparedStatement.executeQuery();
-            rs.next();
-            boolean approved = rs.getBoolean("status");
-            return approved;
+            preparedStatement.execute();
+            return true;
         } catch (SQLException q) {
             q.printStackTrace();
             return false;
         }
     }
+
+
+
+    // MIGHT NEED A SEPARATE METHOD FOR DUPLICATING A PIECE OF MEDIA, BUT POSSIBLY CAN COMBINE THE GET MEDIA BY TITLE,
+    // CREATE NEW MEDIA, AND GET MEDIA BY ID.
 }
