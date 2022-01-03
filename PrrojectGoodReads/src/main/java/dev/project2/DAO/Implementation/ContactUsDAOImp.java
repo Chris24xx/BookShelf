@@ -134,12 +134,32 @@ public class ContactUsDAOImp implements ContactUsAbstract {
     }
 
     @Override
-    public ContactUs updateContactRequestById(int contactId) {
-        return null;
+    public boolean updateContactRequestById(int contactId) {
+        try(Connection connection = DBConn.createConnection()) {
+            String sql = "update project2.contact_us set status = true where contact_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, contactId);
+            preparedStatement.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean deleteContactRequestById(int contactId) {
-        return false;
+        try(Connection connection = DBConn.createConnection()) {
+            String sql;
+            sql = "delete from project2.contact_us where contact_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,contactId);
+            preparedStatement.execute();
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

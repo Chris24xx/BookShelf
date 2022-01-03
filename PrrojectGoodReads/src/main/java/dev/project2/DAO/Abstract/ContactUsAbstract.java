@@ -15,7 +15,7 @@ public interface ContactUsAbstract {
 
     List<ContactUs> getCompletedContactRequests();
 
-    ContactUs updateContactRequestById(int contactId);
+    boolean updateContactRequestById(int contactId);
 
     boolean deleteContactRequestById(int contactId);
 
