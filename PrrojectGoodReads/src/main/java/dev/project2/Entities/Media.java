@@ -1,7 +1,7 @@
 package dev.project2.Entities;
 import java.util.Objects;
 
-// The Media entity's class.
+// The Media entity class.
 public class Media {
 
     // The Media entity's properties needed for the database table.
