@@ -14,7 +14,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public Media createNewMedia(Media media) {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "insert into \"project2\".media values(default, ?, ?, ?, ?, ?, default, ?)";
+            String sql = "insert into project2.media values(default, ?, ?, ?, ?, ?, default, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, media.getTitle());
             preparedStatement.setString(2, media.getCreator());
@@ -38,7 +38,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllMedia() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media";
+            String sql = "select * from project2.media";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -68,7 +68,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllBooks() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where media_type = 'Book'";
+            String sql = "select * from project2.media where media_type = 'Book'";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -97,7 +97,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllMovies() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where media_type = 'Movie'";
+            String sql = "select * from project2.media where media_type = 'Movie'";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -126,7 +126,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllGames() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where media_type = 'Game'";
+            String sql = "select * from project2.media where media_type = 'Game'";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -155,7 +155,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public Media getMediaByTitle(String title) {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where title = ?";
+            String sql = "select * from project2.media where title = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, title);
             ResultSet rs = preparedStatement.executeQuery();
@@ -183,7 +183,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllMediaPerUser(int userId) {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where user_id = ?";
+            String sql = "select * from project2.media where user_id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, userId);
             ResultSet rs = preparedStatement.executeQuery();
@@ -213,7 +213,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getPendingMedia() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where status = false";
+            String sql = "select * from project2.media where status = false";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> pendingMedia = new ArrayList<>();
@@ -244,10 +244,10 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getApprovedMedia() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from \"project2\".media where status = true";
+            String sql = "select * from project2.media where status = true";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
-            List<Media> pendingMedia = new ArrayList<>();
+            List<Media> approvedMedia = new ArrayList<>();
             while(resultSet.next()){
                 Media media = new Media(
                         resultSet.getInt("media_id"),
@@ -259,9 +259,9 @@ public class MediaDAOImp implements MediaDAO {
                         resultSet.getBoolean("status"),
                         resultSet.getInt("user_id")
                 );
-                pendingMedia.add(media);
+                approvedMedia.add(media);
             }
-            return pendingMedia;
+            return approvedMedia;
         } catch (SQLException q){
             q.printStackTrace();
             return null;
@@ -271,7 +271,24 @@ public class MediaDAOImp implements MediaDAO {
 
 
     @Override
-    public boolean approveDenyMedia() {
+    public boolean approveMedia(int mediaId) {
+        try (Connection connection = DBConn.createConnection()) {
+            String sql = "update project2.media set status = true where media_id = ? returning status";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, mediaId);
+            ResultSet rs = preparedStatement.executeQuery();
+            rs.next();
+            boolean approved = rs.getBoolean("status");
+            return approved;
+        } catch (SQLException q) {
+            q.printStackTrace();
+            return false;
+        }
+    }
+
+
+    @Override
+    public boolean deleteMedia(int mediaId) {
         return false;
     }
 }

@@ -13,10 +13,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Harry Potter", "J.K. Rowling",
-                "The boy who lived.", "Book", "YA Fantasy", false, 1);
+        Media newMedia = new Media(0, "The Hobbit", "J.R.R. Tolkien",
+                "A hobbit that strangely went on an adventure.", "Book", "YA Fantasy",
+                false, 1);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Harry Potter");
+        Assert.assertEquals(returnedMedia.getTitle(), "The Hobbit");
     }
 
 
@@ -68,13 +69,22 @@ public class MediaDAOImpTest {
     @Test
     public void testGetPendingMedia() {
         List<Media> pendingMedia = mediaDAO.getPendingMedia();
-        Assert.assertTrue(pendingMedia.size() >= 1);
+
     }
 
 
 
     @Test
-    public void testApproveDenyMedia() {
+    void testGetApprovedMedia() {
+        List<Media> approvedMedia = mediaDAO.getApprovedMedia();
+        Assert.assertTrue(approvedMedia.size() >= 0);
+    }
+
+
+    @Test
+    public void testApproveMedia() {
+        Boolean approvedAMedia = mediaDAO.approveMedia(3);
+        Assert.assertTrue(true);
     }
 
 

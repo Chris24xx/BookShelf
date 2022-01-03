@@ -23,6 +23,8 @@ public interface MediaDAO {
 
     List<Media> getApprovedMedia();
 
-    boolean approveDenyMedia(); // Seventh
+    boolean approveMedia(int mediaId); // Seventh
+
+    boolean deleteMedia(int mediaId); // Eighth
 
 }
