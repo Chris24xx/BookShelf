@@ -5,22 +5,22 @@ import java.util.List;
 
 public interface MediaDAO {
 
-    Media createNewMedia(Media media);
+    Media createNewMedia(Media media); // Fourth
 
-    List<Media> getAllMedia();
+    List<Media> getAllMedia(); // First
 
-    List<Media> getAllBooks();
+    List<Media> getAllBooks(); // SecondA
 
-    List<Media> getAllMovies();
+    List<Media> getAllMovies();  // SecondB
 
-    List<Media> getAllGames();
+    List<Media> getAllGames();  // SecondC
 
-    List<Media> getMediaByTitle();
+    List<Media> getMediaByTitle(); // Third
 
-    List<Media> getAllMediaPerUser();
+    List<Media> getAllMediaPerUser(); // Fifth
 
-    List<Media> getPendingMedia();
+    List<Media> getPendingMedia(); // Sixth
 
-    boolean approveDenyMedia();
+    boolean approveDenyMedia(); // Seventh
 
 }

@@ -2,21 +2,19 @@ package dev.project2.DAO.Implementation;
 import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.Entities.Media;
 import dev.project2.dbcon.DBConn;
-
-import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// Media table order: media_id, title, creator, synopsis, media_type, genre, status, user_id
 
-
+// This is the DAO class that implements the interface "MediaDAO". It contains all the methods that will interact with
+// the database and the website.
 public class MediaDAOImp implements MediaDAO {
 
     @Override
     public Media createNewMedia(Media media) {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "insert into media values(default, ?, ?, ?, ?, ?, default, ?)";
+            String sql = "insert into \"project2\".media values(default, ?, ?, ?, ?, ?, default, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, media.getTitle());
             preparedStatement.setString(2, media.getCreator());
@@ -40,7 +38,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllMedia() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from media";
+            String sql = "select * from \"project2\".media";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -66,10 +64,11 @@ public class MediaDAOImp implements MediaDAO {
 
 
 
+
     @Override
     public List<Media> getAllBooks() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from media where media_type = 'Book'";
+            String sql = "select * from \"project2\".media where media_type = \"Book\"";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();

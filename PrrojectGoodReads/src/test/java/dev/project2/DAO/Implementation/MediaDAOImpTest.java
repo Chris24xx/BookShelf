@@ -1,18 +1,18 @@
 package dev.project2.DAO.Implementation;
+
 import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.Entities.Media;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 
-public class MediaDAOTests {
+public class MediaDAOImpTest {
 
     MediaDAO mediaDAO = new MediaDAOImp();
 
     @Test
-    void createNewMedia(){
+    void testCreateNewMedia(){
         Media newMedia = new Media(0, "Harry Potter", "J.K. Rowling",
                 "The boy who lived.", "Book", "YA Fantasy", false, 1);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
@@ -21,7 +21,7 @@ public class MediaDAOTests {
 
 
     @Test
-    void getAllMedia(){
+    void testGetAllMedia(){
         List<Media> allMedia = mediaDAO.getAllMedia();
         Assert.assertTrue(allMedia.size() >= 1);
     }
@@ -29,43 +29,33 @@ public class MediaDAOTests {
 
 
     @Test
-    void getAllBooks(){
-        List<Media> allBooks = mediaDAO.getAllBooks();
-        Assert.assertTrue(allBooks.size() >= 1);
+    public void testGetAllBooks() {
     }
-
 
     @Test
-    void getAllMovies(){
-        List<Media> allMovies = mediaDAO.getAllMovies();
-        Assert.assertTrue(allMovies.size() >= 1);
+    public void testGetAllMovies() {
+    }
+
+    @Test
+    public void testGetAllGames() {
+    }
+
+    @Test
+    public void testGetMediaByTitle() {
+    }
+
+    @Test
+    public void testGetAllMediaPerUser() {
+    }
+
+    @Test
+    public void testGetPendingMedia() {
+    }
+
+    @Test
+    public void testApproveDenyMedia() {
     }
 
 
-    void getAllGames(){
-        List<Media> allGames = mediaDAO.getAllGames();
-        Assert.assertTrue(allGames.size() >= 1);
-    }
-
-
-    void getMediaByTitle(){
-
-    }
-
-
-    void getAllMediaPerUser(){
-
-    }
-
-
-    void getPendingMedia(){
-        List<Media> pendingMedia = mediaDAO.getPendingMedia();
-        Assert.assertTrue(pendingMedia.size() >= 1);
-    }
-
-
-    void approveDenyMedia(){
-
-    }
 
 }

@@ -1,10 +1,12 @@
 package dev.project2.Entities;
 import java.util.Objects;
 
-// The Media entity class.
+// The Media entity class. This class is where the Media entity gets created with all its private variables and
+// getters/setters.
 public class Media {
 
-    // The Media entity's properties needed for the database table in order.
+    // The Media entity's properties needed for the database table in order. Marked as private to protect from unwanted
+    // changes (Encapsulation).
     private int mediaId;
     private String title;
     private String creator;
@@ -15,9 +17,10 @@ public class Media {
     private int userId;
 
 
-    // Both a default, no-args constructor and the constructor that sets all the properties.
+    // A default, no-args constructor.
     public Media(){}
 
+    // Also, the constructor that sets all the properties.
     public Media(int mediaId, String title, String creator, String synopsis, String mediaType, String genre,
                  boolean status, int userId) {
         this.mediaId = mediaId;
