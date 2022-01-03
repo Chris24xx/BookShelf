@@ -1,8 +1,8 @@
 package dev.project2.dbcon;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 
 public class DBConn {
     public static Connection createConnection(){
