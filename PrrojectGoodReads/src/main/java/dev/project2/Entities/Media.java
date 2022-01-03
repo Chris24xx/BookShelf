@@ -4,7 +4,7 @@ import java.util.Objects;
 // The Media entity class.
 public class Media {
 
-    // The Media entity's properties needed for the database table.
+    // The Media entity's properties needed for the database table in order.
     private int mediaId;
     private String title;
     private String creator;
@@ -31,7 +31,7 @@ public class Media {
     }
 
 
-    // The overridden "toString()", "equals()", and "hashCode()" methods.
+    // The overridden "toString()", "equals()", and "hashCode()" methods to make this a JavaBean.
     @Override
     public String toString() {
         return "Media{" +
@@ -52,7 +52,10 @@ public class Media {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Media media = (Media) o;
-        return mediaId == media.mediaId && status == media.status && userId == media.userId && Objects.equals(title, media.title) && Objects.equals(creator, media.creator) && Objects.equals(synopsis, media.synopsis) && Objects.equals(mediaType, media.mediaType) && Objects.equals(genre, media.genre);
+        return mediaId == media.mediaId && status == media.status && userId ==
+                media.userId && Objects.equals(title, media.title) && Objects.equals(creator, media.creator) &&
+                Objects.equals(synopsis, media.synopsis) && Objects.equals(mediaType, media.mediaType) &&
+                Objects.equals(genre, media.genre);
     }
 
     @Override
