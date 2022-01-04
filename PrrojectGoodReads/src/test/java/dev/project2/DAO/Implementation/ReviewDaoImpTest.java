@@ -1,21 +1,13 @@
 package dev.project2.DAO.Implementation;
 
+//import dev.project2.Website.Abstract.ReviewAbstract;
 import dev.project2.DAO.Abstract.ReviewAbstract;
 import dev.project2.Entities.Review;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.sql.Timestamp;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
 import java.util.List;
-
-import static dev.project2.Entities.Review.*;
-import static org.testng.Assert.*;
 
 public class ReviewDaoImpTest {
     ReviewAbstract dao = new ReviewDaoImp();
