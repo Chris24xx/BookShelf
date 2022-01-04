@@ -11,9 +11,10 @@ public class MediaServiceImp implements MediaService {
 
     MediaDAO mediaDAO;
 
-    public MediaServiceImp(MediaDAO mediaDAO) {
+    public MediaServiceImp (MediaDAO mediaDAO) {
         this.mediaDAO = mediaDAO;
     }
+
 
     @Override
     public Media createNewMediaService(Media media) {
@@ -44,8 +45,7 @@ public class MediaServiceImp implements MediaService {
     @Override
     public Media getMediaByTitleService(String title) {
         try {
-            Media media = this.mediaDAO.getMediaByTitle(title);
-            return media;
+            return this.mediaDAO.getMediaByTitle(title);
         } catch (TitleNotFound t) {
             throw new TitleNotFound("Title was not found");
         }
@@ -72,8 +72,7 @@ public class MediaServiceImp implements MediaService {
     @Override
     public boolean approveMediaService(int mediaId) {
         try {
-            boolean approve = this.mediaDAO.approveMedia(mediaId);
-            return approve;
+            return this.mediaDAO.approveMedia(mediaId);
         } catch (ItemNotFound i) {
             throw new ItemNotFound("This piece of media does not exist");
         }
