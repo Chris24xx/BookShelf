@@ -9,21 +9,27 @@ public class Review {
     private int reviewId;
     private Boolean status;
     private Instant createdAt;
-    private int mediaId;
     private int userId;
     private int rating;
-    private String user_review;
+    private String userReview;
+    private int mediaId;
+
 
     public Review(){}
 
-    public Review(int reviewId, Boolean status, Instant createdAt, int mediaId, int userId, int rating, String user_review) {
+    public Review(Boolean status, String userReview){
+        this.status = status;
+        this.userReview = userReview;
+    }
+
+    public Review(int reviewId, Boolean status, Instant createdAt,int mediaId , int userId, int rating, String userReview) {
         this.reviewId = reviewId;
         this.status = status;
         this.createdAt = createdAt;
         this.mediaId = mediaId;
         this.userId = userId;
         this.rating = rating;
-        this.user_review = user_review;
+        this.userReview = userReview;
     }
 
     public int getReviewId() {
@@ -34,11 +40,11 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public boolean isStatus() {
+    public Boolean isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
@@ -75,11 +81,11 @@ public class Review {
     }
 
     public String getUserReview() {
-        return user_review;
+        return userReview;
     }
 
     public void setReview(String review) {
-        this.user_review = review;
+        this.userReview = userReview;
     }
 
     @Override
@@ -91,7 +97,7 @@ public class Review {
                 ", mediaId=" + mediaId +
                 ", userId=" + userId +
                 ", rating=" + rating +
-                ", review='" + user_review + '\'' +
+                ", review='" + userReview + '\'' +
                 '}';
     }
 
