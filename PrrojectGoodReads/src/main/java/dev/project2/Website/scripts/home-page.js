@@ -12,7 +12,16 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
   };
 
-  
+
+
+// MODAL FOR CREATE NEW MEDIA BUTTON
+
+
+
+// RANDOM MEDIA IMAGES ON HOME PAGE
+
+
+
 
 // LOGOUT
 function logout(){

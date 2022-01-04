@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Bookshelf Home</title>
     <link rel="stylesheet" href="styles/home-page.css">
-    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/tabs.css">
 </head>
 <body>
 
@@ -35,12 +35,16 @@
     <section id="user-profile" class="tabcontent">
         <h2>Username</h2>
         <div class="flex-profile">
-            <img src="images/kyla.jpg" alt="Profile picture" id="profile-pic">
+            <img src="" alt="Profile picture" id="profile-pic">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam reiciendis, tenetur dicta quidem neque suscipit adipisci! Iure omnis iusto fugiat itaque suscipit debitis aut voluptate, repellendus autem delectus eos?</p>
         </div>
         <div class="flex-titles">
             <section class="title-list-section">
                 <h3>Your Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search titles">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
                 <!-- Ordered list of titles will be generated here. -->
                 <ol id="list-of-titles"></ol>
             </section>
@@ -53,7 +57,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button>Add new title to your collection</button>
+        <button class="add-new-media-button">Add new title to your collection</button>
     </section>
 
 
@@ -63,6 +67,10 @@
         <div class="flex-titles">
             <section class="title-list-section">
                 <h3>Book Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search books">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
                 <!-- Ordered list of titles will be generated here. -->
                 <ol id="list-of-titles"></ol>
             </section>
@@ -75,7 +83,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button>Add new title to your collection</button>
+        <button class="add-new-media-button">Add new title to your collection</button>
     </section>
 
 
@@ -85,6 +93,10 @@
         <div class="flex-titles">
             <section class="title-list-section">
                 <h3>Movie Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search movies">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
                 <!-- Ordered list of titles will be generated here. -->
                 <ol id="list-of-titles"></ol>
             </section>
@@ -97,7 +109,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button>Add new title to your collection</button>
+        <button class="add-new-media-button">Add new title to your collection</button>
     </section>
 
 
@@ -107,6 +119,10 @@
         <div class="flex-titles">
             <section class="title-list-section">
                 <h3>Game Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search games">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
                 <!-- Ordered list of titles will be generated here. -->
                 <ol id="list-of-titles"></ol>
             </section>
@@ -119,12 +135,19 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button>Add new title to your collection</button>
+        <button class="add-new-media-button">Add new title to your collection</button>
     </section>
 
 
     <section id="moderator-contact" class="tabcontent">
-        <h2>Contact</h2>
+        <h2>Contact Us</h2>
+        <div class="flex-contact">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Issue">
+            <textarea placeholder="Please describe the issue." cols="30" rows="10"></textarea>
+            <button class="add-new-media-button">Submit</button>
+        </div>
     </section>
 
 
@@ -135,4 +158,5 @@
     
 </body>
 <script src="scripts/home-page.js"></script>
+<script src="https://kit.fontawesome.com/97834caa56.js" crossorigin="anonymous"></script>
 </html>

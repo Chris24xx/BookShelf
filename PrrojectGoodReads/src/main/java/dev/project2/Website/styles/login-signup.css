@@ -45,7 +45,7 @@ h2 {
 .flex-container > input {
     width: 15rem;
     padding: 7px 15px;
-    color: rgb(1, 1, 58);
+    color: rgb(2, 2, 78);
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -86,7 +86,7 @@ button {
 .container > input {
     width: 15rem;
     padding: 7px 15px;
-    color: rgb(1, 1, 58);
+    color: rgb(2, 2, 78);
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -112,4 +112,8 @@ button {
     font-size: 1.1rem;
     font-weight: bold;
     margin: 0 1rem;
+}
+
+button:active {
+    transform: translateY(4px);
 }
