@@ -14,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "The Hobbit", "J.R.R. Tolkien",
-                "A hobbit that strangely went on an adventure.", "Book", "YA Fantasy",
+        Media newMedia = new Media(0, "Test", "Test",
+                "Test.", "Book", "YA Fantasy",
                 false, 1);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "The Hobbit");
+        Assert.assertEquals(returnedMedia.getTitle(), "Test");
     }
 
 
@@ -89,5 +89,11 @@ public class MediaDAOImpTest {
     }
 
 
+
+    @Test
+    void testDeleteMedia() {
+        boolean deletedMedia = mediaDAO.deleteMedia(2);
+        Assert.assertTrue(deletedMedia);
+    }
 
 }
