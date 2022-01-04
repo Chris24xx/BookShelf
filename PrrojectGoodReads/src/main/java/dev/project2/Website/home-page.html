@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf Home</title>
+    <link rel="stylesheet" href="styles/home-page.css">
+</head>
+<body>
+
+    <header>
+        <a href="home-page.html" id="home" class="tablink" onclick="openTab(event, 'home-page')"><h1>The Bookshelf</h1></a>
+        <nav class="nav-container">
+            <button id="profile" class="tablink" onclick="openTab(event, 'user-profile')">Profile</button>
+            <button id="books" class="tablink" onclick="openTab(event, 'general-books')">Books</button>
+            <button id="movies" class="tablink" onclick="openTab(event, 'general-movies')">Movies</button>
+            <button id="games" class="tablink" onclick="openTab(event, 'general-games')">Games</button>
+            <button id="contact" class="tablink" onclick="openTab(event, 'moderator-contact')">Contact Us</button>
+        </nav>
+    </header>
+
+    <section id="home-page" class="tabcontent">
+        <h2>Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quibusdam delectus ad corporis id rem mollitia voluptatem? Accusamus modi earum quo dolores illo consectetur illum ex praesentium voluptas magni.</p>
+
+        <div class="flex-images">
+            <img src="images/harry-potter.jpg" alt="Front cover of book Harry Potter and the Sorcerer's Stone.">
+            <img src="images/die-hard.jpg" alt="Front cover of the movie Die Hard.">
+            <img src="images/Halo_Infinite.png" alt="Front cover of the game Halo Infinite.">
+        </div>
+    </section>
+
+
+    <section id="user-profile" class="tabcontent">
+        <h2>Profile</h2>
+    </section>
+
+
+    <section id="general-books" class="tabcontent">
+        <h2>Books</h2>
+    </section>
+
+
+    <section id="general-movies" class="tabcontent">
+        <h2>Movies</h2>
+    </section>
+
+
+    <section id="general-games" class="tabcontent">
+        <h2>Games</h2>
+    </section>
+
+
+    <section id="moderator-contact" class="tabcontent">
+        <h2>Contact</h2>
+    </section>
+
+
+    <footer>
+        <button>Logout</button>
+    </footer>
+
+    
+</body>
+<script src="scripts/home-page.js"></script>
+</html>
