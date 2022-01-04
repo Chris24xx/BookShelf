@@ -13,7 +13,7 @@ public interface ReviewAbstract {
 
     boolean deleteReview(int reviewId);
 
-    Review updateReview(Review review);
+    boolean updateReview(int reviewId, Boolean status);
 
     List<Review> getPendingReviews();
 
