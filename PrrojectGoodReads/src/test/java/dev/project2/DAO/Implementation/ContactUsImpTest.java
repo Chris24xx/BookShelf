@@ -1,12 +1,11 @@
 package dev.project2.DAO.Implementation;
+//import dev.project2.Website.Abstract.ContactUsAbstract;
 import dev.project2.DAO.Abstract.ContactUsAbstract;
 import dev.project2.Entities.ContactUs;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
-import static org.testng.Assert.*;
 
 
 public class ContactUsImpTest {
@@ -41,7 +40,7 @@ public class ContactUsImpTest {
         for (ContactUs c : contactUsList){
             System.out.println(c);
         }
-        Assert.assertTrue(contactUsList.size() >= 3);
+        Assert.assertTrue(contactUsList.size() >= 2);
     }
 
     @Test
