@@ -1,6 +1,8 @@
 package dev.project2.DAO.Implementation;
 import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.Entities.Media;
+import dev.project2.Exception.ItemNotFound;
+import dev.project2.Exception.TitleNotFound;
 import dev.project2.dbcon.DBConn;
 import java.sql.*;
 import java.util.ArrayList;
@@ -159,18 +161,21 @@ public class MediaDAOImp implements MediaDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, title);
             ResultSet rs = preparedStatement.executeQuery();
-            rs.next();
-            Media media = new Media(
-                    rs.getInt("media_id"),
-                    rs.getString("title"),
-                    rs.getString("creator"),
-                    rs.getString("synopsis"),
-                    rs.getString("media_type"),
-                    rs.getString("genre"),
-                    rs.getBoolean("status"),
-                    rs.getInt("user_id")
-            );
-            return media;
+            if(rs.next()){
+                Media media = new Media(
+                        rs.getInt("media_id"),
+                        rs.getString("title"),
+                        rs.getString("creator"),
+                        rs.getString("synopsis"),
+                        rs.getString("media_type"),
+                        rs.getString("genre"),
+                        rs.getBoolean("status"),
+                        rs.getInt("user_id")
+                );
+                return media;
+            } else {
+                throw new TitleNotFound("Title was not found");
+            }
         } catch (SQLException q){
             q.printStackTrace();
             return null;
@@ -270,6 +275,7 @@ public class MediaDAOImp implements MediaDAO {
 
 
 
+
     @Override
     public boolean approveMedia(int mediaId) {
         try (Connection connection = DBConn.createConnection()) {
@@ -277,9 +283,12 @@ public class MediaDAOImp implements MediaDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, mediaId);
             ResultSet rs = preparedStatement.executeQuery();
-            rs.next();
-            boolean approved = rs.getBoolean("status");
-            return approved;
+            if(rs.next()){
+                boolean approved = rs.getBoolean("status");
+                return approved;
+            } else {
+                throw new ItemNotFound("This piece of media does not exist");
+            }
         } catch (SQLException q) {
             q.printStackTrace();
             return false;
