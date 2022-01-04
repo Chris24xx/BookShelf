@@ -1,0 +1,657 @@
+<mxfile host="65bd71144e">
+    <diagram id="z-UZiGT43cMe-RsQEHF_" name="Login Page">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="110" width="610" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="140" width="270" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Login" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="310" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Sign Up" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="350" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Email:" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="210" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Password:" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="250" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Welcome" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="140" width="210" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="ITRwSG7rcglIEAETDkQU" name="Sign Up">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="Nm4APJK4cC2TXfsfw_LC-0"/>
+                <mxCell id="Nm4APJK4cC2TXfsfw_LC-1" parent="Nm4APJK4cC2TXfsfw_LC-0"/>
+                <mxCell id="Q8GFKz9X_0wVlMLxdWlT-0" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="2QWNCUa9FiBdWLpKyeU5-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="85" y="130" width="610" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-0" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="255" y="160" width="270" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-1" value="Sign Up" style="rounded=0;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="330" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-2" value="First Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="300" y="250" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-4" value="Last Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="300" y="270" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-5" value="Email" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="300" y="300" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-6" value="Password" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="300" y="320" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-7" value="Sign Up" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="420" y="360" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oLcJYmVPApOc5dVwf-sq-8" value="Already Have an Account?" style="rounded=1;whiteSpace=wrap;html=1;" parent="Nm4APJK4cC2TXfsfw_LC-1" vertex="1">
+                    <mxGeometry x="350" y="390" width="150" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="y_1VXkTE_bUIA3RUS9ig" name="Home Page">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="ubBeEopnXTEtsi5lP4Un-0"/>
+                <mxCell id="ubBeEopnXTEtsi5lP4Un-1" parent="ubBeEopnXTEtsi5lP4Un-0"/>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-0" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-1" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-2" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-3" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-4" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-5" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-8" value="&lt;h1&gt;Welcome&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="80" y="160" width="620" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-9" value="Movies" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="40" y="270" width="230" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-10" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-9" vertex="1">
+                    <mxGeometry y="26" width="230" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-11" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-9" vertex="1">
+                    <mxGeometry y="52" width="230" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-12" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-9" vertex="1">
+                    <mxGeometry y="78" width="230" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-13" value="Games" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="520" y="270" width="300" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-14" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-13" vertex="1">
+                    <mxGeometry y="26" width="300" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-15" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-13" vertex="1">
+                    <mxGeometry y="52" width="300" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-16" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-13" vertex="1">
+                    <mxGeometry y="78" width="300" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-17" value="Books" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="290" y="270" width="210" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-18" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-17" vertex="1">
+                    <mxGeometry y="26" width="210" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-19" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-17" vertex="1">
+                    <mxGeometry y="52" width="210" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gGsBoufRi8iY_jWELRGj-20" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="gGsBoufRi8iY_jWELRGj-17" vertex="1">
+                    <mxGeometry y="78" width="210" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="pHLoQFmIsNPPbTv7UPGs-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="ubBeEopnXTEtsi5lP4Un-1" vertex="1">
+                    <mxGeometry x="710" y="450" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Profile user page" id="lZq2B4OzzCH8vIkjRJSl">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-0"/>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-1" parent="nF9kXDc5ZR-0ltHWyTp6-0"/>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-3" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-4" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-5" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-6" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-7" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-8" value="&lt;h1&gt;User Name&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-22" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="70" y="150" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-23" value="BookShelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="80" y="320" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-25" value="List of media&lt;br&gt;Click bookshelf will populate list of my media&lt;br&gt;media will have links. on click, will popuulate all reviews and media information" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="80" y="400" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-27" value="List of reviews&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="570" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-29" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="320" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-30" value="Author" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="440" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-31" value="Synopsis:" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="320" y="360" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-37" value="Book Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="570" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-44" value="Information for the media that was clicked on" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="320" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="nF9kXDc5ZR-0ltHWyTp6-45" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=-0.005;entryY=0.69;entryDx=0;entryDy=0;entryPerimeter=0;" parent="nF9kXDc5ZR-0ltHWyTp6-1" target="nF9kXDc5ZR-0ltHWyTp6-44" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="540" as="sourcePoint"/>
+                        <mxPoint x="300" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="NRL7EhgIg3YPopV-UKEP-0" value="Add Review" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="470" y="560" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="NRL7EhgIg3YPopV-UKEP-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="315" y="630" width="295" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="NRL7EhgIg3YPopV-UKEP-2" value="" style="shape=flexArrow;endArrow=classic;html=1;width=42;endSize=12.33;" parent="nF9kXDc5ZR-0ltHWyTp6-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="600" as="sourcePoint"/>
+                        <mxPoint x="499.5" y="650" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="NRL7EhgIg3YPopV-UKEP-3" value="Add Review Form" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="350" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="NRL7EhgIg3YPopV-UKEP-4" value="Submit" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="540" y="900" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="LJpZhKXzec6yOmmtFQKR-0" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="115" y="180" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="asbAKg32lslzxOo1o0_E-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="nF9kXDc5ZR-0ltHWyTp6-1" vertex="1">
+                    <mxGeometry x="700" y="1040" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Books Page" id="2oJrJyF2ViXVEkcnpqtk">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--0"/>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--1" parent="af8aQH5dCdqhqRI0Vrw--0"/>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--3" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--4" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--5" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--6" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--7" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--8" value="&lt;h1&gt;Books&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="180" y="130" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--11" value="List of media&lt;br&gt;Click bookshelf will populate list of my media&lt;br&gt;media will have links. on click, will popuulate all reviews and media information" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="90" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--12" value="List of reviews&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="620" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--13" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="395" y="330" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--14" value="Author" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="530" y="330" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--15" value="Synopsis:" style="rounded=0;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="670" y="330" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--17" value="Information for the media that was clicked on" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="395" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="af8aQH5dCdqhqRI0Vrw--18" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=-0.005;entryY=0.69;entryDx=0;entryDy=0;entryPerimeter=0;" parent="af8aQH5dCdqhqRI0Vrw--1" target="af8aQH5dCdqhqRI0Vrw--17" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="540" as="sourcePoint"/>
+                        <mxPoint x="300" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5NBkFyqSW3b2XdQExf5m-0" value="Search/Filter:" style="rounded=1;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="80" y="320" width="230" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="SnsHE7vY3mOdOIQFMTNx-1" value="" style="edgeStyle=none;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" source="5NBkFyqSW3b2XdQExf5m-1" target="5NBkFyqSW3b2XdQExf5m-0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5NBkFyqSW3b2XdQExf5m-1" value="Search" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="260" y="340" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5NBkFyqSW3b2XdQExf5m-7" value="Add" style="rounded=1;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="310" y="340" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="Yzfvkwf2jb8DHApI8-69-0" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="120" y="140" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="SnsHE7vY3mOdOIQFMTNx-2" value="List All Books" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="230" y="360" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2kXZ_eu-V-F2FSXIINdO-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="af8aQH5dCdqhqRI0Vrw--1" vertex="1">
+                    <mxGeometry x="700" y="670" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Movie" id="oivzbCr-w6Ksbq5UFQ_B">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-0"/>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-1" parent="bs2OKy4Q-BQutL0MemKP-0"/>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-3" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-4" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-5" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-6" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-7" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-8" value="&lt;h1&gt;Movie&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-9" value="Lists All Movies" style="rounded=1;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="100" y="260" width="680" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-10" value="List of media&lt;br&gt;Click bookshelf will populate list of my media&lt;br&gt;media will have links. on click, will popuulate all reviews and media information" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="10" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-11" value="List of reviews&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="570" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-12" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="320" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-13" value="Author" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="440" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-14" value="Synopsis:" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="320" y="360" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-15" value="Book Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="570" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-16" value="Information for the media that was clicked on" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="320" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="bs2OKy4Q-BQutL0MemKP-17" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=-0.005;entryY=0.69;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bs2OKy4Q-BQutL0MemKP-1" target="bs2OKy4Q-BQutL0MemKP-16" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="540" as="sourcePoint"/>
+                        <mxPoint x="300" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Nmnmxp7ZXk8dyi--25iH-0" value="Search/Filter:" style="rounded=1;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="10" y="325" width="230" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sqdmUoN1Q-AAXIbsxVKH-0" value="Add" style="rounded=1;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="250" y="325" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6-kxFzRABJnwXxvf4qfP-0" value="Search" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="190" y="340" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="S0wzkMxZdHrMjR4-oobl-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="bs2OKy4Q-BQutL0MemKP-1" vertex="1">
+                    <mxGeometry x="680" y="670" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Games" id="ovN4-Nbo1ckBXJdtWig_">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-0"/>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-1" parent="CjAGOgAD6sIllcnahMOL-0"/>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-3" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-4" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-5" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-6" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-7" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-8" value="&lt;h1&gt;Games&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-9" value="Lists All Games" style="rounded=1;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="100" y="260" width="680" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-10" value="List of media&lt;br&gt;Click bookshelf will populate list of my media&lt;br&gt;media will have links. on click, will popuulate all reviews and media information" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="90" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-11" value="List of reviews&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="570" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-12" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="320" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-13" value="Author" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="440" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-14" value="Synopsis:" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="320" y="360" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-15" value="Book Title" style="rounded=0;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="570" y="335" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-16" value="Information for the media that was clicked on" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="320" y="390" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="CjAGOgAD6sIllcnahMOL-17" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=-0.005;entryY=0.69;entryDx=0;entryDy=0;entryPerimeter=0;" parent="CjAGOgAD6sIllcnahMOL-1" target="CjAGOgAD6sIllcnahMOL-16" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="540" as="sourcePoint"/>
+                        <mxPoint x="300" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="RbiKkm0J9kmRGpuuuEEl-0" value="Search/Filter:" style="rounded=1;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry y="325" width="230" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GnCCq1sUmnZSK94NqppY-0" value="Add" style="rounded=1;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="240" y="330" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="UBxS-GlUclkSNqnbfCfM-0" value="Search" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="180" y="340" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="CUkgXcIYMkrVokgGe4h0-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="CjAGOgAD6sIllcnahMOL-1" vertex="1">
+                    <mxGeometry x="700" y="650" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Moderator profile page" id="tKZXoQYdiDgfiZE_nK5n">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-0"/>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-1" parent="8Sx1LOkEhilNFX7xllG9-0"/>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-3" value="Moderator Home" style="rounded=0;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-4" value="Pending Media" style="rounded=0;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="365" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-5" value="Pending Reviews" style="rounded=0;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="510" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-8" value="&lt;h1&gt;Moderator Name&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="70" y="150" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Sx1LOkEhilNFX7xllG9-22" value="Message" style="rounded=1;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="610" y="410" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="Gz4QOKImBqD3k79XDM3W-0" value="List of Messages from User" style="rounded=1;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="100" y="340" width="630" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="yllSSlac-vJSUyHv7KPk-0" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="700" y="510" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="AABVz0scYwEoh-dr-gJ7-0" value="Profile Search" style="rounded=0;whiteSpace=wrap;html=1;" parent="8Sx1LOkEhilNFX7xllG9-1" vertex="1">
+                    <mxGeometry x="80" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="pending Media" id="6KCN-ccErmy_oibyCoB0">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-0"/>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-1" parent="gRoqMmqwJn0ww42r6OEn-0"/>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-3" value="Moderator Home" style="rounded=0;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-4" value="Pending Media" style="rounded=0;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="365" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-5" value="Pending Reviews" style="rounded=0;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="510" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-6" value="&lt;h1&gt;Moderator Name&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="70" y="150" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-9" value="List of Pending Media" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="100" y="340" width="630" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="gRoqMmqwJn0ww42r6OEn-10" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="700" y="590" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJP3BNfvAhuePqV8-c87-0" value="Approve" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="570" y="420" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJP3BNfvAhuePqV8-c87-1" value="Deny" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="650" y="420" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJP3BNfvAhuePqV8-c87-2" value="Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="110" y="420" width="450" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ukB5M-92rjJulFFhMnjX-0" value="Profile Searches" style="rounded=0;whiteSpace=wrap;html=1;" parent="gRoqMmqwJn0ww42r6OEn-1" vertex="1">
+                    <mxGeometry x="80" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="moderator -user profiles " id="QUNsxJ3tj7cHN-Moj9vM">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-0"/>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-1" parent="IXhAR-YoKgXOKEFGJCzr-0"/>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-3" value="Moderator Home" style="rounded=0;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-4" value="Pending Media" style="rounded=0;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="365" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-5" value="Pending Reviews" style="rounded=0;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="510" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-6" value="&lt;h1&gt;Moderator Name&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="70" y="150" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-8" value="List of Users" style="rounded=1;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="100" y="340" width="630" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-9" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="680" y="570" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-12" value="Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="110" y="420" width="610" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="IXhAR-YoKgXOKEFGJCzr-13" value="Profile Search" style="rounded=0;whiteSpace=wrap;html=1;" parent="IXhAR-YoKgXOKEFGJCzr-1" vertex="1">
+                    <mxGeometry x="80" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Pending Reviews" id="f1Cqcxu1vzLqPoOvuri9">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-0"/>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-1" parent="AitnePk6hGOlOq5Ac8fV-0"/>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-3" value="Moderator Home" style="rounded=0;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-4" value="Pending Media" style="rounded=0;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="365" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-5" value="Pending Reviews" style="rounded=0;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="510" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-6" value="&lt;h1&gt;Moderator Name&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="200" y="160" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="70" y="150" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-8" value="List of Pending Reviews" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="100" y="340" width="630" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AitnePk6hGOlOq5Ac8fV-9" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="670" y="700" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9LCsRo_-pH94ta18wBoL-0" value="Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="110" y="420" width="450" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cF5UMKxzJ4ADogMrn5mJ-0" value="Approve" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="560" y="420" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cF5UMKxzJ4ADogMrn5mJ-1" value="Deny" style="rounded=1;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="640" y="420" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cF5UMKxzJ4ADogMrn5mJ-2" value="Profile Searches" style="rounded=0;whiteSpace=wrap;html=1;" parent="AitnePk6hGOlOq5Ac8fV-1" vertex="1">
+                    <mxGeometry x="80" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="YMDTp75j87F7oA1MskaJ-0" value="List of Completed Reviews?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="AitnePk6hGOlOq5Ac8fV-1">
+                    <mxGeometry x="90" y="520" width="630" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Contact form" id="RNYdh6Buk4ETX-nQCWie">
+        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-0"/>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-1" parent="n-VgrL4TSSB8cFmch9BB-0"/>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-2" value="The Bookshelf" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="90" y="30" width="600" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-3" value="Login/Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-4" value="Books" style="rounded=0;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="210" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-5" value="Movies" style="rounded=0;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="330" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-6" value="Games" style="rounded=0;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="450" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="n-VgrL4TSSB8cFmch9BB-7" value="Conact us" style="rounded=0;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="570" y="100" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-2" value="Contact Us" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="210" y="160" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-3" value="Email:" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="140" y="240" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-4" value="Name:" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="140" y="290" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-5" value="What's Your Issue?" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="140" y="350" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="190" y="410" width="490" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="bPrSMKLHBSVfhHoLx4wm-7" value="Submit" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="560" y="710" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ElcNmvvRB3sRRVwF-7P9-2" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
+                    <mxGeometry x="710" y="810" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
