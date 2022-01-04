@@ -1,3 +1,4 @@
+// WORKING TABS
 function openTab(evt, tabName) {
     let tabcontent = document.getElementsByClassName("tabcontent");
     for (let i = 0; i < tabcontent.length; i++) {
@@ -10,3 +11,11 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   };
+
+  
+
+// LOGOUT
+function logout(){
+  // sessionStorage.clear();
+  window.location.href = "login.html";
+};
