@@ -2,13 +2,12 @@ package dev.project2.Entities;
 
 
 import java.time.*;
-import java.util.List;
 import java.util.Objects;
 
 public class Review {
     private int reviewId;
     private Boolean status;
-    private Instant createdAt;
+    private String createdAt;
     private int userId;
     private int rating;
     private String userReview;
@@ -22,10 +21,10 @@ public class Review {
         this.userReview = userReview;
     }
 
-    public Review(int reviewId, Boolean status, Instant createdAt,int mediaId , int userId, int rating, String userReview) {
+    public Review(int reviewId, Boolean status,String createdAt, int mediaId, int userId, int rating, String userReview) {
         this.reviewId = reviewId;
         this.status = status;
-        this.createdAt = createdAt;
+        this.createdAt = Instant.now().toString();
         this.mediaId = mediaId;
         this.userId = userId;
         this.rating = rating;
@@ -48,11 +47,11 @@ public class Review {
         this.status = status;
     }
 
-    public Instant getCreatedAt() {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Instant createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
