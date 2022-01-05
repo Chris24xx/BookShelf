@@ -6,6 +6,7 @@ import dev.project2.dbcon.DBConn;
 
 import java.sql.SQLException;
 import java.sql.*;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class ReviewDaoImp implements ReviewAbstract  {
             String sql;
             sql = "insert into project2.review values(default,null,?,?,?,?,?)";
             PreparedStatement state = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-            state.setTimestamp(1, Timestamp.from(review.getCreatedAt()));
+            state.setString(1, review.getCreatedAt());
             state.setInt(2,review.getUserId());
             state.setInt(3,review.getRating());
             state.setString(4,review.getUserReview());
@@ -47,7 +48,7 @@ public class ReviewDaoImp implements ReviewAbstract  {
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 Review review = new Review();
-                review.setCreatedAt(resultSet.getTimestamp("created_at").toInstant());
+                review.setCreatedAt(resultSet.getString("created_at"));
                 review.setRating(resultSet.getInt("rating"));
                 review.setReview(resultSet.getString("user_review"));
                 return review;
@@ -73,7 +74,7 @@ public class ReviewDaoImp implements ReviewAbstract  {
                 Review review = new Review(
                         resultSet.getInt("review_id"),
                         resultSet.getObject("status", Boolean.class),
-                        resultSet.getTimestamp("created_at").toInstant(),
+                        resultSet.getString("created_at"),
                         resultSet.getInt("media_id"),
                         resultSet.getInt("user_id"),
                         resultSet.getInt("rating"),
