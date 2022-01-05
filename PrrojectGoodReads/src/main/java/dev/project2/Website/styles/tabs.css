@@ -29,9 +29,17 @@
 
 .flex-titles > section {
     background-color: rgb(2, 2, 78);
-    width: 17rem;
+    /* width: 17rem; */
     height: 25rem;
     box-shadow: 0 10px 10px rgb(2, 2, 78);
+}
+
+.title-list-section {
+    width: 60%;
+}
+
+.review-list-section {
+    width: 37%;
 }
 
 .flex-titles h3 {
