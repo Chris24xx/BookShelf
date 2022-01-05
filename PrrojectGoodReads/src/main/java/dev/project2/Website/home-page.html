@@ -5,6 +5,7 @@
     <title>Bookshelf Home</title>
     <link rel="stylesheet" href="styles/home-page.css">
     <link rel="stylesheet" href="styles/tabs.css">
+    <script src="https://kit.fontawesome.com/97834caa56.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,9 +26,8 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quibusdam delectus ad corporis id rem mollitia voluptatem? Accusamus modi earum quo dolores illo consectetur illum ex praesentium voluptas magni.</p>
 
         <div class="flex-images">
-            <img src="images/harry-potter.jpg" alt="Front cover of book Harry Potter and the Sorcerer's Stone.">
-            <img src="images/die-hard.jpg" alt="Front cover of the movie Die Hard.">
-            <img src="images/Halo_Infinite.png" alt="Front cover of the game Halo Infinite.">
+            <img id="media-revolve" src="images/harry-potter.jpg" alt="Front cover of book Harry Potter and the Sorcerer's Stone.">
+            <img id="media2-revolve" src="images/die-hard.jpg" alt="Front cover of the movie Die Hard.">
         </div>
     </section>
 
@@ -50,6 +50,10 @@
             </section>
             <section class="title-info-section">
                 <h3>This Title</h3>
+                <p id="prof-title"></p>
+                <p id="prof-creator"></p>
+                <p id="prof-genre"></p>
+                <p id="prof-synopsis"></p>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
@@ -57,7 +61,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button class="add-new-media-button">Add new title to your collection</button>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
     </section>
 
 
@@ -76,6 +80,11 @@
             </section>
             <section class="title-info-section">
                 <h3>This Book</h3>
+                <p id="book-title"></p>
+                <p id="book-creator"></p>
+                <p id="book-genre"></p>
+                <p id="book-synopsis"></p>
+                <button id="duplicate-button">Duplicate for my collection</button>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
@@ -83,7 +92,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button class="add-new-media-button">Add new title to your collection</button>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
     </section>
 
 
@@ -102,6 +111,11 @@
             </section>
             <section class="title-info-section">
                 <h3>This Movie</h3>
+                <p id="movie-title"></p>
+                <p id="movie-creator"></p>
+                <p id="movie-genre"></p>
+                <p id="movie-synopsis"></p>
+                <button id="duplicate-button">Duplicate for my collection</button>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
@@ -109,7 +123,7 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button class="add-new-media-button">Add new title to your collection</button>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
     </section>
 
 
@@ -128,6 +142,11 @@
             </section>
             <section class="title-info-section">
                 <h3>This Game</h3>
+                <p id="game-title"></p>
+                <p id="game-creator"></p>
+                <p id="game-genre"></p>
+                <p id="game-synopsis"></p>
+                <button id="duplicate-button">Duplicate for my collection</button>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
@@ -135,8 +154,9 @@
                 <ol id="list-of-reviews"></ol>
             </section>
         </div>
-        <button class="add-new-media-button">Add new title to your collection</button>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
     </section>
+
 
 
     <section id="moderator-contact" class="tabcontent">
@@ -151,12 +171,33 @@
     </section>
 
 
+
+    <section class="add-new-media" id="media-box">
+        <div class="new-media-content">
+            <span class="close" onclick="closeMediaBox();">&times;</span>
+            <h3 class="media-header">Add new media to your collection</h3>
+            <p>Fill out this section to add new media to your collection.</p>
+            <select id="media-type">
+                <option value=""></option>
+                <option value="Book">Book</option>
+                <option value="Movie">Movie</option>
+                <option value="Game">Game</option>
+            </select>
+            <input type="text" placeholder="Title">
+            <input type="text" placeholder="Creator">
+            <input type="text" placeholder="Genre">
+            <textarea id="synopsis" cols="30" rows="5" placeholder="A synopsis"></textarea>
+            <button class="add-new-media-button">Submit new media</button>
+        </div>
+    </section>
+
+
+
     <footer>
         <button onclick="logout();">Logout</button>
     </footer>
 
     
-</body>
 <script src="scripts/home-page.js"></script>
-<script src="https://kit.fontawesome.com/97834caa56.js" crossorigin="anonymous"></script>
+</body>
 </html>
