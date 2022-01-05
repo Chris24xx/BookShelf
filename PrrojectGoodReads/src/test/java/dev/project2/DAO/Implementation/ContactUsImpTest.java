@@ -15,7 +15,7 @@ public class ContactUsImpTest {
     public void testCreateContactUs(){
         ContactUs contactUs = new ContactUs(1, false, "wherever@yahoo.com", "Amanda Gonzalez", "I am having..." );
         ContactUs returnedContactUs = dao.createContact(contactUs);
-        Assert.assertTrue(returnedContactUs.getContactId()==5);
+        Assert.assertTrue(returnedContactUs.getContactId()==3);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class ContactUsImpTest {
         for (ContactUs c : contactUsList){
             System.out.println(c);
         }
-        Assert.assertTrue(contactUsList.size() >= 4);
+        Assert.assertTrue(contactUsList.size() >= 3);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class ContactUsImpTest {
         for (ContactUs c : contactUsList){
             System.out.println(c);
         }
-        Assert.assertTrue(contactUsList.size() >= 2);
+        Assert.assertTrue(contactUsList.size() >= 3);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class ContactUsImpTest {
 
     @Test
     public void testUpdateContactRequest() {
-        boolean result = dao.updateContactRequestById(4);
+        boolean result = dao.updateContactRequestById(2);
         Assert.assertTrue(result);
     }
 
