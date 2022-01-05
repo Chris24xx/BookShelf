@@ -40,24 +40,11 @@
 }
 
 .title-list-section {
-    z-index: -1;
     overflow-y: scroll;
 }
 
 .review-list-section {
-    z-index: -1;
     overflow-y: scroll;
-}
-
-.title-info-section {
-    z-index: 1;
-}
-
-.title-info-section:hover {
-    width: 40rem;
-    height: 25rem;
-    position: absolute;
-    left: 23vw;
 }
 
 .add-new-media-button {
@@ -80,7 +67,6 @@
     justify-content: space-between;
     align-content: space-between;
     height: 80vh;
-    /* border: red solid 2px; */
 }
 
 .flex-contact input {
@@ -103,6 +89,10 @@
     margin: 1rem 1rem;
 }
 
+.tabcontent section {
+    margin-top: 2rem;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -120,36 +110,21 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(2, 2, 78);
 }
-  
-.topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
+
+.search-container {
+    margin-top: 1rem;
 }
-  
+
+.search-container input {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
 .search-container button {
     padding: 6px 10px;
-    margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
+    background-color: rgb(248, 244, 244);
+    font-size: 15px;
     border: none;
     cursor: pointer;
-}
-  
-.search-container button:hover {
-    background: #ccc;
-}
-
-.topnav input[type=text], .topnav .search-container button {
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-}
-
-.topnav input[type=text] {
-    border: 1px solid #ccc;  
 }

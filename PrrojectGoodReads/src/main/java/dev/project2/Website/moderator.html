@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf Moderator Home</title>
+    <link rel="stylesheet" href="styles/moderator.css">
+    <script src="https://kit.fontawesome.com/97834caa56.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="moderator.html" id="home" class="tablink" onclick="openTab(event, 'moderator-home')"><h1>The Bookshelf</h1></a>
+        <nav class="nav-container">
+            <button id="users" class="tablink" onclick="openTab(event, 'user-profiles')">Profile Search</button>
+            <button id="pending-media" class="tablink" onclick="openTab(event, 'media-pending')">Pending Media</button>
+            <button id="pending-reviews" class="tablink" onclick="openTab(event, 'reviews-pending')">Pending Reviews</button>
+        </nav>
+    </header>
+
+
+    <section id="moderator-home" class="tabcontent">
+        <h2>Moderator Name</h2>
+        <div class="flex-profile">
+            <img src="images/stickfigure.png" alt="Picture of a stick figure for stand in.">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam reiciendis, tenetur dicta quidem neque suscipit adipisci! Iure omnis iusto fugiat itaque suscipit debitis aut voluptate, repellendus autem delectus eos?</p>
+        </div>
+        <div class="flex-messages">
+            <section class="list-section">
+                <h3>Messages</h3>
+                <!-- Ordered list of reviews will be generated here. -->
+                <ol id="list-of-messages"></ol>
+            </section>
+        </div>
+        <button class="message-btn">Message</button>
+    </section>
+
+
+
+    <section id="user-profiles" class="tabcontent">
+        <h2>Users</h2>
+        <div class="flex-messages">
+            <section class="list-section">
+                <h3>List of Users</h3>
+                <!-- Ordered list of reviews will be generated here. -->
+                <ol id="list-of-users"></ol>
+            </section>
+        </div>
+    </section>
+
+
+
+    <section id="media-pending" class="tabcontent">
+        <h2>Pending Media</h2>
+        <div class="flex-container">
+            <section class="pending-list">
+                <h3>List of Pending Media</h3>
+                <!-- Table of pending media will be generated here. -->
+                <table id="pending-media-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Synopsis</th>
+                    </thead>
+                    <tbody>
+                        <!-- Media rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="approved-list">
+                <h3>List of Approved Media</h3>
+                <!-- Table of approved media will be generated here. -->
+                <table id="approved-media-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Synopsis</th>
+                    </thead>
+                    <tbody>
+                        <!-- Media rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="approve-deny-flex">
+            <input type="number" placeholder="Media Id">
+            <button>Approve</button>
+            <button>Deny</button>
+        </div>
+    </section>
+
+
+    <section id="reviews-pending" class="tabcontent">
+        <h2>Pending Reviews</h2>
+        <div class="flex-container">
+            <section class="pending-list">
+                <h3>List of Pending Reviews</h3>
+                <!-- Table of pending reviews will be generated here. -->
+                <table id="pending-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="approved-list">
+                <h3>List of Approved Reviews</h3>
+                <!-- Table of approved reviews will be generated here. -->
+                <table id="approved-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="approve-deny-flex">
+            <input type="number" placeholder="Review Id">
+            <button>Approve</button>
+            <button>Deny</button>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <button onclick="logout();">Logout</button>
+    </footer>
+
+    
+<script src="scripts/moderator.js"></script>
+</body>
+</html>
