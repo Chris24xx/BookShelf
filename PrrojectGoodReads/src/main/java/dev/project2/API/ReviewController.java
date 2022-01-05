@@ -56,7 +56,7 @@ public class ReviewController {
     public Handler getPendingReview = context -> {
         try{
             List<Review> pendingReviewList = this.reviewImp.getPendingReviewsService();
-            Gson gson = new Gson();
+            Gson gson = new Gson()
             String list = gson.toJson(pendingReviewList);
             context.result(list);
             context.status(201);
