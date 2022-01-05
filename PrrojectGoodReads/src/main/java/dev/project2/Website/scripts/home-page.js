@@ -33,25 +33,25 @@ function closeMediaBox() {
 
 
 // RANDOM MEDIA IMAGES ON HOME PAGE
-let books = ["images/anne-green-gables.jpg", "images/harry-potter.jpg", "images/hobbit.jpg"];
-let movies = ["images/die-hard.jpg", "images/into-the-woods.jpg", "images/stardust.jpg"];
-let games = ["images/Halo_Infinite.png", "images/mario-cart.jpg", "images/metal-gear-solid.jpg"];
+let media = ["images/anne-green-gables.jpg", "images/harry-potter.jpg", "images/mario-cart.jpg", "images/die-hard.jpg"];
+let media2 = ["images/hobbit.jpg", "images/into-the-woods.jpg", "images/stardust.jpg", "images/Halo_Infinite.png", "images/metal-gear-solid.jpg"];
+
 
 let i = 0;
 
-setInterval(function revolveBooks() {
-  const eleBook = document.getElementById("books-revolve");
-  eleBook.setAttribute('src', books[++i]);
-  if(i === books.length - 1) {
+setInterval(function revolveMedia() {
+  const eleBook = document.getElementById("media-revolve");
+  eleBook.setAttribute('src', media[++i]);
+  if(i === media.length - 1) {
     i = -1;
   }
   return;
 }, 3000);
 
-setInterval(function revolveMovies() {
-  const eleMovie = document.getElementById("movie-revolve");
-  eleMovie.setAttribute('src', movies[++i]);
-  if(i === movies.length - 1) {
+setInterval(function revolveMedia2() {
+  const eleMovie = document.getElementById("media2-revolve");
+  eleMovie.setAttribute('src', media2[++i]);
+  if(i === media2.length - 1) {
     i = -1;
   }
   return;
