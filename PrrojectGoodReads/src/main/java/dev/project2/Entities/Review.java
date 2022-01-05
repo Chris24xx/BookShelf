@@ -2,6 +2,8 @@ package dev.project2.Entities;
 
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
 import java.util.Objects;
 
 public class Review {
@@ -24,7 +26,7 @@ public class Review {
     public Review(int reviewId, Boolean status,String createdAt, int mediaId, int userId, int rating, String userReview) {
         this.reviewId = reviewId;
         this.status = status;
-        this.createdAt = Instant.now().toString();
+        this.createdAt = LocalDateTime.now().toString();
         this.mediaId = mediaId;
         this.userId = userId;
         this.rating = rating;
@@ -83,7 +85,7 @@ public class Review {
         return userReview;
     }
 
-    public void setReview(String review) {
+    public void setReview(String userReview) {
         this.userReview = userReview;
     }
 
