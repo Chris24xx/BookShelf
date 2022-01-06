@@ -63,7 +63,7 @@ function populateDataComp(responseBody){
       tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       completedTableBody.appendChild(tableRow);
   }
-}s
+}
 
 getCompletedContactRequests()
 getPendingContactRequests()
