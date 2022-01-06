@@ -67,6 +67,40 @@ setInterval(function revolveMedia2() {
 
 
 
+// Create contact function and constants
+const email = document.getElementById("contactUsEmailInput")
+const fullName = document.getElementById("contactUsNameInput")
+const issue = document.getElementById("contactUsIssueInput")
+
+async function createContactRequest(){
+  // let url = "http://localhost:8080/contact"
+  
+   let response = await fetch(
+    "http://localhost:8080/contact", {
+           method:"POST",
+           headers: {"Content-Type": "application/json"},
+           body: JSON.stringify({
+            "contactId":0,
+             "email":email.value,
+             "fullName":fullName.value,
+             "issueMessage":issue.value,
+              "status":false})
+       }
+       )
+       if (response.status === 200 || response.status === 201){
+      alert("your contact request has been sent")
+      document.location.reload(true)
+       let body = await response.json() 
+   } else {
+       alert("your contact request was not sent")
+   }
+}
+
+
+
+// End of contact function and constants
+
+
 // LOGOUT
 function logout(){
   window.location.href = "login.html";
