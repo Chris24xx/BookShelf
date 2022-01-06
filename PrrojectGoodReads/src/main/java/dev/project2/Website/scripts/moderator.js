@@ -69,7 +69,10 @@ getCompletedContactRequests()
 getPendingContactRequests()
 
 //------------------End of contact request js on this page
-
+//------------------Reviews
+async function pendingReviewList(params) {
+    let url = "http://localhost:8080/review/pending";
+}
   
 
 

@@ -43,7 +43,7 @@ public class App {
         // REVIEW
         app.post("/review", reviewController.createReview);
         app.get("/review/{reviewId}/{userId}", reviewController.getReview);
-        app.get("/review/all", reviewController.getAllReview);
+        app.get("/review/all/{userId}", reviewController.getAllReview);
         app.get("/review/pending", reviewController.getPendingReview);
         app.get("/review/past", reviewController.getPastReviews);
         app.patch("/review/update/{reviewId}",reviewController.updateReview);
