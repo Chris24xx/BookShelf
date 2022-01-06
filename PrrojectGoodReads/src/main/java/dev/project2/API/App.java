@@ -10,6 +10,7 @@ import dev.project2.Service.Implementation.MediaServiceImp;
 import dev.project2.Service.Implementation.ReviewImp;
 import dev.project2.controllers.ContactUsController;
 import dev.project2.controllers.MediaController;
+import dev.project2.controllers.ReviewController;
 import io.javalin.Javalin;
 
 public class App {
