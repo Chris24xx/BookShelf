@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf Home</title>
+    <link rel="stylesheet" href="styles/home-page.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+    <script src="https://kit.fontawesome.com/97834caa56.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="home-page.html" id="home" class="tablink" onclick="openTab(event, 'home-page')"><h1>The Bookshelf</h1></a>
+        <nav class="nav-container">
+            <button id="profile" class="tablink" onclick="openTab(event, 'user-profile')">Profile</button>
+            <button id="books" class="tablink" onclick="openTab(event, 'general-books')">Books</button>
+            <button id="movies" class="tablink" onclick="openTab(event, 'general-movies')">Movies</button>
+            <button id="games" class="tablink" onclick="openTab(event, 'general-games')">Games</button>
+            <button id="contact" class="tablink" onclick="openTab(event, 'moderator-contact')">Contact Us</button>
+        </nav>
+    </header>
+
+
+    <section id="home-page" class="tabcontent">
+        <h2>Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quibusdam delectus ad corporis id rem mollitia voluptatem? Accusamus modi earum quo dolores illo consectetur illum ex praesentium voluptas magni.</p>
+
+        <div class="flex-images">
+            <img id="media-revolve" src="images/harry-potter.jpg" alt="Front cover of book Harry Potter and the Sorcerer's Stone.">
+            <img id="media2-revolve" src="images/die-hard.jpg" alt="Front cover of the movie Die Hard.">
+        </div>
+    </section>
+
+
+    <section id="user-profile" class="tabcontent">
+        <h2>Username</h2>
+        <div class="flex-profile">
+            <img src="" alt="Profile picture" id="profile-pic">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam reiciendis, tenetur dicta quidem neque suscipit adipisci! Iure omnis iusto fugiat itaque suscipit debitis aut voluptate, repellendus autem delectus eos?</p>
+        </div>
+        <div class="flex-titles">
+            <section class="title-list-section">
+                <h3>Your Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search titles">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <table id="user-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Media Type</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="review-list-section">
+                <h3>The Reviews</h3>
+                <table id="user-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
+    </section>
+
+
+    <section id="general-books" class="tabcontent">
+        <h2>Shelf of Books</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic quibusdam delectus ad corporis id rem mollitia voluptatem? Accusamus modi earum quo dolores illo consectetur illum ex praesentium voluptas magni.</p>
+        <div class="flex-titles">
+            <section class="title-list-section">
+                <h3>Book Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search books">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <table id="books-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="review-list-section">
+                <h3>The Reviews</h3>
+                <table id="books-reviews-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
+    </section>
+
+
+    <section id="general-movies" class="tabcontent">
+        <h2>Shelf of Movies</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem enim tenetur officia eveniet molestiae placeat aliquid, dolorem deleniti doloribus nulla eos vel asperiores consectetur ab rem, quibusdam, pariatur dignissimos fugiat.</p>
+        <div class="flex-titles">
+            <section class="title-list-section">
+                <h3>Movie Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search movies">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <table id="movies-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="review-list-section">
+                <h3>The Reviews</h3>
+                <table id="movie-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
+    </section>
+
+
+    <section id="general-games" class="tabcontent">
+        <h2>Shelf of Games</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quaerat vitae consectetur, autem a numquam voluptate dolor corporis neque delectus, eius nulla debitis dolores ipsam ab eaque in asperiores sed.</p>
+        <div class="flex-titles">
+            <section class="title-list-section">
+                <h3>Game Titles</h3>
+                <div class="search-container">
+                    <input type="text" placeholder="Search games">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <table id="games-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+            <section class="review-list-section">
+                <h3>The Reviews</h3>
+                <table id="game-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
+    </section>
+
+
+
+    <section id="moderator-contact" class="tabcontent">
+        <h2>Contact Us</h2>
+        <div class="flex-contact">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Name">
+            <h3 style="margin-top: 1.5rem;">Issue</h3>
+            <textarea placeholder="Please describe the issue." cols="30" rows="10"></textarea>
+            <button class="add-new-media-button">Submit</button>
+        </div>
+    </section>
+
+
+
+    <section class="add-new-media" id="media-box">
+        <div class="new-media-content">
+            <span class="close" onclick="closeMediaBox();">&times;</span>
+            <h3 class="media-header">Add new media to your collection</h3>
+            <p>Fill out this section to add new media to your collection.</p>
+            <select id="media-type">
+                <option value=""></option>
+                <option value="Book">Book</option>
+                <option value="Movie">Movie</option>
+                <option value="Game">Game</option>
+            </select>
+            <input type="text" placeholder="Title">
+            <input type="text" placeholder="Creator">
+            <input type="text" placeholder="Genre">
+            <textarea id="synopsis" cols="30" rows="5" placeholder="A synopsis"></textarea>
+            <button class="add-new-media-button">Submit new media</button>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <button onclick="logout();">Logout</button>
+    </footer>
+
+    
+<script src="scripts/home-page.js"></script>
+</body>
+</html>

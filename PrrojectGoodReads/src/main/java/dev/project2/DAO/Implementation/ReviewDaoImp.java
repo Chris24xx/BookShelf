@@ -1,10 +1,13 @@
 package dev.project2.DAO.Implementation;
 import dev.project2.DAO.Abstract.*;
 import dev.project2.Entities.Review;
+import dev.project2.Exception.ListCanNotBeGenerated;
 import dev.project2.dbcon.DBConn;
 
 import java.sql.SQLException;
 import java.sql.*;
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,11 +21,11 @@ public class ReviewDaoImp implements ReviewAbstract  {
             String sql;
             sql = "insert into project2.review values(default,null,?,?,?,?,?)";
             PreparedStatement state = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-            state.setTimestamp(1, Timestamp.from(review.getCreatedAt()));
-            state.setInt(2,review.getMediaId());
-            state.setInt(3,review.getUserId());
-            state.setInt(4,review.getRating());
-            state.setString(5,review.getUserReview());
+            state.setString(1, review.getDateAndTime());
+            state.setInt(2,review.getUserId());
+            state.setInt(3,review.getRating());
+            state.setString(4,review.getUserReview());
+            state.setInt(5,review.getMediaId());
             state.execute();
             ResultSet resultSet = state.getGeneratedKeys();
             resultSet.next();
@@ -46,7 +49,7 @@ public class ReviewDaoImp implements ReviewAbstract  {
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 Review review = new Review();
-                review.setCreatedAt(resultSet.getTimestamp("created_at").toInstant());
+                review.setCreatedAt(resultSet.getString("created_at"));
                 review.setRating(resultSet.getInt("rating"));
                 review.setReview(resultSet.getString("user_review"));
                 return review;
@@ -70,13 +73,14 @@ public class ReviewDaoImp implements ReviewAbstract  {
             List<Review> reviewList = new ArrayList<>();
             while(resultSet.next()){
                 Review review = new Review(
-                        resultSet.getInt(1),
-                        resultSet.getBoolean(2),
-                        resultSet.getTimestamp(3).toInstant(),
-                        resultSet.getInt(4),
-                        resultSet.getInt(5),
-                        resultSet.getInt(6),
-                        resultSet.getString(7)
+                        resultSet.getInt("review_id"),
+                        resultSet.getObject("status", Boolean.class),
+                        resultSet.getString("created_at"),
+                        resultSet.getInt("media_id"),
+                        resultSet.getInt("user_id"),
+                        resultSet.getInt("rating"),
+                        resultSet.getString("user_review")
+
                 );
                 reviewList.add(review);
 
@@ -105,4 +109,84 @@ public class ReviewDaoImp implements ReviewAbstract  {
             return false;
         }
     }
+
+    @Override
+    public boolean updateReview(int reviewId,Boolean status) {
+        try(Connection connection = DBConn.createConnection()) {
+            String sql;
+            sql ="update project2.review set status = ? where review_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setObject(1, status);
+            preparedStatement.setInt(2, reviewId);
+            preparedStatement.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public List<Review> getPendingReviews() {
+        try(Connection conn = DBConn.createConnection()) {
+            String sql;
+            sql = "select * from project2.review where status is null";
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<Review> reviewList = new ArrayList<>();
+            while(resultSet.next()){
+                Review review = new Review(
+                        resultSet.getInt("review_id"),
+                        resultSet.getObject("status", Boolean.class),
+                        resultSet.getString("created_at"),
+                        resultSet.getInt("media_id"),
+                        resultSet.getInt("user_id"),
+                        resultSet.getInt("rating"),
+                        resultSet.getString("user_review")
+
+                );
+                reviewList.add(review);
+
+
+            }
+            return reviewList;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Review> notNullReviews() {
+             try(Connection conn = DBConn.createConnection()) {
+                String sql;
+                sql = "select * from project2.review where status is not null";
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                List<Review> reviewList = new ArrayList<>();
+                while(resultSet.next()){
+                    Review review = new Review(
+                            resultSet.getInt("review_id"),
+                            resultSet.getObject("status", Boolean.class),
+                            resultSet.getString("created_at"),
+                            resultSet.getInt("media_id"),
+                            resultSet.getInt("user_id"),
+                            resultSet.getInt("rating"),
+                            resultSet.getString("user_review")
+
+                    );
+                    reviewList.add(review);
+
+
+                }
+                return reviewList;
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+                return null;
+            }
+    }
 }
+
+

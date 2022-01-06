@@ -3,25 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Bookshelf Sign In</title>
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/login-signup.css">
 </head>
 
 <body>
     
     <header>
-        <h1>Bookshelf</h1>
+        <h1>The Bookshelf</h1>
     </header>
 
     <h2>Welcome</h2>
 
-    <div class="flex-inputs">
+    <div class="flex-container">
         <input type="email" placeholder="Email">
         <input type="text" placeholder="Password">
-    </div>
-    <div class="flex-buttons">
         <button>Login</button>
-        <button>Sign Up</button>
+        <button onclick="window.location.href = 'sign-up.html';">Sign Up</button>
     </div>
 
+    <script src="scripts/login-signup.js"></script>
 </body>
 </html>

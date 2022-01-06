@@ -1,4 +1,5 @@
 package dev.project2.DAO.Implementation;
+//import dev.project2.Website.Abstract.ContactUsAbstract;
 import dev.project2.DAO.Abstract.ContactUsAbstract;
 import dev.project2.Entities.ContactUs;
 import org.testng.Assert;
@@ -6,17 +7,15 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static org.testng.Assert.*;
-
 
 public class ContactUsImpTest {
     ContactUsAbstract dao = new ContactUsDAOImp();
 
     @Test
     public void testCreateContactUs(){
-        ContactUs contactUs = new ContactUs(1, false, "wherever@yahoo.com", "Amanda Gonzalez", "I am having..." );
+        ContactUs contactUs = new ContactUs(1, false, "yayasisterhood@yahoo.com", "Jennifer Jones", "I am having..." );
         ContactUs returnedContactUs = dao.createContact(contactUs);
-        Assert.assertTrue(returnedContactUs.getContactId()==5);
+        Assert.assertTrue(returnedContactUs.getContactId()==7);
     }
 
     @Test
@@ -32,7 +31,7 @@ public class ContactUsImpTest {
         for (ContactUs c : contactUsList){
             System.out.println(c);
         }
-        Assert.assertTrue(contactUsList.size() >= 4);
+        Assert.assertTrue(contactUsList.size() >= 5);
     }
 
     @Test
@@ -61,7 +60,7 @@ public class ContactUsImpTest {
 
     @Test
     public void testUpdateContactRequest() {
-        boolean result = dao.updateContactRequestById(4);
+        boolean result = dao.updateContactRequestById(1);
         Assert.assertTrue(result);
     }
 

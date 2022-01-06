@@ -51,7 +51,7 @@ async function getCompletedContactRequests(){
 function populateData(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
-      tableRow.innerHTML = `<td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
+      tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       pendingTableBody.appendChild(tableRow);
   }
 }
@@ -60,7 +60,7 @@ function populateData(responseBody){
 function populateDataComp(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
-      tableRow.innerHTML = `<td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
+      tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       completedTableBody.appendChild(tableRow);
   }
 }

@@ -12,4 +12,10 @@ public interface ReviewAbstract {
     List<Review> getAllReviews();
 
     boolean deleteReview(int reviewId);
+
+    boolean updateReview(int reviewId, Boolean status);
+
+    List<Review> getPendingReviews();
+
+    List<Review> notNullReviews();
 }

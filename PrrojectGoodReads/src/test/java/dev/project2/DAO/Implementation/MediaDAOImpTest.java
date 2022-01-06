@@ -1,5 +1,6 @@
 package dev.project2.DAO.Implementation;
 
+//import dev.project2.Website.Abstract.MediaDAO;
 import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.Entities.Media;
 import org.testng.Assert;
@@ -13,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "The Hobbit", "J.R.R. Tolkien",
-                "A hobbit that strangely went on an adventure.", "Book", "YA Fantasy",
-                false, 1);
+        Media newMedia = new Media(0, "Harry Potter and the Sorcerer's Stone", "J.K. Rowling",
+                "The boy who lived.", "Book", "YA Fantasy",
+                false, 6);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "The Hobbit");
+        Assert.assertEquals(returnedMedia.getTitle(), "Harry Potter and the Sorcerer's Stone");
     }
 
 
@@ -88,5 +89,11 @@ public class MediaDAOImpTest {
     }
 
 
+
+    @Test
+    void testDeleteMedia() {
+        boolean deletedMedia = mediaDAO.deleteMedia(2);
+        Assert.assertTrue(deletedMedia);
+    }
 
 }
