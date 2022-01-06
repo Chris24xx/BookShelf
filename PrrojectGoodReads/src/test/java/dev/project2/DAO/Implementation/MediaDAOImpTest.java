@@ -14,17 +14,17 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Harry Potter and the Sorcerer's Stone", "J.K. Rowling",
-                "The boy who lived.", "Book", "YA Fantasy",
-                false, 6);
+        Media newMedia = new Media(0, "Anne of Green Gables", "Lucy Maud Montgomery",
+                "The orphan with great imagination.", "Book", "Children's literature",
+                false, 2);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Harry Potter and the Sorcerer's Stone");
+        Assert.assertEquals(returnedMedia.getTitle(), "Anne of Green Gables");
     }
 
 
     @Test
-    void testGetAllMedia(){
-        List<Media> allMedia = mediaDAO.getAllMedia();
+    void testGetMediaByUserId(){
+        List<Media> allMedia = mediaDAO.getMediaByUserId(6);
         Assert.assertTrue(allMedia.size() >= 1);
     }
 
@@ -33,7 +33,7 @@ public class MediaDAOImpTest {
     @Test
     public void testGetAllBooks() {
         List<Media> allBooks = mediaDAO.getAllBooks();
-        Assert.assertTrue(allBooks.size() >= 1);
+        Assert.assertTrue(allBooks.size() == 2);
     }
 
 
@@ -55,14 +55,6 @@ public class MediaDAOImpTest {
     public void testGetMediaByTitle() {
         Media mediaTitle = mediaDAO.getMediaByTitle("Harry Potter");
         Assert.assertEquals(mediaTitle.getTitle(), "Harry Potter");
-    }
-
-
-
-    @Test
-    public void testGetAllMediaPerUser() {
-        List<Media> userMedia = mediaDAO.getAllMediaPerUser(1);
-        Assert.assertTrue(userMedia.size() >= 1);
     }
 
 

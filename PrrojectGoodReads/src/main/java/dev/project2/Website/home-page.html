@@ -47,14 +47,13 @@
                 </div>
                 <table id="user-list-table">
                     <thead>
-                        <th>ID</th>
+                        <th>Media Type</th>
                         <th>Title</th>
                         <th>Creator</th>
                         <th>Synopsis</th>
-                        <th>Media Type</th>
                         <th>Genre</th>
                     </thead>
-                    <tbody>
+                    <tbody id="user-media-body">
                         <!-- Title rows and data will go here. -->
                     </tbody>
                 </table>
@@ -220,11 +219,12 @@
                 <option value="Movie">Movie</option>
                 <option value="Game">Game</option>
             </select>
-            <input type="text" placeholder="Title">
-            <input type="text" placeholder="Creator">
-            <input type="text" placeholder="Genre">
+            <input type="text" placeholder="Title" id="media-title">
+            <input type="text" placeholder="Creator" id="media-creator">
+            <input type="text" placeholder="Genre" id="media-genre">
             <textarea id="synopsis" cols="30" rows="5" placeholder="A synopsis"></textarea>
-            <button class="add-new-media-button">Submit new media</button>
+            <button class="add-new-media-button" onclick="createMedia();">Submit new media</button>
+            <p id="submit-message"></p>
         </div>
     </section>
 
