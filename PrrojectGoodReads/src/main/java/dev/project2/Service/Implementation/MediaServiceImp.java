@@ -22,8 +22,8 @@ public class MediaServiceImp implements MediaService {
     }
 
     @Override
-    public List<Media> getAllMediaService() {
-        return this.mediaDAO.getAllMedia();
+    public List<Media> getMediaByUserIdService(int userId) {
+        return this.mediaDAO.getMediaByUserId(userId);
     }
 
     @Override
@@ -51,11 +51,6 @@ public class MediaServiceImp implements MediaService {
         }
     }
 
-
-    @Override
-    public List<Media> getAllMediaPerUserService(int userId) {
-        return this.mediaDAO.getAllMediaPerUser(userId);
-    }
 
     @Override
     public List<Media> getPendingMediaService() {

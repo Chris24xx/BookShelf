@@ -7,7 +7,7 @@ public interface MediaDAO {
 
     Media createNewMedia(Media media);
 
-    List<Media> getAllMedia();
+    List<Media> getMediaByUserId(int userId);
 
     List<Media> getAllBooks();
 
@@ -15,9 +15,7 @@ public interface MediaDAO {
 
     List<Media> getAllGames();
 
-    Media getMediaByTitle(String title);
-
-    List<Media> getAllMediaPerUser(int userId);
+    Media getMediaByTitle(String title);  // Is this needed?
 
     List<Media> getPendingMedia();
 
