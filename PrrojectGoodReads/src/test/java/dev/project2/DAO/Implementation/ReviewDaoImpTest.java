@@ -29,7 +29,7 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testGetAllReviews() {
-        List<Review> reviews = dao.getAllReviews();
+        List<Review> reviews = dao.getAllReviews(1);
         for(Review r: reviews){
             System.out.println(r);
         }
@@ -45,7 +45,7 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testUpdateReview() {
-        boolean updateReview = dao.updateReview(9, false );
+        boolean updateReview = dao.updateReview(7, true );
         Assert.assertTrue(updateReview);
     }
 

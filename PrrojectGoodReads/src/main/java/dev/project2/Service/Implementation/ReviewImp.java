@@ -36,8 +36,7 @@ public class ReviewImp implements ReviewAbs {
     }
 
     @Override
-    public List<Review> getAllReviewsService() {
-        return this.reviewDao.getAllReviews();
+    public List<Review> getAllReviewsService(int reviewId) {return this.reviewDao.getAllReviews(reviewId);
     }
 
     @Override

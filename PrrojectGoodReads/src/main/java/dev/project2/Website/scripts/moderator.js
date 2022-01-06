@@ -13,7 +13,7 @@ function openTab(evt, tabName) {
   };
 
 
-  //Contact us List of Completed and Pending Functions
+  //Contact us List of Completed and Pending Function Constants
   const pendingTable = document.getElementById("pending-messages-table");
   const pendingTableBody = document.getElementById("pending-message-body");
   const completedTable = document.getElementById("completed-messages-table");
@@ -47,20 +47,20 @@ async function getCompletedContactRequests(){
     }
 }
 
-// Populate data for contact us tables
+// Populate data for Pending contact us table
 function populateData(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
-      tableRow.innerHTML = `<td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
+      tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       pendingTableBody.appendChild(tableRow);
   }
 }
 
-// Populate data for contact us tables
+// Populate data for Completed contact us table
 function populateDataComp(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
-      tableRow.innerHTML = `<td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
+      tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       completedTableBody.appendChild(tableRow);
   }
 }
