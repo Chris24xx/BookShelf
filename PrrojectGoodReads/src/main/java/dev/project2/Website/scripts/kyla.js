@@ -1,38 +1,28 @@
 // TO VIEW ALL BOOKS
 let bookButton = document.getElementById("books");
-bookButton.addEventListener("click", getAllBooks);
+bookButton.addEventListener("click", getAllApprovedBooks);
 
-async function getAllBooks(){
+async function getAllApprovedBooks(){
+    bookTableBody.innerHTML = '';
     const booksRoute = "http://localhost:8080/books";
-}
+    let response = await fetch(booksRoute);
+    if(response.status == 200){
+        let bookBody = await response.json();
+        console.log(bookBody);
+        populateBooks(bookBody);
+    } else {
+        alert("Could not retrieve books!");
+    };
+};
 
 
-// let pendingButton = document.getElementById("pending");
-// button.addEventListener("click", getPendingData);
+const bookTable = document.getElementById("books-list-table");
+const bookTableBody = document.getElementById("books-info");
 
-// async function getPendingData(){
-//   // tableBody.innerHTML = ``;
-//   const pendingRoute = "http://127.0.0.1:5000/employee/pending/";
-//   // Fetching the information from the route.
-//   let response = await fetch(pendingRoute + sessionStorage.getItem("valueEmp"));
-//   if(response.status == 200){
-//     let pBody = await response.json();
-//     populateReimburseData(pBody);
-//   } else {
-//     alert("Could not retrieve reimbursement data!")
-//   }
-// };
-
-
-// TO POPULATE THE TABLE DATA
-// This grabs the tables and table bodies so that we can populate data into them.
-// const table = document.getElementById("reimburse-table");
-// const tableBody = document.getElementById("r-body");
-
-// function populateReimburseData(jsonBody){
-//   for(let rb of jsonBody){
-//     let tableRow = document.createElement("tr");
-//     tableRow.innerHTML = `<td>${rb.reimburseId}</td><td>${rb.requestLabel}</td><td>$${rb.amount}</td><td>${rb.status}</td><td>${rb.reason}</td>`;
-//     tableBody.appendChild(tableRow);
-//   };
-// };
+function populateBooks(jsonBody){
+    for(let bb of jsonBody){
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
+        bookTableBody.appendChild(tableRow);
+    };
+};
