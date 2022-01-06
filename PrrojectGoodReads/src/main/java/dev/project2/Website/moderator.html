@@ -27,17 +27,18 @@
         <div class="flex-messages">
             <h3>List of Pending Contact Requests</h3>
             <div class="flex-update">
-                <section class="message">
-                </section>
-                <button class="update-button">Update Status</button>
-            </div>
-            <div class="flex-update">
-                <section class="message">
-                </section>
-                <button class="update-button">Update Status</button>
-            </div>
-            <div class="flex-update">
-                <section class="message">
+                <section class="completed-messages">
+                    <table id="pending-messages-table">
+                        <thead id="pending-message-t-head">
+                            <th>Name</th>
+                            <th>Issue</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </thead>
+                        <tbody id="pending-message-body">
+                            <!-- Message rows and data will go here. -->
+                        </tbody>
+                    </table>
                 </section>
                 <button class="update-button">Update Status</button>
             </div>
@@ -47,19 +48,21 @@
             <div class="flex-update">
                 <section class="completed-messages">
                     <table id="completed-messages-table">
-                        <thead>
-                            <th>ID</th>
-                            <th>Message</th>
+                        <thead id="completed-message-t-head">
+                            <th>Name</th>
+                            <th>Issue</th>
+                            <th>Email</th>
+                            <th>Status</th>
                         </thead>
-                        <tbody>
+                        <tbody id="completed-message-body">
                             <!-- Message rows and data will go here. -->
                         </tbody>
                     </table>
                 </section>
             </div>
-            <div class="flex-update">
+            <!-- <div class="flex-update">
                 <section class="message">
-                </section>
+                </section> -->
                 <button class="update-button">Delete Status</button>
             </div>
         </div>
