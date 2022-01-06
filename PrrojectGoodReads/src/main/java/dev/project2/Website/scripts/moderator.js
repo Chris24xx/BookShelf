@@ -63,17 +63,27 @@ function populateDataComp(responseBody){
       tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       completedTableBody.appendChild(tableRow);
   }
-}
+}s
 
 getCompletedContactRequests()
 getPendingContactRequests()
 
 //------------------End of contact request js on this page
 //------------------Reviews
+let reviewButton = getElementById("pending-reviews")
+
+
 async function pendingReviewList(params) {
-    let url = "http://localhost:8080/review/pending";
+  let url = "http://localhost:8080/review/pending";
+  let response = await fetch(url);
+  if (response.status === 200) {
+    let body = response.json();
+    console .log(body);
+    
+  } else {
+    
+  }
 }
-  
 
 
 
