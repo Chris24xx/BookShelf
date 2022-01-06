@@ -29,6 +29,18 @@ public class MediaController {
     };
 
 
+
+    public Handler getMediaPerUser = ctx -> {
+        int id = Integer.parseInt(ctx.pathParam("userId"));
+        List<Media> userMedia = this.mediaService.getMediaByUserIdService(id);
+        Gson gson = new Gson();
+        String booksJSONs = gson.toJson(userMedia);
+        ctx.result(booksJSONs);
+        ctx.status(200);
+    };
+
+
+
     public Handler getAllBooks = ctx -> {
         List<Media> books = this.mediaService.getAllBooksService();
         Gson gson = new Gson();

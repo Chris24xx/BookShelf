@@ -38,26 +38,27 @@ public class MediaDAOImp implements MediaDAO {
 
 
     @Override
-    public List<Media> getAllMedia() {
+    public List<Media> getMediaByUserId(int userId) {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet  = statement.executeQuery(sql);
-            List<Media> allMedia = new ArrayList<>();
-            while(resultSet.next()){
-                Media media = new Media(
-                        resultSet.getInt("media_id"),
-                        resultSet.getString("title"),
-                        resultSet.getString("creator"),
-                        resultSet.getString("synopsis"),
-                        resultSet.getString("media_type"),
-                        resultSet.getString("genre"),
-                        resultSet.getBoolean("status"),
-                        resultSet.getInt("user_id")
+            String sql = "select * from project2.media where user_id = ? and status = true";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, userId);
+            ResultSet rs = preparedStatement.executeQuery();
+            List<Media> allUserMedia = new ArrayList<>();
+            while(rs.next()){
+                Media userMedia = new Media(
+                        rs.getInt("media_id"),
+                        rs.getString("title"),
+                        rs.getString("creator"),
+                        rs.getString("synopsis"),
+                        rs.getString("media_type"),
+                        rs.getString("genre"),
+                        rs.getBoolean("status"),
+                        rs.getInt("user_id")
                 );
-                allMedia.add(media);
+                allUserMedia.add(userMedia);
             }
-            return allMedia;
+            return allUserMedia;
         } catch (SQLException q){
             q.printStackTrace();
             return null;
@@ -70,7 +71,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllBooks() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where media_type = 'Book'";
+            String sql = "select * from project2.media where media_type = 'Book' and status = true";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -99,7 +100,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllMovies() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where media_type = 'Movie'";
+            String sql = "select * from project2.media where media_type = 'Movie' and status = true";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -128,7 +129,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getAllGames() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where media_type = 'Game'";
+            String sql = "select * from project2.media where media_type = 'Game' and status = true";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> allMedia = new ArrayList<>();
@@ -182,36 +183,6 @@ public class MediaDAOImp implements MediaDAO {
         }
     }
 
-
-
-
-    @Override
-    public List<Media> getAllMediaPerUser(int userId) {
-        try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where user_id = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, userId);
-            ResultSet rs = preparedStatement.executeQuery();
-            List<Media> userMedia = new ArrayList<>();
-            while(rs.next()){
-                Media media = new Media(
-                        rs.getInt("media_id"),
-                        rs.getString("title"),
-                        rs.getString("creator"),
-                        rs.getString("synopsis"),
-                        rs.getString("media_type"),
-                        rs.getString("genre"),
-                        rs.getBoolean("status"),
-                        rs.getInt("user_id")
-                );
-                userMedia.add(media);
-            }
-            return userMedia;
-        } catch (SQLException q){
-            q.printStackTrace();
-            return null;
-        }
-    }
 
 
 

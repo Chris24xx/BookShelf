@@ -8,7 +8,7 @@ public interface MediaService {
 
     Media createNewMediaService(Media media);
 
-    List<Media> getAllMediaService();
+    List<Media> getMediaByUserIdService(int userId);
 
     List<Media> getAllBooksService();
 
@@ -17,8 +17,6 @@ public interface MediaService {
     List<Media> getAllGamesService();
 
     Media getMediaByTitleService(String title);
-
-    List<Media> getAllMediaPerUserService(int userId);
 
     List<Media> getPendingMediaService();
 
