@@ -1,4 +1,4 @@
-package dev.project2.API;
+package dev.project2.controllers;
 
 import com.fatboyindustrial.gsonjodatime.Converters;
 import com.google.gson.Gson;
