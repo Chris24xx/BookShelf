@@ -14,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Test", "Test",
-                "Test.", "Book", "YA Fantasy",
-                false, 1);
+        Media newMedia = new Media(0, "Harry Potter and the Sorcerer's Stone", "J.K. Rowling",
+                "The boy who lived.", "Book", "YA Fantasy",
+                false, 6);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Test");
+        Assert.assertEquals(returnedMedia.getTitle(), "Harry Potter and the Sorcerer's Stone");
     }
 
 
