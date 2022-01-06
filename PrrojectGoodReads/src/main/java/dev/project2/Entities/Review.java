@@ -3,7 +3,7 @@ package dev.project2.Entities;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-
+import java.time.format.FormatStyle;
 import java.util.Objects;
 
 public class Review {
@@ -26,7 +26,7 @@ public class Review {
     public Review(int reviewId, Boolean status,String createdAt, int mediaId, int userId, int rating, String userReview) {
         this.reviewId = reviewId;
         this.status = status;
-        this.createdAt = LocalDateTime.now().toString();
+        this.createdAt = createdAt;
         this.mediaId = mediaId;
         this.userId = userId;
         this.rating = rating;
@@ -112,5 +112,10 @@ public class Review {
     @Override
     public int hashCode() {
         return Objects.hash(getReviewId(), isStatus(), getCreatedAt(), getMediaId(), getUserId(), getRating(), getUserReview());
+    }
+
+    public String getDateAndTime(){
+        createdAt = LocalDateTime.now().format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT,FormatStyle.SHORT));
+        return createdAt;
     }
 }

@@ -8,11 +8,16 @@ import dev.project2.Exception.ListCanNotBeGenerated;
 import dev.project2.Exception.ReviewNotFound;
 import dev.project2.Service.Implementation.ReviewImp;
 import io.javalin.http.Handler;
+import org.apache.logging.log4j.core.config.plugins.convert.TypeConverters;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
+
+import static java.lang.Boolean.TYPE;
+import static java.lang.Boolean.getBoolean;
 
 public class ReviewController {
     ReviewImp reviewImp;
@@ -35,7 +40,9 @@ public class ReviewController {
         int userId = Integer.parseInt(context.pathParam("userId"));
         try{
             Review review = this.reviewImp.getReviewService(reviewId,userId);
-            Gson gson = new Gson();
+            GsonBuilder builder = new GsonBuilder();
+            builder.serializeNulls();
+            Gson gson = builder.setPrettyPrinting().create();
             String newReview = gson.toJson(review);
             context.result(newReview);
             context.status(201);
@@ -47,7 +54,9 @@ public class ReviewController {
 
     public Handler getAllReview = context -> {
         List<Review> reviewList = this.reviewImp.getAllReviewsService();
-        Gson gson = new Gson();
+        GsonBuilder builder = new GsonBuilder();
+        builder.serializeNulls();
+        Gson gson = builder.setPrettyPrinting().create();
         String list = gson.toJson(reviewList);
         context.result(list);
         context.status(200);
@@ -56,7 +65,9 @@ public class ReviewController {
     public Handler getPendingReview = context -> {
         try{
             List<Review> pendingReviewList = this.reviewImp.getPendingReviewsService();
-            Gson gson = new Gson();
+            GsonBuilder builder = new GsonBuilder();
+            builder.serializeNulls();
+            Gson gson = builder.setPrettyPrinting().create();
             String list = gson.toJson(pendingReviewList);
             context.result(list);
             context.status(201);
@@ -69,7 +80,9 @@ public class ReviewController {
     public Handler getPastReviews = context -> {
         try{
             List<Review> pendingReviewList = this.reviewImp.notNullReviewsService();
-            Gson gson = new Gson();
+            GsonBuilder builder = new GsonBuilder();
+            builder.serializeNulls();
+            Gson gson = builder.setPrettyPrinting().create();
             String list = gson.toJson(pendingReviewList);
             context.result(list);
             context.status(201);
@@ -91,11 +104,23 @@ public class ReviewController {
     public Handler updateReview = context -> {
         int reviewId = Integer.parseInt(context.pathParam("reviewId"));
         Gson gson = new Gson();
-        Boolean status = gson.fromJson(context.body(),Boolean.class);
-        boolean result = this.reviewImp.updateReviewService(reviewId,status);
-        String newResult = gson.toJson(result);
-        context.result(newResult);
-        context.status(201);
+        Map<String,Boolean> status = gson.fromJson(context.body(), Map.class );
+        if(status.get("status")){
+            boolean result = this.reviewImp.updateReviewService(reviewId,true);
+            gson.toJson(result);
+            context.result("success");
+            context.status(201);
+
+        }else{
+            boolean result = this.reviewImp.updateReviewService(reviewId,false);
+            gson.toJson(result);
+            context.result("success");
+            context.status(201);
+        }
+
+
+
+
     };
 
 }

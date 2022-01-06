@@ -45,7 +45,7 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testUpdateReview() {
-        boolean updateReview = dao.updateReview(9, false );
+        boolean updateReview = dao.updateReview(7, true );
         Assert.assertTrue(updateReview);
     }
 
