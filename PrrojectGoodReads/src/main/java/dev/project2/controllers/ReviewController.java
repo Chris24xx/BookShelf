@@ -1,6 +1,5 @@
 package dev.project2.controllers;
 
-import com.fatboyindustrial.gsonjodatime.Converters;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dev.project2.Entities.Review;
@@ -8,16 +7,9 @@ import dev.project2.Exception.ListCanNotBeGenerated;
 import dev.project2.Exception.ReviewNotFound;
 import dev.project2.Service.Implementation.ReviewImp;
 import io.javalin.http.Handler;
-import org.apache.logging.log4j.core.config.plugins.convert.TypeConverters;
 
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.time.Instant;
 import java.util.List;
 import java.util.Map;
-
-import static java.lang.Boolean.TYPE;
-import static java.lang.Boolean.getBoolean;
 
 public class ReviewController {
     ReviewImp reviewImp;

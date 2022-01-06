@@ -63,28 +63,44 @@ function populateDataComp(responseBody){
       tableRow.innerHTML = `<td>${contact_us.contactId}</td><td>${contact_us.email}</td><td>${contact_us.fullName}</td><td>${contact_us.issueMessage}</td><td>${contact_us.status}</td>`;
       completedTableBody.appendChild(tableRow);
   }
-}s
+}
 
 getCompletedContactRequests()
 getPendingContactRequests()
 
 //------------------End of contact request js on this page
 //------------------Reviews
-let reviewButton = getElementById("pending-reviews")
+let reviewButton = document.getElementById("pending-reviews")
+reviewButton.addEventListener("click", pendingReviewList)
+let pendingReviewTable = document.getElementById("pending-review-table")
 
 
 async function pendingReviewList(params) {
   let url = "http://localhost:8080/review/pending";
   let response = await fetch(url);
   if (response.status === 200) {
-    let body = response.json();
-    console .log(body);
+    let body = await response.json();
+    console.log(body)
+    populatePendingList(body)
+    
+  }else if (response.status === 404) {
+    alert("List can not be generated")
     
   } else {
-    
+    alert("something went wrong.")
   }
 }
 
+function populatePendingList(responseBody){
+  let array = responseBody
+  for(let reviews of array){
+    let tableRow = document.createElement("tr")
+    tableRow.innerHTML =`<td>${reviews.reviewId}</td><td>${reviews.userReview}</td><td>${reviews.mediaId}</td>`
+    pendingReviewTable.appendChild(tableRow);
+  }
+    
+  
+}
 
 
 // LOGOUT
