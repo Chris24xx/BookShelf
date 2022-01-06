@@ -40,7 +40,7 @@ public class ContactUsImpTest {
         for (ContactUs c : contactUsList){
             System.out.println(c);
         }
-        Assert.assertTrue(contactUsList.size() >= 3);
+        Assert.assertTrue(contactUsList.size() >= 1);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class ContactUsImpTest {
 
     @Test
     public void testUpdateContactRequest() {
-        boolean result = dao.updateContactRequestById(2);
+        boolean result = dao.updateContactRequestById(1);
         Assert.assertTrue(result);
     }
 

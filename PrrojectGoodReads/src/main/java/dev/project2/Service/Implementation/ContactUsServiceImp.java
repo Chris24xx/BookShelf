@@ -33,8 +33,8 @@ public ContactUsServiceImp(ContactUsAbstract contactDao){
     @Override
     public List<ContactUs> getAllContactRequests() {
         try{
-            List<ContactUs> contactUsList = this.contactDao.getAllContactRequests();
-            return contactUsList;
+            List<ContactUs> contactUsGetAllList = this.contactDao.getAllContactRequests();
+            return contactUsGetAllList;
         } catch(ListCanNotBeGenerated e){
             throw new ListCanNotBeGenerated("List cannot be generated at this time");
         }
@@ -43,8 +43,8 @@ public ContactUsServiceImp(ContactUsAbstract contactDao){
     @Override
     public List<ContactUs> getPendingContactRequests() {
         try {
-            List<ContactUs> contactUsList = this.contactDao.getPendingContactRequests();
-            return contactUsList;
+            List<ContactUs> contactUsPendingList = this.contactDao.getPendingContactRequests();
+            return contactUsPendingList;
         } catch (ListCanNotBeGenerated e) {
             throw new ListCanNotBeGenerated("List cannot be generated at this time");
         }
@@ -53,8 +53,8 @@ public ContactUsServiceImp(ContactUsAbstract contactDao){
     @Override
     public List<ContactUs> getCompletedContactRequests() {
         try {
-            List<ContactUs> contactUsList = this.contactDao.getCompletedContactRequests();
-            return contactUsList;
+            List<ContactUs> contactUsCompletedList = this.contactDao.getCompletedContactRequests();
+            return contactUsCompletedList;
         } catch (ListCanNotBeGenerated e) {
             throw new ListCanNotBeGenerated("List cannot be generated at this time");
         }
