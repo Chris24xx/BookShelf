@@ -629,7 +629,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Contact form" id="RNYdh6Buk4ETX-nQCWie">
-        <mxGraphModel dx="820" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="820" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="n-VgrL4TSSB8cFmch9BB-0"/>
                 <mxCell id="n-VgrL4TSSB8cFmch9BB-1" parent="n-VgrL4TSSB8cFmch9BB-0"/>
@@ -671,6 +671,15 @@
                 </mxCell>
                 <mxCell id="ElcNmvvRB3sRRVwF-7P9-2" value="Logout" style="rounded=1;whiteSpace=wrap;html=1;" parent="n-VgrL4TSSB8cFmch9BB-1" vertex="1">
                     <mxGeometry x="710" y="810" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3i2EFyw-CnmAgIMab98B-0" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="n-VgrL4TSSB8cFmch9BB-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="369.5" as="sourcePoint"/>
+                        <mxPoint x="370" y="369.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3i2EFyw-CnmAgIMab98B-1" value="Header for issue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="n-VgrL4TSSB8cFmch9BB-1">
+                    <mxGeometry x="440" y="360" width="110" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
