@@ -64,12 +64,13 @@ public class ReviewDaoImp implements ReviewAbstract  {
     }
 
     @Override
-    public List<Review> getAllReviews() {
+    public List<Review> getAllReviews(int reviewId) {
         try(Connection conn = DBConn.createConnection()) {
             String sql;
-            sql = "select * from project2.review";
-            Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            sql = "select * from project2.review where user_id = ?";
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setInt(1, reviewId);
+            ResultSet resultSet = preparedStatement.executeQuery();
             List<Review> reviewList = new ArrayList<>();
             while(resultSet.next()){
                 Review review = new Review(

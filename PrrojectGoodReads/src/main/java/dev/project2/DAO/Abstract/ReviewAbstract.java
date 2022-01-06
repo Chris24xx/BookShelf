@@ -9,7 +9,7 @@ public interface ReviewAbstract {
 
     Review getReview(int reviewId,int userID);
 
-    List<Review> getAllReviews();
+    List<Review> getAllReviews(int reviewId);
 
     boolean deleteReview(int reviewId);
 
