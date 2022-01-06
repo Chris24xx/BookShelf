@@ -3,6 +3,7 @@ package dev.project2.Service.Implementation;
 import dev.project2.DAO.Abstract.ContactUsAbstract;
 import dev.project2.Entities.ContactUs;
 import dev.project2.Exception.ContactUsNotFound;
+import dev.project2.Exception.ListCanNotBeGenerated;
 import dev.project2.Service.Abstract.ContactUsAbstractService;
 
 import java.util.List;
@@ -31,18 +32,34 @@ public ContactUsServiceImp(ContactUsAbstract contactDao){
 
     @Override
     public List<ContactUs> getAllContactRequests() {
-        return this.contactDao.getAllContactRequests();
+        try{
+            List<ContactUs> contactUsGetAllList = this.contactDao.getAllContactRequests();
+            return contactUsGetAllList;
+        } catch(ListCanNotBeGenerated e){
+            throw new ListCanNotBeGenerated("List cannot be generated at this time");
+        }
     }
 
     @Override
     public List<ContactUs> getPendingContactRequests() {
-        return this.contactDao.getPendingContactRequests();
+        try {
+            List<ContactUs> contactUsPendingList = this.contactDao.getPendingContactRequests();
+            return contactUsPendingList;
+        } catch (ListCanNotBeGenerated e) {
+            throw new ListCanNotBeGenerated("List cannot be generated at this time");
+        }
     }
 
     @Override
     public List<ContactUs> getCompletedContactRequests() {
-        return this.contactDao.getCompletedContactRequests();
-    }
+        try {
+            List<ContactUs> contactUsCompletedList = this.contactDao.getCompletedContactRequests();
+            return contactUsCompletedList;
+        } catch (ListCanNotBeGenerated e) {
+            throw new ListCanNotBeGenerated("List cannot be generated at this time");
+        }
+}
+
 
     @Override
     public boolean updateContactRequestById(int contactId) {

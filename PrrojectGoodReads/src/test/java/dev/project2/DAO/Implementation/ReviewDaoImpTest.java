@@ -16,7 +16,7 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testCreateReview() {
-        Review review = new Review(1,null, Instant.now(),5,1,5,"test");
+        Review review = new Review(1,null,"now",1,1,5,"test");
         Review returnedReview = dao.createReview(review);
         Assert.assertTrue(returnedReview.getReviewId() != 0);
     }
