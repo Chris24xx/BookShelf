@@ -247,3 +247,7 @@ button:active {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(2, 2, 78);
 }
+
+table {
+    margin-top: 1rem;
+}
