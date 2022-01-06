@@ -195,18 +195,18 @@
     </section>
 
 
-
+    <!-- Contact us Section -->
     <section id="moderator-contact" class="tabcontent">
         <h2>Contact Us</h2>
         <div class="flex-contact">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email" id="contactUsEmailInput">
+            <input type="text" placeholder="Name" id="contactUsNameInput">
             <h3 style="margin-top: 1.5rem;">Issue</h3>
-            <textarea placeholder="Please describe the issue." cols="30" rows="10"></textarea>
-            <button class="add-new-media-button">Submit</button>
+            <textarea placeholder="Please describe the issue." id="contactUsIssueInput" cols="30" rows="10"></textarea>
+            <button class="add-new-media-button" id="contactUsCreateButton" onClick="createContactRequest()">Submit</button>
         </div>
     </section>
-
+    <!-- Contact us Section Ends -->
 
 
     <section class="add-new-media" id="media-box">
