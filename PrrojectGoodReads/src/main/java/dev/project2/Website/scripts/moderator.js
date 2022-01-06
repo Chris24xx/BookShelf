@@ -13,7 +13,7 @@ function openTab(evt, tabName) {
   };
 
 
-  //Contact us List of Completed and Pending Functions
+  //Contact us List of Completed and Pending Function Constants
   const pendingTable = document.getElementById("pending-messages-table");
   const pendingTableBody = document.getElementById("pending-message-body");
   const completedTable = document.getElementById("completed-messages-table");
@@ -47,7 +47,7 @@ async function getCompletedContactRequests(){
     }
 }
 
-// Populate data for contact us tables
+// Populate data for Pending contact us table
 function populateData(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
@@ -56,7 +56,7 @@ function populateData(responseBody){
   }
 }
 
-// Populate data for contact us tables
+// Populate data for Completed contact us table
 function populateDataComp(responseBody){
   for (let contact_us of responseBody){
       let tableRow = document.createElement("tr");
