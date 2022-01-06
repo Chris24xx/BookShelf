@@ -97,14 +97,13 @@ public class MediaController {
 
 
 
-    // TROUBLE
     public Handler approveMedia = ctx -> {
-        int id = Integer.parseInt(ctx.pathParam("id"));
+        int id = Integer.parseInt(ctx.pathParam("mediaId"));
         try {
             boolean media = this.mediaService.approveMediaService(id);
-//            Gson gson = new Gson();
-//            String mediaJson = gson.toJson(media);
-            ctx.result(String.valueOf(media));
+            Gson gson = new Gson();
+            String mediaJson = gson.toJson(media);
+            ctx.result(mediaJson);
             ctx.status(200);
         } catch (ItemNotFound i) {
             ctx.result(i.getMessage());
@@ -114,15 +113,14 @@ public class MediaController {
 
 
 
-    // TROUBLE
     public Handler deleteMedia = ctx -> {
-        int id = Integer.parseInt(ctx.pathParam("id"));
+        int id = Integer.parseInt(ctx.pathParam("mediaId"));
         try {
             boolean media = this.mediaService.deleteMediaService(id);
-//            Gson gson = new Gson();
-//            String mediaJson = gson.toJson(media);
-            ctx.result(String.valueOf(media));
-            ctx.status(200);
+            Gson gson = new Gson();
+            String mediaJson = gson.toJson(media);
+            ctx.result(mediaJson);
+            ctx.status(201);
         } catch (ItemNotFound i) {
             ctx.result(i.getMessage());
             ctx.status(404);

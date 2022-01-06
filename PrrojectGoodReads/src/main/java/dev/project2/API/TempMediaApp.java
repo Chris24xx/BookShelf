@@ -29,8 +29,8 @@ public class TempMediaApp {
         app.get("/title/{title}", mediaController.getMediaByTitle);
         app.get("/pendingMedia", mediaController.getPendingMedia);
         app.get("/approvedMedia", mediaController.getApprovedMedia);
-        app.get("/approveMedia/{mediaId}", mediaController.approveMedia);  // TROUBLE
-        app.get("/deleteMedia/{mediaId}", mediaController.deleteMedia);   // TROUBLE
+        app.patch("/approveMedia/{mediaId}", mediaController.approveMedia);
+        app.delete("/deleteMedia/{mediaId}", mediaController.deleteMedia);
 
 
 
