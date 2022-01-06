@@ -53,7 +53,7 @@ public class ReviewController {
     };
 
     public Handler getAllReview = context -> {
-        int reviewId = Integer.parseInt(context.pathParam("reviewId"));
+        int reviewId = Integer.parseInt(context.pathParam("userId"));
         List<Review> reviewList = this.reviewImp.getAllReviewsService(reviewId);
         GsonBuilder builder = new GsonBuilder();
         builder.serializeNulls();
