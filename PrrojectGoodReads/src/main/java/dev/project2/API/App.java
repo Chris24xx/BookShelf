@@ -10,6 +10,7 @@ import dev.project2.Service.Implementation.MediaServiceImp;
 import dev.project2.Service.Implementation.ReviewImp;
 import dev.project2.controllers.ContactUsController;
 import dev.project2.controllers.MediaController;
+import dev.project2.controllers.ReviewController;
 import io.javalin.Javalin;
 
 public class App {
@@ -43,7 +44,7 @@ public class App {
         // REVIEW
         app.post("/review", reviewController.createReview);
         app.get("/review/{reviewId}/{userId}", reviewController.getReview);
-        app.get("/review/all", reviewController.getAllReview);
+        app.get("/review/all/{userId}", reviewController.getAllReview);
         app.get("/review/pending", reviewController.getPendingReview);
         app.get("/review/past", reviewController.getPastReviews);
         app.patch("/review/update/{reviewId}",reviewController.updateReview);

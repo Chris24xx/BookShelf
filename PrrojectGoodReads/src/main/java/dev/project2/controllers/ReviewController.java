@@ -1,4 +1,4 @@
-package dev.project2.API;
+package dev.project2.controllers;
 
 import com.fatboyindustrial.gsonjodatime.Converters;
 import com.google.gson.Gson;
@@ -53,7 +53,7 @@ public class ReviewController {
     };
 
     public Handler getAllReview = context -> {
-        int reviewId = Integer.parseInt(context.pathParam("reviewId"));
+        int reviewId = Integer.parseInt(context.pathParam("userId"));
         List<Review> reviewList = this.reviewImp.getAllReviewsService(reviewId);
         GsonBuilder builder = new GsonBuilder();
         builder.serializeNulls();
@@ -71,7 +71,7 @@ public class ReviewController {
             Gson gson = builder.setPrettyPrinting().create();
             String list = gson.toJson(pendingReviewList);
             context.result(list);
-            context.status(201);
+            context.status(200);
         } catch (ListCanNotBeGenerated e) {
             context.result(e.getMessage());
             context.status(404);
