@@ -71,7 +71,7 @@ public class ReviewController {
             Gson gson = builder.setPrettyPrinting().create();
             String list = gson.toJson(pendingReviewList);
             context.result(list);
-            context.status(201);
+            context.status(200);
         } catch (ListCanNotBeGenerated e) {
             context.result(e.getMessage());
             context.status(404);
