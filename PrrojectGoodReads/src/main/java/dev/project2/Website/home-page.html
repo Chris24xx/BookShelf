@@ -45,20 +45,31 @@
                     <input type="text" placeholder="Search titles">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
-                <!-- Ordered list of titles will be generated here. -->
-                <ol id="list-of-titles"></ol>
-            </section>
-            <section class="title-info-section">
-                <h3>This Title</h3>
-                <p id="prof-title"></p>
-                <p id="prof-creator"></p>
-                <p id="prof-genre"></p>
-                <p id="prof-synopsis"></p>
+                <table id="user-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Media Type</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
-                <!-- Ordered list of reviews will be generated here. -->
-                <ol id="list-of-reviews"></ol>
+                <table id="user-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
         </div>
         <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
@@ -75,21 +86,30 @@
                     <input type="text" placeholder="Search books">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
-                <!-- Ordered list of titles will be generated here. -->
-                <ol id="list-of-titles"></ol>
-            </section>
-            <section class="title-info-section">
-                <h3>This Book</h3>
-                <p id="book-title"></p>
-                <p id="book-creator"></p>
-                <p id="book-genre"></p>
-                <p id="book-synopsis"></p>
-                <button id="duplicate-button">Duplicate for my collection</button>
+                <table id="books-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
-                <!-- Ordered list of reviews will be generated here. -->
-                <ol id="list-of-reviews"></ol>
+                <table id="books-reviews-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
         </div>
         <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
@@ -106,21 +126,30 @@
                     <input type="text" placeholder="Search movies">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
-                <!-- Ordered list of titles will be generated here. -->
-                <ol id="list-of-titles"></ol>
-            </section>
-            <section class="title-info-section">
-                <h3>This Movie</h3>
-                <p id="movie-title"></p>
-                <p id="movie-creator"></p>
-                <p id="movie-genre"></p>
-                <p id="movie-synopsis"></p>
-                <button id="duplicate-button">Duplicate for my collection</button>
+                <table id="movies-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
-                <!-- Ordered list of reviews will be generated here. -->
-                <ol id="list-of-reviews"></ol>
+                <table id="movie-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
         </div>
         <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
@@ -137,21 +166,30 @@
                     <input type="text" placeholder="Search games">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
-                <!-- Ordered list of titles will be generated here. -->
-                <ol id="list-of-titles"></ol>
-            </section>
-            <section class="title-info-section">
-                <h3>This Game</h3>
-                <p id="game-title"></p>
-                <p id="game-creator"></p>
-                <p id="game-genre"></p>
-                <p id="game-synopsis"></p>
-                <button id="duplicate-button">Duplicate for my collection</button>
+                <table id="games-list-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Synopsis</th>
+                        <th>Genre</th>
+                    </thead>
+                    <tbody>
+                        <!-- Title rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
             <section class="review-list-section">
                 <h3>The Reviews</h3>
-                <!-- Ordered list of reviews will be generated here. -->
-                <ol id="list-of-reviews"></ol>
+                <table id="game-review-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <!-- Review rows and data will go here. -->
+                    </tbody>
+                </table>
             </section>
         </div>
         <button class="add-new-media-button" id="media-button">Add a new title to your collection</button>
@@ -164,7 +202,7 @@
         <div class="flex-contact">
             <input type="email" placeholder="Email">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Issue">
+            <h3 style="margin-top: 1.5rem;">Issue</h3>
             <textarea placeholder="Please describe the issue." cols="30" rows="10"></textarea>
             <button class="add-new-media-button">Submit</button>
         </div>
