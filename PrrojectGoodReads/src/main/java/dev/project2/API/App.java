@@ -25,7 +25,7 @@ public class App {
 
         app.get("/review/{reviewId}/{userId}", reviewController.getReview);
 
-        app.get("/review/all", reviewController.getAllReview);
+        app.get("/review/all/{reviewId}", reviewController.getAllReview);
 
         app.get("/review/pending", reviewController.getPendingReview);
 
