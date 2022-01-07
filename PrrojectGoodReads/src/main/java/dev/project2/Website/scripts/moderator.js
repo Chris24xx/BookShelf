@@ -18,6 +18,8 @@ function openTab(evt, tabName) {
   const pendingTableBody = document.getElementById("pending-message-body");
   const completedTable = document.getElementById("completed-messages-table");
   const completedTableBody = document.getElementById("completed-message-body");
+  const pendingInput = document.getElementById("pendingIdInput");
+
 // Get Pending Contact Requests
   async function getPendingContactRequests(){
     let url = "http://localhost:8080/contactRequests/pending";
@@ -46,6 +48,38 @@ async function getCompletedContactRequests(){
         alert("There was a problem trying to get completed contact requests: sorry!");
     }
 }
+
+
+// Update Contact Request Status
+async function updateContactRequestStatus(){
+  let url = "http://localhost:8080/updateContactRequestStatus/"
+  
+   let response = await fetch(
+       url + pendingInput, {
+          method:"PATCH",
+          headers: {"Content-Type": "application/json"},
+      //     body: JSON.stringify({
+      //       "contactId":0,
+      //        "email":"some email",
+      //        "fullName":"a full name",
+      //        "issueMessage":"an issue message",
+      //         "status":true})
+      // 
+    }
+   )
+
+   if (response.status === 200 || response.status === 201){
+       document.location.reload(true)
+       let body = await response.json()
+
+    
+   } else {
+       alert("your contact request update failed")
+   }
+}
+
+// Delete Contact Request
+
 
 // Populate data for Pending contact us table
 function populateData(responseBody){
