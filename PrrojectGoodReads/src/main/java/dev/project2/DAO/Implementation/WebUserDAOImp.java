@@ -2,6 +2,7 @@ package dev.project2.DAO.Implementation;
 
 import dev.project2.DAO.Abstract.WebUserDAO;
 import dev.project2.Entities.WebUser;
+import dev.project2.Exception.WebUserNotFound;
 import dev.project2.dbcon.DBConn;
 
 import java.sql.*;
@@ -30,7 +31,7 @@ public class WebUserDAOImp implements WebUserDAO {
                 return webUser;
             }
             else{
-                throw new RuntimeException("WebUser not found");
+                throw new WebUserNotFound("User not found");
             }
         } catch (SQLException e){
             e.printStackTrace();
@@ -121,4 +122,31 @@ public class WebUserDAOImp implements WebUserDAO {
         return false;
     }
     }
+
+    @Override
+    public WebUser getWebUserByEmail(String email) {
+        try(Connection connection = DBConn.createConnection()){
+            String sql = "select * from project2.web_user where email = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next()){
+                WebUser webUser = new WebUser(
+                        resultSet.getInt("user_id"),
+                        resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getString("email"),
+                        resultSet.getString("user_password"),
+                        resultSet.getBoolean("enabled_moderator")
+                );
+                return webUser;
+            }
+            else{
+                throw new WebUserNotFound("User Email not found");
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+            return null;
+        }    }
 }
