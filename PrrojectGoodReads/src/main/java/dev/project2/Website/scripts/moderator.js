@@ -13,11 +13,13 @@ function openTab(evt, tabName) {
 };
 
 
-//Contact us List of Completed and Pending Function Constants
-const pendingTable = document.getElementById("pending-messages-table");
-const pendingTableBody = document.getElementById("pending-message-body");
-const completedTable = document.getElementById("completed-messages-table");
-const completedTableBody = document.getElementById("completed-message-body");
+  //Contact us List of Completed and Pending Function Constants
+  const pendingTable = document.getElementById("pending-messages-table");
+  const pendingTableBody = document.getElementById("pending-message-body");
+  const completedTable = document.getElementById("completed-messages-table");
+  const completedTableBody = document.getElementById("completed-message-body");
+  const pendingInput = document.getElementById("pendingIdInput");
+  const deleteIdInput = document.getElementById("deleteIdInput");
 // Get Pending Contact Requests
 async function getPendingContactRequests() {
   let url = "http://localhost:8080/contactRequests/pending";
@@ -46,6 +48,66 @@ async function getCompletedContactRequests() {
     alert("There was a problem trying to get completed contact requests: sorry!");
   }
 }
+
+
+// Update Contact Request Status
+async function updateContactRequestStatus(){
+  sessionStorage.setItem("pendingInput", pendingInput.value);
+  let url = "http://localhost:8080/updateContactRequestStatus/"
+ 
+   let response = await fetch(
+       url + pendingInput.value
+       ,{
+          method:"PATCH",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            "contactId":pendingInput.value,
+            "status":true
+          })
+      
+    }
+   )
+
+   if (response.status === 200 || response.status === 201){
+       document.location.reload(true)
+       let body = await response.json()
+
+    
+   } else {
+       alert("your contact request update failed")
+       document.location.reload(true)
+   }
+}
+
+// Delete Contact Request
+async function deleteContactRequest(){
+  sessionStorage.setItem("deleteIdInput", deleteIdInput.value);
+  let url = "http://localhost:8080/deleteContactRequest/"
+ 
+   let response = await fetch(
+       url + deleteIdInput.value
+       ,{
+          method:"DELETE",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            "contactId":deleteIdInput.value,
+            "status":true
+          })
+      
+    }
+   )
+
+   if (response.status === 200 || response.status === 201){
+       document.location.reload(true)
+       let body = await response.json()
+
+    
+   } else {
+       alert("your have not deleted your contact request")
+       document.location.reload(true)
+   }
+}
+
 
 // Populate data for Pending contact us table
 function populateData(responseBody) {
@@ -160,7 +222,34 @@ async function updateReview(approval) {
 
 
 
+//-------------End of Reviews
+  //User List Function and Constants
+  const userTable = document.getElementById("users-table");
+  const userTableBody = document.getElementById("user-table-body");
+// List all users 
+async function getAllUsers(){
+  let url = "http://localhost:8080/webUsers";
 
+  let response = await fetch(url);
+  
+  if (response.status === 200 || response.status === 201){
+      let body = await response.json();
+      populateUserData(body);
+  } else {
+      alert("There was a problem trying to get all users: sorry!");
+  }
+}
+
+// Populate data for all users
+function populateUserData(responseBody){
+  for (let web_user of responseBody){
+      let tableRow = document.createElement("tr");
+      tableRow.innerHTML = `<td>${web_user.userId}</td><td>${web_user.firstName}</td><td>${web_user.lastName}</td><td>${web_user.userEmail}</td>`;
+      userTable.appendChild(tableRow);
+  }
+}
+
+ getAllUsers()
 // LOGOUT
 function logout() {
   window.location.href = "login.html";

@@ -41,7 +41,11 @@
                         </tbody>
                     </table>
                 </section>
-                <button class="update-button">Update Status</button>
+            </div>
+                <br>
+                <div class="flex-update">
+                    <input type="number" placeholder="Contact Request Id" id="pendingIdInput">
+                    <button class="update-button" onClick="updateContactRequestStatus()">Update Status</button>
             </div>
         </div>
         <div class="flex-messages">
@@ -65,7 +69,12 @@
             <!-- <div class="flex-update">
                 <section class="message">
                 </section> -->
-                <button class="update-button">Delete Status</button>
+                <br>
+                <div class="flex-update">
+                    <input type="number" placeholder="Contact Request Id" id="deleteIdInput">
+                    <button class="update-button" onClick="deleteContactRequest()">Delete Request</button>
+                </div>
+                
             </div>
         </div>
     </section>
