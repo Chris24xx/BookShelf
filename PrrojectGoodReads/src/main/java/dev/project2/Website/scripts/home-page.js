@@ -15,19 +15,28 @@ function openTab(evt, tabName) {
 
 
 // OPEN/CLOSE BOX TO CREATE NEW MEDIA
-let mediaButton = document.getElementById("media-button");
+let mediaButton = document.getElementsByClassName("add-new-media-button");
 let newMediaBox = document.getElementsByClassName("add-new-media");
 
 // Open the media box.
 function openMediaBox() {
-  newMediaBox.style.display = "block";
+  for(let i = 0; i < newMediaBox.length; i++){
+    newMediaBox[i].style.display = "block";
+  }
 };
 
-mediaButton.addEventListener("click", openMediaBox);
+function mediaButtonsListener(){
+  for(let i = 0; mediaButton.length; i++){
+    if(mediaButton[i].id === "media-button"){
+      mediaButton[i].addEventListener("click", openMediaBox);
+    }
+  }
+}
 
-// Close the media box.
 function closeMediaBox() {
-  newMediaBox.style.display = "none";
+  for(let i = 0; i < newMediaBox.length; i++){
+    newMediaBox[i].style.display = "none";
+  }
 };
 
 
@@ -105,3 +114,5 @@ async function createContactRequest(){
 function logout(){
   window.location.href = "login.html";
 };
+
+mediaButtonsListener();
