@@ -3,7 +3,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dev.project2.Entities.Media;
 import dev.project2.Exception.ItemNotFound;
-import dev.project2.Exception.TitleNotFound;
 import dev.project2.Service.Abstract.MediaService;
 import io.javalin.http.Handler;
 
@@ -66,21 +65,6 @@ public class MediaController {
         String gamesJSONs = gson.toJson(games);
         ctx.result(gamesJSONs);
         ctx.status(200);
-    };
-
-
-    public Handler getMediaByTitle = ctx -> {
-        String title = ctx.pathParam("title");
-        try {
-            Media media = this.mediaService.getMediaByTitleService(title);
-            Gson gson = new Gson();
-            String mediaJson = gson.toJson(media);
-            ctx.result(mediaJson);
-            ctx.status(200);
-        } catch (TitleNotFound t) {
-            ctx.result(t.getMessage());
-            ctx.status(404);
-        }
     };
 
 

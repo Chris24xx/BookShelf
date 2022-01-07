@@ -76,3 +76,22 @@ async function approveMedia(){
         alert("Could not approve this media!");
     };
 };
+
+
+
+// TO DENY/DELETE A PIECE OF MEDIA
+async function deleteMedia(){
+    let mediaIdInput = document.getElementById("media-id-input");
+
+    let deleteRoute = "http://localhost:8080/deleteMedia/";
+    let response = await fetch(deleteRoute + mediaIdInput.value, {headers:{'Content-Type': 'application/json'}, method: "DELETE"});
+
+    if(response.status == 200){
+        let deleteMediaBody = await response.json();
+        mediaIdInput.value = '';
+        // document.location.reload(true);
+        console.log(deleteMediaBody);
+    } else if(response.status == 404){
+        alert("Could not delete this media!");
+    };
+};

@@ -13,12 +13,6 @@ public class MediaServiceTests {
 
 
 
-    @Test(expectedExceptions = TitleNotFound.class, expectedExceptionsMessageRegExp = "Title was not found")
-    void testGetMediaByTitleService(){
-        mediaService.getMediaByTitleService("Capture the Flag");
-    }
-
-
     @Test(expectedExceptions = ItemNotFound.class,
             expectedExceptionsMessageRegExp = "This piece of media does not exist")
     void testApproveMediaService(){

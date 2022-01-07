@@ -155,35 +155,6 @@ public class MediaDAOImp implements MediaDAO {
 
 
 
-    @Override
-    public Media getMediaByTitle(String title) {
-        try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where title = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, title);
-            ResultSet rs = preparedStatement.executeQuery();
-            if(rs.next()){
-                Media media = new Media(
-                        rs.getInt("media_id"),
-                        rs.getString("title"),
-                        rs.getString("creator"),
-                        rs.getString("synopsis"),
-                        rs.getString("media_type"),
-                        rs.getString("genre"),
-                        rs.getBoolean("status"),
-                        rs.getInt("user_id")
-                );
-                return media;
-            } else {
-                throw new TitleNotFound("Title was not found");
-            }
-        } catch (SQLException q){
-            q.printStackTrace();
-            return null;
-        }
-    }
-
-
 
 
     @Override
