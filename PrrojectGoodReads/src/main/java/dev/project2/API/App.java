@@ -4,13 +4,16 @@ import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.DAO.Implementation.ContactUsDAOImp;
 import dev.project2.DAO.Implementation.MediaDAOImp;
 import dev.project2.DAO.Implementation.ReviewDaoImp;
+import dev.project2.DAO.Implementation.WebUserDAOImp;
 import dev.project2.Service.Abstract.MediaService;
 import dev.project2.Service.Implementation.ContactUsServiceImp;
 import dev.project2.Service.Implementation.MediaServiceImp;
 import dev.project2.Service.Implementation.ReviewImp;
+import dev.project2.Service.Implementation.WebUserServiceImp;
 import dev.project2.controllers.ContactUsController;
 import dev.project2.controllers.MediaController;
 import dev.project2.controllers.ReviewController;
+import dev.project2.controllers.WebUserController;
 import io.javalin.Javalin;
 
 public class App {
@@ -38,7 +41,9 @@ public class App {
         MediaController mediaController = new MediaController(mediaService);
 
         // WEB USER
-
+        WebUserDAOImp webUserDAOImp = new WebUserDAOImp();
+        WebUserServiceImp webUserServiceImp = new WebUserServiceImp(webUserDAOImp);
+        WebUserController webUserController = new WebUserController(webUserServiceImp);
 
 
         // REVIEW
@@ -74,8 +79,12 @@ public class App {
 
 
         // WEB USER
-
-
+        app.post("/webUser", webUserController.createWebUser);
+        app.get("/webUser/{userId}", webUserController.getWebUserById);
+        app.get("/webUsers", webUserController.getAllWebUsers);
+        app.delete("/webUser/delete/{userId}", webUserController.deleteWebUser);
+        app.patch("/webUser/mod/{userId}", webUserController.moderatorStatus);
+        app.post("webUser/login", webUserController.webUserLoginStatus);
 
 
         app.start();
