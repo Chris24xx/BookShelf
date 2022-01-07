@@ -62,7 +62,7 @@ public class MediaDAOImpTest {
     @Test
     public void testGetPendingMedia() {
         List<Media> pendingMedia = mediaDAO.getPendingMedia();
-
+        Assert.assertTrue(pendingMedia.size() >= 1);
     }
 
 
