@@ -49,7 +49,7 @@ public class App {
         // REVIEW
         app.post("/review", reviewController.createReview);
         app.get("/review/{reviewId}/{userId}", reviewController.getReview);
-        app.get("/review/all/{userId}", reviewController.getAllReview);
+        app.get("/review/all/{userId}/{mediaId}", reviewController.getAllReview);
         app.get("/review/pending", reviewController.getPendingReview);
         app.get("/review/past", reviewController.getPastReviews);
         app.patch("/review/update/{reviewId}",reviewController.updateReview);
@@ -72,6 +72,9 @@ public class App {
         app.get("/books", mediaController.getAllBooks);
         app.get("/movies", mediaController.getAllMovies);
         app.get("/games", mediaController.getAllGames);
+        app.get("/pendingMedia", mediaController.getPendingMedia);
+        app.get("/approvedMedia", mediaController.getApprovedMedia);
+        app.patch("/approveMedia/{mediaId}", mediaController.approveMedia);
 
 
         // WEB USER

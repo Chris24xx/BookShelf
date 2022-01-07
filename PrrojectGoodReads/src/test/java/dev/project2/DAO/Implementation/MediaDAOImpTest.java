@@ -14,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Halo Infinite", "343 Industries",
-                "A supersoldier and his fight against the Banished.", "Game", "Action",
-                false, 7);
+        Media newMedia = new Media(0, "Test", "Test",
+                "Testing test tester.", "Game", "Action",
+                false, 1);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Halo Infinite");
+        Assert.assertEquals(returnedMedia.getTitle(), "Test");
     }
 
 

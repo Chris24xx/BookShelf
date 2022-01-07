@@ -104,7 +104,7 @@
 
 
     <section id="media-pending" class="tabcontent">
-        <h2>Pending Media</h2>
+        <h2>Make Media Decisions</h2>
         <div class="flex-container">
             <section class="pending-list">
                 <h3>List of Pending Media</h3>
@@ -114,8 +114,9 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Synopsis</th>
+                        <th>Genre</th>
                     </thead>
-                    <tbody>
+                    <tbody id="pending-media-info">
                         <!-- Media rows and data will go here. -->
                     </tbody>
                 </table>
@@ -128,23 +129,24 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Synopsis</th>
+                        <th>Genre</th>
                     </thead>
-                    <tbody>
+                    <tbody id="approved-media-info">
                         <!-- Media rows and data will go here. -->
                     </tbody>
                 </table>
             </section>
         </div>
         <div class="approve-deny-flex">
-            <input type="number" placeholder="Media Id">
-            <button>Approve</button>
+            <input type="number" placeholder="Media Id" id="media-id-input">
+            <button id="approve-media-btn" onclick="approveMedia();">Approve</button>
             <button>Deny</button>
         </div>
     </section>
 
 
     <section id="reviews-pending" class="tabcontent">
-        <h2>Pending Reviews</h2>
+        <h2>Make Review Decisions</h2>
         <div class="flex-container">
             <section class="pending-list">
                 <h3>List of Pending Reviews</h3>
@@ -190,5 +192,6 @@
 
     
 <script src="scripts/moderator.js"></script>
+<script src="scripts/kylatempmod.js"></script>
 </body>
 </html>
