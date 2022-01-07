@@ -155,3 +155,18 @@ function populateGames(jsonBody){
         gameTableBody.appendChild(tableRow);
     };
 };
+
+
+// Review Functions
+
+async function userReviewList() {
+    mediaId = sessionStorage.getItem("mediaId")
+    userId = sessionStorage.getItem("webUserId")
+    let url = `http://localhost:8080/review/all/${userId}/${mediaId}`;
+    let response = await fetch(url);
+    if(response.status === 200){
+        let body = await response.json();
+        console.log(body)
+    }
+
+}
