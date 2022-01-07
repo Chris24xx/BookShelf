@@ -68,14 +68,10 @@ public class App {
 
         // MEDIA
         app.post("/newMedia", mediaController.createMedia);
+        app.get("/userMedia/{userId}", mediaController.getMediaPerUser);
         app.get("/books", mediaController.getAllBooks);
         app.get("/movies", mediaController.getAllMovies);
         app.get("/games", mediaController.getAllGames);
-        app.get("/title/{title}", mediaController.getMediaByTitle);
-        app.get("/pendingMedia", mediaController.getPendingMedia);
-        app.get("/approvedMedia", mediaController.getApprovedMedia);
-        app.patch("/approveMedia/{mediaId}", mediaController.approveMedia);
-        app.delete("/deleteMedia/{mediaId}", mediaController.deleteMedia);
 
 
         // WEB USER
