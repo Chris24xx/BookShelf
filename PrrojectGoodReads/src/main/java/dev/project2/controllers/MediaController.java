@@ -132,7 +132,7 @@ public class MediaController {
             Gson gson = new Gson();
             String mediaJson = gson.toJson(media);
             ctx.result(mediaJson);
-            ctx.status(201);
+            ctx.status(200);
         } catch (ItemNotFound i) {
             ctx.result(i.getMessage());
             ctx.status(404);
