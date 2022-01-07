@@ -93,3 +93,68 @@ function populateBooks(jsonBody){
         bookTableBody.appendChild(tableRow);
     };
 };
+
+
+
+
+
+// TO VIEW ALL MOVIES
+let movieButton = document.getElementById("movies");
+movieButton.addEventListener("click", getAllApprovedMovies);
+
+async function getAllApprovedMovies(){
+    movieTableBody.innerHTML = '';
+    const moviesRoute = "http://localhost:8080/movies";
+    let response = await fetch(moviesRoute);
+    if(response.status == 200){
+        let movieBody = await response.json();
+        console.log(movieBody);
+        populateMovies(movieBody);
+    } else {
+        alert("Could not retrieve Movies!");
+    };
+};
+
+
+const movieTable = document.getElementById("movies-list-table");
+const movieTableBody = document.getElementById("movies-info");
+
+function populateMovies(jsonBody){
+    for(let mb of jsonBody){
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
+        movieTableBody.appendChild(tableRow);
+    };
+};
+
+
+
+
+// TO VIEW ALL GAMES
+let gameButton = document.getElementById("games");
+gameButton.addEventListener("click", getAllApprovedGames);
+
+async function getAllApprovedGames(){
+    gameTableBody.innerHTML = '';
+    const gamesRoute = "http://localhost:8080/games";
+    let response = await fetch(gamesRoute);
+    if(response.status == 200){
+        let gameBody = await response.json();
+        console.log(gameBody);
+        populateGames(gameBody);
+    } else {
+        alert("Could not retrieve Games!");
+    };
+};
+
+
+const gameTable = document.getElementById("games-list-table");
+const gameTableBody = document.getElementById("games-info");
+
+function populateMovies(jsonBody){
+    for(let gb of jsonBody){
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
+        gameTableBody.appendChild(tableRow);
+    };
+};
