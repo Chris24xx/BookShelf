@@ -91,7 +91,7 @@ public class ReviewController {
         Gson gson = new Gson();
         String newResult = gson.toJson(result);
         context.result(newResult);
-        context.status(201);
+        context.status(200);
     };
 
     public Handler updateReview = context -> {
