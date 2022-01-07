@@ -53,18 +53,17 @@ async function getCompletedContactRequests(){
 // Update Contact Request Status
 async function updateContactRequestStatus(){
   let url = "http://localhost:8080/updateContactRequestStatus/"
-  
+ 
    let response = await fetch(
-       url + pendingInput, {
+       url + pendingInput
+       ,{
           method:"PATCH",
           headers: {"Content-Type": "application/json"},
-      //     body: JSON.stringify({
-      //       "contactId":0,
-      //        "email":"some email",
-      //        "fullName":"a full name",
-      //        "issueMessage":"an issue message",
-      //         "status":true})
-      // 
+          body: JSON.stringify({
+            "contactId":0,
+            "status":true
+          })
+      
     }
    )
 
@@ -75,6 +74,7 @@ async function updateContactRequestStatus(){
     
    } else {
        alert("your contact request update failed")
+       document.location.reload(true)
    }
 }
 
