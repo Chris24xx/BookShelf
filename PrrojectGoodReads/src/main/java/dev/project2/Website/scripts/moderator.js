@@ -166,7 +166,34 @@ function populatePendingList(responseBody){
   
 }
 
+//-------------End of Reviews
+  //User List Function and Constants
+  const userTable = document.getElementById("users-table");
+  const userTableBody = document.getElementById("user-table-body");
+// List all users 
+async function getAllUsers(){
+  let url = "http://localhost:8080/webUsers";
 
+  let response = await fetch(url);
+  
+  if (response.status === 200 || response.status === 201){
+      let body = await response.json();
+      populateUserData(body);
+  } else {
+      alert("There was a problem trying to get all users: sorry!");
+  }
+}
+
+// Populate data for all users
+function populateUserData(responseBody){
+  for (let web_user of responseBody){
+      let tableRow = document.createElement("tr");
+      tableRow.innerHTML = `<td>${web_user.userId}</td><td>${web_user.firstName}</td><td>${web_user.lastName}</td><td>${web_user.userEmail}</td>`;
+      userTable.appendChild(tableRow);
+  }
+}
+
+ getAllUsers()
 // LOGOUT
 function logout(){
     window.location.href = "login.html";
