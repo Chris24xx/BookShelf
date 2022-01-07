@@ -14,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Anne of Green Gables", "Lucy Maud Montgomery",
-                "The orphan with great imagination.", "Book", "Children's literature",
-                false, 2);
+        Media newMedia = new Media(0, "Halo Infinite", "343 Industries",
+                "A supersoldier and his fight against the Banished.", "Game", "Action",
+                false, 7);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Anne of Green Gables");
+        Assert.assertEquals(returnedMedia.getTitle(), "Halo Infinite");
     }
 
 
@@ -33,14 +33,14 @@ public class MediaDAOImpTest {
     @Test
     public void testGetAllBooks() {
         List<Media> allBooks = mediaDAO.getAllBooks();
-        Assert.assertTrue(allBooks.size() == 2);
+        Assert.assertTrue(allBooks.size() >= 2);
     }
 
 
     @Test
     public void testGetAllMovies() {
         List<Media> allMovies = mediaDAO.getAllMovies();
-        Assert.assertTrue(allMovies.size() >= 0);
+        Assert.assertTrue(allMovies.size() >= 1);
     }
 
 
@@ -48,7 +48,7 @@ public class MediaDAOImpTest {
     @Test
     public void testGetAllGames() {
         List<Media> allGames = mediaDAO.getAllGames();
-        Assert.assertTrue(allGames.size() >= 0);
+        Assert.assertTrue(allGames.size() >= 1);
     }
 
     @Test
@@ -62,7 +62,7 @@ public class MediaDAOImpTest {
     @Test
     public void testGetPendingMedia() {
         List<Media> pendingMedia = mediaDAO.getPendingMedia();
-
+        Assert.assertTrue(pendingMedia.size() >= 1);
     }
 
 
@@ -76,7 +76,7 @@ public class MediaDAOImpTest {
 
     @Test
     public void testApproveMedia() {
-        Boolean approvedAMedia = mediaDAO.approveMedia(2);
+        Boolean approvedAMedia = mediaDAO.approveMedia(7);
         Assert.assertTrue(true);
     }
 
@@ -84,7 +84,7 @@ public class MediaDAOImpTest {
 
     @Test
     void testDeleteMedia() {
-        boolean deletedMedia = mediaDAO.deleteMedia(2);
+        boolean deletedMedia = mediaDAO.deleteMedia(1);
         Assert.assertTrue(deletedMedia);
     }
 
