@@ -29,7 +29,7 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testGetAllReviews() {
-        List<Review> reviews = dao.getAllReviews(1);
+        List<Review> reviews = dao.getAllReviews(1, 2);
         for(Review r: reviews){
             System.out.println(r);
         }
