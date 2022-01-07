@@ -19,6 +19,8 @@ function openTab(evt, tabName) {
   const completedTable = document.getElementById("completed-messages-table");
   const completedTableBody = document.getElementById("completed-message-body");
   const pendingInput = document.getElementById("pendingIdInput");
+  const deleteIdInput = document.getElementById("deleteIdInput");
+
 
 // Get Pending Contact Requests
   async function getPendingContactRequests(){
@@ -52,15 +54,16 @@ async function getCompletedContactRequests(){
 
 // Update Contact Request Status
 async function updateContactRequestStatus(){
+  sessionStorage.setItem("pendingInput", pendingInput.value);
   let url = "http://localhost:8080/updateContactRequestStatus/"
  
    let response = await fetch(
-       url + pendingInput
+       url + pendingInput.value
        ,{
           method:"PATCH",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({
-            "contactId":0,
+            "contactId":pendingInput.value,
             "status":true
           })
       
@@ -79,6 +82,33 @@ async function updateContactRequestStatus(){
 }
 
 // Delete Contact Request
+async function deleteContactRequest(){
+  sessionStorage.setItem("deleteIdInput", deleteIdInput.value);
+  let url = "http://localhost:8080/deleteContactRequest/"
+ 
+   let response = await fetch(
+       url + deleteIdInput.value
+       ,{
+          method:"DELETE",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            "contactId":deleteIdInput.value,
+            "status":true
+          })
+      
+    }
+   )
+
+   if (response.status === 200 || response.status === 201){
+       document.location.reload(true)
+       let body = await response.json()
+
+    
+   } else {
+       alert("your have not deleted your contact request")
+       document.location.reload(true)
+   }
+}
 
 
 // Populate data for Pending contact us table
