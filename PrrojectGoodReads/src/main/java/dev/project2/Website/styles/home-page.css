@@ -110,7 +110,7 @@ button:active {
 }
 
 .add-new-media {
-    display: block;
+    display: none;
     height: 105vh;
     margin-top: -2rem;
     background-color: rgb(2, 2, 78);
