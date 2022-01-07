@@ -15,7 +15,7 @@ async function createMedia(){
                     "mediaType": mediaType.value, 
                     "genre":mediaGenre.value, 
                     "status":false, 
-                    "userId": SESSIONSTORAGEPENDING}) });
+                    "userId": sessionStorage.getItem("webUserId")}) });
     if(response.status == 201){
         let createdMediaBody = await response.json();
         mediaType.value = '';
@@ -40,7 +40,7 @@ profileButton.addEventListener("click", userMediaList);
 async function userMediaList(){
     profileTableBody.innerHTML = '';
     const profileMediaRoute = "http://localhost:8080/userMedia/";
-    let response = await fetch(profileMediaRoute + SESSIONSTORAGEPENDING);
+    let response = await fetch(profileMediaRoute + sessionStorage.getItem("webUserId"));
     if(response.status == 200){
         let userMediaBody = await response.json();
         console.log(userMediaBody);
