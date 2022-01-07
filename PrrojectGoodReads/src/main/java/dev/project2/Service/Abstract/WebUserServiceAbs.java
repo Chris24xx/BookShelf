@@ -17,5 +17,8 @@ public interface WebUserServiceAbs {
 
     boolean deleteWebUser(int id);
 
+    WebUser getWebUserByEmail(String email);
+
+    WebUser webUserLoginCheck(String email, String password);
 
 }

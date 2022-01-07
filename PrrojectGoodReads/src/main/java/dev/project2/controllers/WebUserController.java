@@ -26,31 +26,31 @@ public class WebUserController {
     };
 
     public Handler getWebUserById = context -> {
+        Gson gson = new Gson();
         int webUserId = Integer.parseInt(context.pathParam("userId"));
         try{
             WebUser webUser = this.webUserServiceImp.getWebUserByIdService(webUserId);
-            Gson gson = new Gson();
             String newWebUser = gson.toJson(webUser);
             context.result(newWebUser);
             context.status(201);
         } catch (WebUserNotFound e) {
-            context.result(e.getMessage());
+            context.result(gson.toJson(e.getMessage()));
             context.status(404);
         }
     };
 
     public Handler getAllWebUsers = context -> {
-        List<WebUser> webUserList = this.webUserServiceImp.getAllWebUsers();
         Gson gson = new Gson();
+        List<WebUser> webUserList = this.webUserServiceImp.getAllWebUsers();
         String list = gson.toJson(webUserList);
         context.result(list);
         context.status(200);
     };
 
     public Handler deleteWebUser = context -> {
+        Gson gson = new Gson();
         int webUserId = Integer.parseInt(context.pathParam("userId"));
         boolean result = this.webUserServiceImp.deleteWebUser(webUserId);
-        Gson gson = new Gson();
         String resultBool = gson.toJson(result);
         context.result(resultBool);
         context.status(201);
@@ -65,5 +65,21 @@ public class WebUserController {
         String updatedModUser = gson.toJson(updatedWebUser);
         context.result(updatedModUser);
         context.status(201);
+    };
+
+    public Handler webUserLoginStatus = context -> {
+        Gson gson = new Gson();
+        try{
+            Map<String, String> userLoginInputs = gson.fromJson(context.body(), Map.class);
+            String userEmail = userLoginInputs.get("userEmail");
+            String password = userLoginInputs.get("password");
+            WebUser webUser = this.webUserServiceImp.webUserLoginCheck(userEmail, password);
+            String newWebUser = gson.toJson(webUser);
+            context.result(newWebUser);
+            context.status(201);
+        } catch (WebUserNotFound e) {
+            context.result(gson.toJson(e.getMessage()));
+            context.status(404);
+        }
     };
 }

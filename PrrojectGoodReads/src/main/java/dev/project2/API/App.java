@@ -84,6 +84,7 @@ public class App {
         app.get("/webUsers", webUserController.getAllWebUsers);
         app.delete("/webUser/delete/{userId}", webUserController.deleteWebUser);
         app.patch("/webUser/mod/{userId}", webUserController.moderatorStatus);
+        app.post("webUser/login", webUserController.webUserLoginStatus);
 
 
         app.start();

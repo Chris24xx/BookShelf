@@ -33,6 +33,7 @@ public class WebUserServiceTests {
                 "someotherrandomemail@email.com",
                 "ABC123",
                 true);
+
         Mockito.when(webUserDAOImp.getWebUserById(1)).thenReturn(new WebUser(
                 1,
                 "test",
@@ -42,5 +43,37 @@ public class WebUserServiceTests {
                 false));
         Mockito.when(webUserDAOImp.updateWebUser(updatedWebUser)).thenReturn(updatedWebUser);
         WebUser webUser = webUserServiceImp.makeModerator(true, 1);
+        Assert.assertTrue(webUser.isModerator());
+    }
+
+    @Test(expectedExceptions = WebUserNotFound.class, expectedExceptionsMessageRegExp = "Incorrect email or Password")
+    public void testWebUserLoginCheckEmailFail(){
+        Mockito.when(webUserDAOImp.getWebUserByEmail("wrong")).thenThrow(new WebUserNotFound("Incorrect email or Password"));
+        WebUser webUser = webUserServiceImp.webUserLoginCheck("wrong", "wrong");
+    }
+
+    @Test(expectedExceptions = WebUserNotFound.class, expectedExceptionsMessageRegExp = "Incorrect email or Password")
+    public void testWebUserLoginCheckPasswordFail(){
+        Mockito.when(webUserDAOImp.getWebUserByEmail("someotherrandomemail@email.com")).thenReturn(new WebUser(
+        1,
+                "test",
+                "test",
+                "someotherrandomemail@email.com",
+                "ABC123",
+                false));
+        WebUser webUser = webUserServiceImp.webUserLoginCheck("someotherrandomemail@email.com", "wrong");
+    }
+
+    @Test
+    public void testWebUserLoginCheckPass(){
+        Mockito.when(webUserDAOImp.getWebUserByEmail("someotherrandomemail@email.com")).thenReturn(new WebUser(
+                1,
+                "test",
+                "test",
+                "someotherrandomemail@email.com",
+                "ABC123",
+                false));
+        WebUser webUser = webUserServiceImp.webUserLoginCheck("someotherrandomemail@email.com", "ABC123");
+        Assert.assertEquals(webUser.getUserId(), 1);
     }
 }

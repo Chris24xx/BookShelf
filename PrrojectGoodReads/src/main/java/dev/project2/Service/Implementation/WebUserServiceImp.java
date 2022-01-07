@@ -58,4 +58,18 @@ public class WebUserServiceImp implements WebUserServiceAbs {
     public boolean deleteWebUser(int id) {
         return this.webUserDAO.deleteWebUser(id);
     }
+
+    @Override
+    public WebUser getWebUserByEmail(String email) {
+        return this.webUserDAO.getWebUserByEmail(email);
+    }
+
+    @Override
+    public WebUser webUserLoginCheck(String email, String password) {
+            WebUser currentWebUser = this.webUserDAO.getWebUserByEmail(email);
+            if (currentWebUser.getUserEmail().equals(email))
+                if (currentWebUser.getPassword().equals(password))
+                    return currentWebUser;
+            throw new WebUserNotFound("Incorrect email or Password");
+    }
 }

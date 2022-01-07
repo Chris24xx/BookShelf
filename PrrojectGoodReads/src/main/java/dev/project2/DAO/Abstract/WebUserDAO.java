@@ -15,4 +15,6 @@ public interface WebUserDAO {
 
     boolean deleteWebUser(int id);
 
+    WebUser getWebUserByEmail(String email);
+
 }
