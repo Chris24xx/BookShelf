@@ -72,6 +72,9 @@ public class App {
         app.get("/books", mediaController.getAllBooks);
         app.get("/movies", mediaController.getAllMovies);
         app.get("/games", mediaController.getAllGames);
+        app.get("/pendingMedia", mediaController.getPendingMedia);
+        app.get("/approvedMedia", mediaController.getApprovedMedia);
+        app.patch("/approveMedia/{mediaId}", mediaController.approveMedia);
 
 
         // WEB USER

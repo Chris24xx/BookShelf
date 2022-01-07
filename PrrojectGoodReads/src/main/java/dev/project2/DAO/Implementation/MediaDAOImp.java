@@ -189,7 +189,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public List<Media> getPendingMedia() {
         try (Connection connection = DBConn.createConnection()){
-            String sql = "select * from project2.media where status = false";
+            String sql = "select * from project2.media where status is null";
             Statement statement = connection.createStatement();
             ResultSet resultSet  = statement.executeQuery(sql);
             List<Media> pendingMedia = new ArrayList<>();
