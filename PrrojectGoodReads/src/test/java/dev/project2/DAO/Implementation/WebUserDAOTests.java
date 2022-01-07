@@ -60,4 +60,11 @@ public class WebUserDAOTests {
         boolean webUserDeleted = webUserDAO.deleteWebUser(9);
         Assert.assertTrue(webUserDeleted);
     }
+
+    @Test
+    public void testGetWebUserByEmail(){
+        WebUser webUser = webUserDAO.getWebUserByEmail("someotherrandomemail@email.com");
+        System.out.println(webUser);
+        Assert.assertEquals(webUser.getUserEmail(), "someotherrandomemail@email.com");
+    }
 }
