@@ -41,17 +41,6 @@ public class MediaServiceImp implements MediaService {
         return this.mediaDAO.getAllGames();
     }
 
-
-    @Override
-    public Media getMediaByTitleService(String title) {
-        try {
-            return this.mediaDAO.getMediaByTitle(title);
-        } catch (TitleNotFound t) {
-            throw new TitleNotFound("Title was not found");
-        }
-    }
-
-
     @Override
     public List<Media> getPendingMediaService() {
         return this.mediaDAO.getPendingMedia();
