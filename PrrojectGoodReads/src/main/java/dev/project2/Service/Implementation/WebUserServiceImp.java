@@ -34,8 +34,8 @@ public class WebUserServiceImp implements WebUserServiceAbs {
         try{
             WebUser webUser = this.webUserDAO.getWebUserById(id);
             return webUser;
-        }catch (Exception e){
-            throw new WebUserNotFound("WebUser not found");
+        }catch (NullPointerException e){
+            throw new WebUserNotFound("User not found");
         }
     }
 
@@ -45,8 +45,16 @@ public class WebUserServiceImp implements WebUserServiceAbs {
     }
 
     @Override
-    public WebUser createWebUser(WebUser webUser) {
-        return this.webUserDAO.createWebUser(webUser);
+    public WebUser createWebUser(WebUser webUser, String email) {
+
+        WebUser userByEmail = getWebUserByEmailService(email);
+
+        if(userByEmail == null){
+            return this.webUserDAO.createWebUser(webUser);
+        }
+        else{
+            throw new WebUserNotFound("Email is already in use");
+        }
     }
 
     @Override
@@ -60,16 +68,25 @@ public class WebUserServiceImp implements WebUserServiceAbs {
     }
 
     @Override
-    public WebUser getWebUserByEmail(String email) {
-        return this.webUserDAO.getWebUserByEmail(email);
+    public WebUser getWebUserByEmailService(String email) {
+        try{
+            WebUser webUser = this.webUserDAO.getWebUserByEmail(email);
+            return webUser;
+        }catch (NullPointerException e){
+            throw new WebUserNotFound("Email not found");
+        }
     }
 
     @Override
     public WebUser webUserLoginCheck(String email, String password) {
+        try{
             WebUser currentWebUser = this.webUserDAO.getWebUserByEmail(email);
             if (currentWebUser.getUserEmail().equals(email))
                 if (currentWebUser.getPassword().equals(password))
                     return currentWebUser;
             throw new WebUserNotFound("Incorrect email or Password");
+        }catch (NullPointerException e) {
+            throw new WebUserNotFound("Incorrect email or Password");
+        }
     }
 }
