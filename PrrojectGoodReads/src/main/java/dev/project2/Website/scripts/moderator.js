@@ -198,12 +198,12 @@ async function updateReview(approval) {
   let url = `http://localhost:8080/review/update/${reviewField.value}`;
   let response = await fetch(url, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ["status"]: status }) });
       if (response.status === 201) {
-        alert("success");
+        alert("Success");
         if(status === false){
           let url = `http://localhost:8080/review/delete/${reviewField.value}`;
           let response = await fetch(url, { method: "DELETE", headers: { "Content-Type": "application/json" }});
           if(response.status === 200){
-            alert("success")
+            alert("Success")
           }
           
         }
