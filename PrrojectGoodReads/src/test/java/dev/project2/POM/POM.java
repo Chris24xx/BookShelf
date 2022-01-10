@@ -13,4 +13,22 @@ public class POM {
 
         PageFactory.initElements(webDriver, this);
     }
+    @FindBy(xpath = "/html/body/header/nav/button[3]")
+    public WebElement reviewButton;
+
+    @FindBy(id = "pending-review-table")
+    public WebElement pendingReviewList;
+
+    @FindBy(id = "approved-review-table")
+    public WebElement approveReviewList;
+
+    @FindBy(id = "updateReview")
+    public WebElement reviewInputField;
+
+    @FindBy(id = "Approve")
+    public WebElement approveButton;
+
+    @FindBy(id = "Deny")
+    public WebElement denyButton;
+
 }
