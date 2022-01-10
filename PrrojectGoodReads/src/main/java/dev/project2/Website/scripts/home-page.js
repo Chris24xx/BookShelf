@@ -1,6 +1,7 @@
 // WORKING TABS
 function openTab(evt, tabName) {
   let tabcontent = document.getElementsByClassName("tabcontent");
+  closeReviewBox();
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   };
@@ -45,7 +46,6 @@ function closeMediaBox() {
 let media = ["images/anne-green-gables.jpg", "images/harry-potter.jpg", "images/mario-cart.jpg", "images/die-hard.jpg"];
 let media2 = ["images/hobbit.jpg", "images/into-the-woods.jpg", "images/stardust.jpg", "images/Halo_Infinite.png", "images/metal-gear-solid.jpg"];
 
-
 let i = 0;
 
 setInterval(function revolveMedia() {
@@ -66,13 +66,6 @@ setInterval(function revolveMedia2() {
   return;
 }, 3000);
 
-// setInterval(function revolveGames() {
-//   const eleGame = document.getElementById("game-revolve");
-//   eleGame.setAttribute('src', games[++i]);
-//   if(i === games.length - 1) {
-//     i = -1;
-//   }
-// }, 3000);
 
 
 

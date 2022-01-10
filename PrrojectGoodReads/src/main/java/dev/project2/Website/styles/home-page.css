@@ -116,7 +116,21 @@ button:active {
     background-color: rgb(2, 2, 78);
 }
 
+.new-review-box {
+    display: none;
+    height: 65vh;
+    margin-top: -2rem;
+    background-color: rgb(2, 2, 78);
+}
+
 .new-media-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.new-review-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,4 +167,28 @@ button:active {
     font-size: 1.1rem;
     font-weight: bold;
     margin: 1rem 1rem;
+}
+
+.new-review-content input {
+    width: 4.5rem;
+    padding: 7px 15px;
+    color: rgb(1, 1, 58);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1rem 1rem;
+}
+
+.new-review-content textarea {
+    width: 50%;
+    padding: 7px 15px;
+    color: rgb(1, 1, 58);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1rem 1rem;
+}
+
+.add-new-review {
+    cursor: pointer;
 }

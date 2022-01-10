@@ -57,6 +57,7 @@ function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
         tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick = "userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td onclick = "createReview(${um.mediaId})">${um.synopsis}</td><td>${um.genre}</td>`;
+
         profileTableBody.appendChild(tableRow);
     };
 };
@@ -287,3 +288,23 @@ async function createReviews(mediaId) {
     
     
 }  
+
+
+// TO OPEN BOX TO CREATE A NEW REVIEW
+let newReviewButton = document.getElementsByClassName("add-new-review");
+let newReviewBox = document.getElementsByClassName("new-review-box");
+
+// Open the review box
+function openNewReviewBox() {
+    for(let i = 0; i < newReviewBox.length; i++){
+        newReviewBox[i].style.display = "block";
+    }
+}
+
+// Close the review box.
+function closeReviewBox() {
+  for(let i = 0; i < newReviewBox.length; i++){
+    newReviewBox[i].style.display = "none";
+  }
+};
+
