@@ -56,7 +56,7 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td>${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick = "userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td>`;
         profileTableBody.appendChild(tableRow);
     };
 }
@@ -159,14 +159,14 @@ function populateGames(jsonBody){
 
 // Review Functions
 
-async function userReviewList() {
-    mediaId = sessionStorage.getItem("mediaId")
-    userId = sessionStorage.getItem("webUserId")
-    let url = `http://localhost:8080/review/all/${userId}/${mediaId}`;
+async function userReviewList(mediaId) {
+        userId = sessionStorage.getItem("webUserId")
+        let url = `http://localhost:8080/review/all/${userId}/${mediaId}`;
+
     let response = await fetch(url);
     if(response.status === 200){
         let body = await response.json();
-        console.log(body)
-    }
+        populateReviews(body)
 
+    };
 }
