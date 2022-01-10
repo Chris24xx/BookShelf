@@ -59,7 +59,7 @@ function populateUserMedia(jsonBody){
         tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick = "userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td>`;
         profileTableBody.appendChild(tableRow);
     };
-}
+};
 
 
 

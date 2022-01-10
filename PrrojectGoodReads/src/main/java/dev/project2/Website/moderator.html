@@ -93,7 +93,7 @@
                         <th>Last Name</th>
                         <th>Email</th>
                     </thead>
-                    <tbody>
+                    <tbody id="user-table-body">
                         <!-- User rows and data will go here. -->
                     </tbody>
                 </table>
@@ -139,8 +139,8 @@
         </div>
         <div class="approve-deny-flex">
             <input type="number" placeholder="Media Id" id="media-id-input">
-            <button id="approve-media-btn" onclick="approveMedia();">Approve</button>
-            <button>Deny</button>
+            <button onclick="approveMedia();">Approve</button>
+            <button onclick="deleteMedia();">Deny</button>
         </div>
     </section>
 

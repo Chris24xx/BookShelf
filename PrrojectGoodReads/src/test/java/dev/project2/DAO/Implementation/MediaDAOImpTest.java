@@ -51,13 +51,6 @@ public class MediaDAOImpTest {
         Assert.assertTrue(allGames.size() >= 1);
     }
 
-    @Test
-    public void testGetMediaByTitle() {
-        Media mediaTitle = mediaDAO.getMediaByTitle("Harry Potter");
-        Assert.assertEquals(mediaTitle.getTitle(), "Harry Potter");
-    }
-
-
 
     @Test
     public void testGetPendingMedia() {

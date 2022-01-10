@@ -18,11 +18,18 @@ public class WebUserController {
 
     public Handler createWebUser = context -> {
         Gson gson = new Gson();
-        WebUser newWebUser = gson.fromJson(context.body(), WebUser.class);
-        WebUser webUser = this.webUserServiceImp.createWebUser(newWebUser);
-        String createdWebUser = gson.toJson(webUser);
-        context.result(createdWebUser);
-        context.status(201);
+        try{
+            WebUser newWebUser = gson.fromJson(context.body(), WebUser.class);
+            String newEmail = newWebUser.getUserEmail();
+            WebUser webUser = this.webUserServiceImp.createWebUser(newWebUser, newEmail);
+            String createdWebUser = gson.toJson(webUser);
+            context.result(createdWebUser);
+            context.status(201);
+        } catch (WebUserNotFound e){
+            context.result(gson.toJson(e.getMessage()));
+            context.status(404);
+        }
+
     };
 
     public Handler getWebUserById = context -> {

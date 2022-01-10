@@ -11,13 +11,13 @@ public interface WebUserServiceAbs {
 
     List<WebUser> getAllWebUsers();
 
-    WebUser createWebUser(WebUser webUser);
+    WebUser createWebUser(WebUser webUser, String email);
 
     WebUser updateWebUser(WebUser webUser);
 
     boolean deleteWebUser(int id);
 
-    WebUser getWebUserByEmail(String email);
+    WebUser getWebUserByEmailService(String email);
 
     WebUser webUserLoginCheck(String email, String password);
 

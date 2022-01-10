@@ -75,6 +75,7 @@ public class App {
         app.get("/pendingMedia", mediaController.getPendingMedia);
         app.get("/approvedMedia", mediaController.getApprovedMedia);
         app.patch("/approveMedia/{mediaId}", mediaController.approveMedia);
+        app.delete("/deleteMedia/{mediaId}", mediaController.deleteMedia);
 
 
         // WEB USER
