@@ -172,7 +172,7 @@
                         <th>Creator</th>
                         <th>Synopsis</th>
                         <th>Genre</th>
-                        <th>Get Reviews</th>
+                        <th>Create Reviews</th>
                     </thead>
                     <tbody id="games-info">
                         <!-- Title rows and data will go here. -->
@@ -210,6 +210,18 @@
     <!-- Contact us Section Ends -->
 
 
+
+    <section class="new-review-box">
+        <div class="new-review-content">
+            <span class="close" onclick="closeReviewBox();">&times;</span>
+            <h3 class="media-header">Add a review!</h3>
+            <input type="number" max="5" placeholder="Rating">
+            <textarea name="review" id="" cols="30" rows="4" placeholder="Your honest review"></textarea>
+            <button id="submit-new-review" class="add-new-media-button">Add New Review</button>
+        </div>
+    </section>
+
+
     <section class="add-new-media" id="media-box" style="display: none;">
         <div class="new-media-content">
             <span class="close" onclick="closeMediaBox();">&times;</span>
@@ -224,7 +236,7 @@
             <input type="text" placeholder="Title" id="media-title">
             <input type="text" placeholder="Creator" id="media-creator">
             <input type="text" placeholder="Genre" id="media-genre">
-            <textarea id="synopsis" cols="30" rows="5" placeholder="A synopsis"></textarea>
+            <textarea id="synopsis" cols="30" rows="4" placeholder="A synopsis"></textarea>
             <button class="add-new-media-button" onclick="createMedia();">Submit new media</button>
             <p id="submit-message"></p>
         </div>
