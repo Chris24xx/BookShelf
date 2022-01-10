@@ -16,8 +16,6 @@ public interface MediaService {
 
     List<Media> getAllGamesService();
 
-    Media getMediaByTitleService(String title);
-
     List<Media> getPendingMediaService();
 
     List<Media> getApprovedMediaService();

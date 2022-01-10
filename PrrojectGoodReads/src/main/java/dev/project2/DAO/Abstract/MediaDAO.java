@@ -15,8 +15,6 @@ public interface MediaDAO {
 
     List<Media> getAllGames();
 
-    Media getMediaByTitle(String title);  // Is this needed?
-
     List<Media> getPendingMedia();
 
     List<Media> getApprovedMedia();

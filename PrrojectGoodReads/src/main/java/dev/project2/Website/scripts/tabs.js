@@ -56,10 +56,10 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td>${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td>${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td>Reviews</td>`;
         profileTableBody.appendChild(tableRow);
     };
-}
+};
 
 
 
@@ -88,7 +88,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
+        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td>Reviews</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -120,7 +120,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
+        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td>Reviews</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -151,7 +151,7 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
+        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td>Reviews</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };

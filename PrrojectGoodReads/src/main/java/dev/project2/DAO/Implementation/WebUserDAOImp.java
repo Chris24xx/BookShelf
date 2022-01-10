@@ -18,6 +18,7 @@ public class WebUserDAOImp implements WebUserDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
+            WebUser currentWebUser = null;
 
             if(resultSet.next()){
                 WebUser webUser = new WebUser(
@@ -28,11 +29,9 @@ public class WebUserDAOImp implements WebUserDAO {
                         resultSet.getString("user_password"),
                         resultSet.getBoolean("enabled_moderator")
                 );
-                return webUser;
+                currentWebUser = webUser;
             }
-            else{
-                throw new WebUserNotFound("User not found");
-            }
+            return currentWebUser;
         } catch (SQLException e){
             e.printStackTrace();
             return null;
@@ -130,6 +129,7 @@ public class WebUserDAOImp implements WebUserDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, email);
             ResultSet resultSet = preparedStatement.executeQuery();
+            WebUser currentWebUser = null;
 
             if(resultSet.next()){
                 WebUser webUser = new WebUser(
@@ -140,13 +140,12 @@ public class WebUserDAOImp implements WebUserDAO {
                         resultSet.getString("user_password"),
                         resultSet.getBoolean("enabled_moderator")
                 );
-                return webUser;
+                currentWebUser = webUser;
             }
-            else{
-                throw new WebUserNotFound("User Email not found");
-            }
+            return currentWebUser;
         } catch (SQLException e){
             e.printStackTrace();
             return null;
-        }    }
+        }
+    }
 }
