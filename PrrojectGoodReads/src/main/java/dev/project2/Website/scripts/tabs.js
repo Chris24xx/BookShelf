@@ -56,7 +56,7 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td>${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td class="add-new-review">${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td class="add-new-review" id="new-review-button" onclick="openNewReviewBox();">New Review</td>`;
         profileTableBody.appendChild(tableRow);
     };
 };
@@ -88,7 +88,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td class="add-new-review">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td class="add-new-review" id="new-review-button" onclick="openNewReviewBox();">New Review</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -120,7 +120,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td class="add-new-review">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td class="add-new-review" id="new-review-button" onclick="openNewReviewBox();">New Review</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -151,7 +151,28 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td class="add-new-review">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td class="add-new-review" id="new-review-button" onclick="openNewReviewBox();">New Review</td>`;
         gameTableBody.appendChild(tableRow);
     };
+};
+
+
+
+
+// TO OPEN BOX TO CREATE A NEW REVIEW
+let newReviewButton = document.getElementsByClassName("add-new-review");
+let newReviewBox = document.getElementsByClassName("new-review-box");
+
+// Open the review box
+function openNewReviewBox() {
+    for(let i = 0; i < newReviewBox.length; i++){
+        newReviewBox[i].style.display = "block";
+    }
+}
+
+// Close the review box.
+function closeReviewBox() {
+  for(let i = 0; i < newReviewBox.length; i++){
+    newReviewBox[i].style.display = "none";
+  }
 };
