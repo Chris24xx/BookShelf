@@ -88,7 +88,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = bookList(${bb.mediaId})>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -120,7 +120,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = movieList(${mb.mediaId})>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -151,7 +151,7 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = gameList(${gb.mediaId})>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };
@@ -170,3 +170,73 @@ async function userReviewList(mediaId) {
 
     };
 }
+
+
+function populateReviews(respoonseBody) {
+    let table = getElementById("user-review-table");
+    for (let reviews of respoonseBody) {
+        let tableRow = document.createElement("tr")
+        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+        table.appendChild(tableRow);
+      }
+
+}
+
+async function generalMovieReviews() {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    movieList(body)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+async function generalBookReviews() {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    bookList(body)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+async function generalGamesReviews() {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    gamesList(body)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+function movieList(responseBody, mediaId)
+let table = getElementById("movies-list-table");
+for (let reviews of responseBody) {
+    let tableRow = document.createElement("tr")
+    if (reviews.mediaId == mediaId) {
+      tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+      table.appendChild(tableRow);
+    }
+
+  }
