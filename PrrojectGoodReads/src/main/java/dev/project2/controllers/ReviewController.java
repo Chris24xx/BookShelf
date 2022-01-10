@@ -19,12 +19,17 @@ public class ReviewController {
     }
 
     public Handler createReview = context -> {
-        Gson gson = new Gson();
+        GsonBuilder builder = new GsonBuilder();
+        builder.serializeNulls();
+        Gson gson = builder.setPrettyPrinting().create();
         Review newReview = gson.fromJson(context.body(), Review.class);
-        Review review = this.reviewImp.createReviewService(newReview);
-        String createdReview = gson.toJson(review);
-        context.result(createdReview);
-        context.status(201);
+        if(newReview.isStatus() == null) {
+            newReview.setStatus(null);
+            Review review = this.reviewImp.createReviewService(newReview);
+            String createdReview = gson.toJson(review);
+            context.result(createdReview);
+            context.status(201);
+        }
     };
 
     public Handler getReview = context -> {

@@ -56,7 +56,8 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td>${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick = "userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td onclick = "createReview(${um.mediaId})">${um.synopsis}</td><td>${um.genre}</td>`;
+
         profileTableBody.appendChild(tableRow);
     };
 };
@@ -88,7 +89,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -120,7 +121,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td onclick ="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -151,7 +152,159 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td>Reviews</td>`;
+        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };
+
+
+// Review Functions
+
+async function userReviewList(mediaId) {
+        userId = sessionStorage.getItem("webUserId")
+        let url = `http://localhost:8080/review/all/${userId}/${mediaId}`;
+
+    let response = await fetch(url);
+    if(response.status === 200){
+        let body = await response.json();
+        populateReviews(body)
+
+    };
+}
+
+
+function populateReviews(respoonseBody) {
+    let table = getElementById("user-review-table");
+    for (let reviews of respoonseBody) {
+        let tableRow = document.createElement("tr")
+        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+        table.appendChild(tableRow);
+      }
+
+}
+
+async function generalMovieReviews(mediaId) {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    moviesReviewList(mediaId, body)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+async function generalBookReviews(mediaId) {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    booksReviewList(body, mediaId)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+async function generalGamesReviews(mediaId) {
+    let url = "http://localhost:8080/review/past";
+  let response = await fetch(url);
+  if (response.status === 201) {
+    let body = await response.json();
+    console.log(body)
+    gamesReviewList(body, mediaId)
+
+  } else if (response.status === 404) {
+    alert("List can not be generated")
+
+  } else {
+    alert("something went wrong.")
+  }
+}
+
+function moviesReviewList(mediaId, responseBody){
+    console.log(responseBody)
+    let table = document.getElementById("movie-review-table");
+    for (let reviews of responseBody) {
+        let tableRow = document.createElement("tr")
+        if (reviews.mediaId == mediaId) {
+        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+        table.appendChild(tableRow);
+        }
+    }
+}
+
+function booksReviewList(responseBody, mediaId){
+    console.log(responseBody)
+    let table = document.getElementById("books-reviews-table");
+    for (let reviews of responseBody) {
+        let tableRow = document.createElement("tr")
+        if (reviews.mediaId == mediaId) {
+        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+        table.appendChild(tableRow);
+        }
+    }
+}
+
+function gamesReviewList(responseBody, mediaId){
+    console.log(responseBody)
+    let table = document.getElementById("game-review-table");
+    for (let reviews of responseBody) {
+        let tableRow = document.createElement("tr")
+        if (reviews.mediaId == mediaId) {
+        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+        table.appendChild(tableRow);
+        }
+    }
+}
+
+async function createReviews(mediaId) {
+    userId = sessionStorage.getItem("webUserId");
+    const url = "http://localhost:8080/newMedia";
+    let response = await fetch(url, {headers:{'Content-Type':'application/json'}, method:["POST"], body:JSON.stringify({"reviewId":0, 
+                    "status":null, 
+                    "createdAt":"now",
+                    "userId": sessionStorage.getItem("webUserId"), 
+                    "rating":rating.value, 
+                    "userReview": userReview.value, 
+                    "mediaId":mediaId,  
+                   }) });
+        if(response.status == 201){
+            let body = await response.json();
+
+            submitMessage.textContent = 'Your review has been submitted and waiting on approval';
+        } else {
+            submitMessage.textContent = 'Something went wrong.';
+        };
+    
+    
+}  
+
+
+// TO OPEN BOX TO CREATE A NEW REVIEW
+let newReviewButton = document.getElementsByClassName("add-new-review");
+let newReviewBox = document.getElementsByClassName("new-review-box");
+
+// Open the review box
+function openNewReviewBox() {
+    for(let i = 0; i < newReviewBox.length; i++){
+        newReviewBox[i].style.display = "block";
+    }
+}
+
+// Close the review box.
+function closeReviewBox() {
+  for(let i = 0; i < newReviewBox.length; i++){
+    newReviewBox[i].style.display = "none";
+  }
+};
+
