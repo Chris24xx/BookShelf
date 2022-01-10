@@ -101,7 +101,6 @@ async function createContactRequest(){
 
 
 // End of contact function and constants
-// Review functions
 
 
 

@@ -146,7 +146,6 @@ async function pendingReviewList(params) {
   let response = await fetch(url);
   if (response.status === 200) {
     let body = await response.json();
-
     populatePendingList(body)
 
   } else if (response.status === 404) {
@@ -173,7 +172,6 @@ async function pastList() {
   let response = await fetch(url);
   if (response.status === 201) {
     let body = await response.json();
-    console.log(body)
     populatePastList(body)
 
   } else if (response.status === 404) {
