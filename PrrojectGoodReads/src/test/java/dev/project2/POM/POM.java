@@ -14,6 +14,7 @@ public class POM {
 
         PageFactory.initElements(webDriver, this);
     }
+
     @FindBy(xpath = "/html/body/header/nav/button[3]")
     public WebElement reviewButton;
 
@@ -123,10 +124,5 @@ public class POM {
 
     @FindBy(id = "approve-deny-message")
     public WebElement approveDenyMessage;
-
-
-    // To view past approved media
-    @FindBy(id = "approved-media-table")
-    public WebElement approvedMedia;
 
 }
