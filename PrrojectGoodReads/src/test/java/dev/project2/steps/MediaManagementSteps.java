@@ -80,7 +80,7 @@ public class MediaManagementSteps {
     @Then("assert message that new media has been added.")
     public void assert_message_that_new_media_has_been_added() {
         String message = TestRunner.pom.addedMediaMessage.getText();
-        Assert.assertEquals(message, "Your media has been added and is awaiting approval");
+        Assert.assertEquals(message, "Your media has been added and is awaiting approval.");
     }
 
 
@@ -109,8 +109,8 @@ public class MediaManagementSteps {
 
     @Then("assert message that media has been approved.")
     public void assert_message_that_media_has_been_approved() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String message = TestRunner.pom.approveDenyMessage.getText();
+        Assert.assertEquals(message, "This title has been approved.");
     }
 
 
