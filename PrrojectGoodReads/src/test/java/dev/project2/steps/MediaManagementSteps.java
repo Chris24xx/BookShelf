@@ -117,20 +117,18 @@ public class MediaManagementSteps {
 
     @When("the moderator fills in media id {int} in the input field.")
     public void the_moderator_fills_in_denied_media_id_in_the_input_field(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        TestRunner.pom.mediaIdInput.sendKeys("14");
     }
 
     @When("the moderator clicks the deny button.")
     public void the_moderator_clicks_the_deny_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        TestRunner.pom.denyMediaButton.click();
     }
 
     @Then("assert message that media has been denied.")
     public void assert_message_that_media_has_been_denied() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String message = TestRunner.pom.approveDenyMessage.getText();
+        Assert.assertEquals(message, "This title has been denied.");
     }
 
 
@@ -138,8 +136,8 @@ public class MediaManagementSteps {
 
     @Then("assert past media populates.")
     public void assert_past_media_populates() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String title = TestRunner.webDriver.getTitle();
+        Assert.assertEquals(title, "Bookshelf Moderator Home");
     }
 
 
