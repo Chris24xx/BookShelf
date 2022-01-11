@@ -14,11 +14,11 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Test", "Test",
-                "Testing test tester.", "Game", "Action",
+        Media newMedia = new Media(0, "Test To Approve", "Test",
+                "Testing test delete.", "Game", "Action",
                 false, 1);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Test");
+        Assert.assertEquals(returnedMedia.getTitle(), "Test To Approve");
     }
 
 

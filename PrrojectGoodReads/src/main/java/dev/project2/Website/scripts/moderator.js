@@ -1,6 +1,8 @@
 // WORKING TABS
 function openTab(evt, tabName) {
   let tabcontent = document.getElementsByClassName("tabcontent");
+  approveMessage.textContent = '';
+  denyMessage.textContent = '';
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   };
@@ -317,6 +319,8 @@ function populateApprovedMedia(jsonBody){
 
 
 // TO APPROVE A PIECE OF MEDIA
+let approveDenyMessage = document.getElementById("approve-deny-message");
+
 async function approveMedia(){
     let mediaIdInput = document.getElementById("media-id-input");
 
@@ -326,8 +330,8 @@ async function approveMedia(){
     if(response.status == 200){
         let approveMediaBody = await response.json();
         mediaIdInput.value = '';
-        // document.location.reload(true);
         console.log(approveMediaBody);
+        approveDenyMessage.textContent = "This title has been approved.";
     } else if(response.status == 404){
         alert("Could not approve this media!");
     };
@@ -345,8 +349,8 @@ async function deleteMedia(){
     if(response.status == 200){
         let deleteMediaBody = await response.json();
         mediaIdInput.value = '';
-        // document.location.reload(true);
         console.log(deleteMediaBody);
+        approveDenyMessage.textContent = "This title has been denied.";
     } else if(response.status == 404){
         alert("Could not delete this media!");
     };
