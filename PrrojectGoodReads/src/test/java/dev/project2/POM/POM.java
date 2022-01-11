@@ -89,9 +89,4 @@ public class POM {
     @FindBy(id = "approve-deny-message")
     public WebElement approveDenyMessage;
 
-
-    // To view past approved media
-    @FindBy(id = "approved-media-table")
-    public WebElement approvedMedia;
-
 }
