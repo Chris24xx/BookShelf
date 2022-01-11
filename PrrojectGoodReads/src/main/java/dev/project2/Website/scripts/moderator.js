@@ -1,8 +1,7 @@
 // WORKING TABS
 function openTab(evt, tabName) {
   let tabcontent = document.getElementsByClassName("tabcontent");
-  approveMessage.textContent = '';
-  denyMessage.textContent = '';
+  approveDenyMessage.textContent = '';
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   };
