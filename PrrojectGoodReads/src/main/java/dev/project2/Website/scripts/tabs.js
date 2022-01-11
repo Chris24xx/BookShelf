@@ -89,7 +89,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td id="creators">${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -121,7 +121,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td id="creators">${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -152,7 +152,7 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td id="creators">${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };

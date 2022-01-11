@@ -8,6 +8,18 @@ Feature: Media management
     Then the user is redirected to the home page.
 
 
+  Scenario Outline: As a user I want to search for media that is not in my collection so that I can add it to my collection.
+    Given the user is on the home page.
+    When the user clicks the <media> tab.
+    Then the user is redirected to the <media> section.
+
+    Examples:
+    | media  | media  |
+    | books  | books  |
+    | movies | movies |
+    | games  | games  |
+
+
   Scenario: As a user I want to add media to my collection so that I can make reviews on it.
     Given the user clicks on the profile tab.
     When the user clicks on add new media button.
