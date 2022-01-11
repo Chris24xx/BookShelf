@@ -139,9 +139,10 @@
         </div>
         <div class="approve-deny-flex">
             <input type="number" placeholder="Media Id" id="media-id-input">
-            <button onclick="approveMedia();">Approve</button>
-            <button onclick="deleteMedia();">Deny</button>
+            <button id="media-approval-btn" onclick="approveMedia();">Approve</button>
+            <button id="media-deny-btn" onclick="deleteMedia();">Deny</button>
         </div>
+        <h3 id="approve-deny-message"></h3>
     </section>
 
 
@@ -192,6 +193,5 @@
 
     
 <script src="scripts/moderator.js"></script>
-<!-- <script src="scripts/kylatempmod.js"></script> -->
 </body>
 </html>
