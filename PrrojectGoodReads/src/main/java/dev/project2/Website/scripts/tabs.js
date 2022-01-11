@@ -121,7 +121,9 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
+
         tableRow.innerHTML = `<td onclick ="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td onclick="openNewReviewBox(${mb.mediaId});">${mb.synopsis}</td><td>${mb.genre}</td>`;
+
         movieTableBody.appendChild(tableRow);
     };
 };
