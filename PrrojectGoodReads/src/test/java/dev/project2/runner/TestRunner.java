@@ -17,7 +17,7 @@ import java.time.Duration;
 @RunWith(Cucumber.class)
 
 
-@CucumberOptions(features = "classpath:", glue = "dev/project2/steps")
+@CucumberOptions(features = "classpath:Features", glue = "dev/project2/steps")
 public class TestRunner{
     public static WebDriver webDriver;
     public static POM pom;
@@ -26,7 +26,7 @@ public class TestRunner{
     @BeforeClass
     public static void setup(){
         File file = new File("src/main/resources/msedgedriver.exe");
-        System.setProperty("webdriver.edge.webDriver", file.getAbsolutePath());
+        System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
         webDriver = new EdgeDriver();
         pom = new POM(webDriver);
         System.out.println("setup complete!");
