@@ -56,7 +56,7 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick = "userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td onclick = "createReview(${um.mediaId})">${um.synopsis}</td><td>${um.genre}</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick="userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td onclick="openNewReviewBox(${um.mediaId});">${um.synopsis}</td><td>${um.genre}</td>`;
 
         profileTableBody.appendChild(tableRow);
     };
@@ -89,7 +89,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td onclick="openNewReviewBox(${bb.mediaId});">${bb.synopsis}</td><td>${bb.genre}</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -121,7 +121,9 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td>`;
+
+        tableRow.innerHTML = `<td onclick ="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td onclick="openNewReviewBox(${mb.mediaId});">${mb.synopsis}</td><td>${mb.genre}</td>`;
+
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -152,7 +154,7 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td>`;
+        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td onclick = "openNewReviewBox(${gb.mediaId});">${gb.synopsis}</td><td>${gb.genre}</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };
@@ -174,7 +176,7 @@ async function userReviewList(mediaId) {
 
 
 function populateReviews(respoonseBody) {
-    let table = getElementById("user-review-table");
+    let table = document.getElementById("user-review-table");
     for (let reviews of respoonseBody) {
         let tableRow = document.createElement("tr")
         tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
@@ -268,6 +270,9 @@ function gamesReviewList(responseBody, mediaId){
 }
 
 async function createReviews(mediaId) {
+    let message = document.getElementById("message_generated")
+    let userReview = document.getElementById("userReview");
+    let rating = document.getElementById("rating")
     userId = sessionStorage.getItem("webUserId");
     const url = "http://localhost:8080/newMedia";
     let response = await fetch(url, {headers:{'Content-Type':'application/json'}, method:["POST"], body:JSON.stringify({"reviewId":0, 
@@ -281,9 +286,9 @@ async function createReviews(mediaId) {
         if(response.status == 201){
             let body = await response.json();
 
-            submitMessage.textContent = 'Your review has been submitted and waiting on approval';
+            message.textContent = 'Your review has been submitted and waiting on approval';
         } else {
-            submitMessage.textContent = 'Something went wrong.';
+            message.textContent = 'Something went wrong.';
         };
     
     
@@ -295,10 +300,11 @@ let newReviewButton = document.getElementsByClassName("add-new-review");
 let newReviewBox = document.getElementsByClassName("new-review-box");
 
 // Open the review box
-function openNewReviewBox() {
+function openNewReviewBox(mediaId) {
     for(let i = 0; i < newReviewBox.length; i++){
         newReviewBox[i].style.display = "block";
     }
+    movieButton.addEventListener("click", createReviews(mediaId));
 }
 
 // Close the review box.
