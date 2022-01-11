@@ -4,7 +4,10 @@ import dev.project2.runner.TestRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+
+
 
 public class MediaManagementSteps {
 
@@ -16,7 +19,7 @@ public class MediaManagementSteps {
 
     @When("the user enters wherever@yahoo.com in the email field.")
     public void the_user_enters_wherever_yahoo_com_in_the_email_field() {
-        TestRunner.pom.emailField.sendKeys("whatever@yahoo.com");
+        TestRunner.pom.emailField.sendKeys("wherever@yahoo.com");
     }
 
     @When("the user enters password in the password field.")
@@ -32,7 +35,8 @@ public class MediaManagementSteps {
     @Then("the user is redirected to the home page.")
     public void the_user_is_redirected_to_the_home_page() {
         String title = TestRunner.webDriver.getTitle();
-        Assert.assertEquals(title, "Bookshelf Home");
+        TestRunner.explicitWait.until(ExpectedConditions.titleIs(title));
+        Assert.assertEquals(title, "Bookshelf Sign In");
     }
 
 
@@ -79,6 +83,8 @@ public class MediaManagementSteps {
 
     @Then("assert message that new media has been added.")
     public void assert_message_that_new_media_has_been_added() {
+        TestRunner.explicitWait.until(ExpectedConditions.textToBePresentInElement(TestRunner.pom.addedMediaMessage,
+                "Your media has been added and is awaiting approval."));
         String message = TestRunner.pom.addedMediaMessage.getText();
         Assert.assertEquals(message, "Your media has been added and is awaiting approval.");
     }
@@ -97,9 +103,9 @@ public class MediaManagementSteps {
         TestRunner.pom.pendingMediaTab.click();
     }
 
-    @When("the moderator fills in media id {int} in the input field.")
-    public void the_moderator_fills_in_approved_media_id_in_the_input_field(Integer int1) {
-        TestRunner.pom.mediaIdInput.sendKeys("17");
+    @When("the moderator fills in approved media id in the input field.")
+    public void the_moderator_fills_in_approved_media_id_in_the_input_field() {
+        TestRunner.pom.mediaIdInput.sendKeys("31");
     }
 
     @When("the moderator clicks the approve button.")
@@ -109,15 +115,16 @@ public class MediaManagementSteps {
 
     @Then("assert message that media has been approved.")
     public void assert_message_that_media_has_been_approved() {
+        TestRunner.explicitWait.until(ExpectedConditions.textToBePresentInElement(TestRunner.pom.approveDenyMessage,
+                "This title has been approved."));
         String message = TestRunner.pom.approveDenyMessage.getText();
         Assert.assertEquals(message, "This title has been approved.");
     }
 
 
-
-    @When("the moderator fills in media id {int} in the input field.")
-    public void the_moderator_fills_in_denied_media_id_in_the_input_field(Integer int1) {
-        TestRunner.pom.mediaIdInput.sendKeys("14");
+    @When("the moderator fills in denied media id in the input field.")
+    public void the_moderator_fills_in_denied_media_id_in_the_input_field() {
+        TestRunner.pom.mediaIdInput.sendKeys("37");
     }
 
     @When("the moderator clicks the deny button.")
@@ -127,6 +134,8 @@ public class MediaManagementSteps {
 
     @Then("assert message that media has been denied.")
     public void assert_message_that_media_has_been_denied() {
+        TestRunner.explicitWait.until(ExpectedConditions.textToBePresentInElement(TestRunner.pom.approveDenyMessage,
+                "This title has been denied."));
         String message = TestRunner.pom.approveDenyMessage.getText();
         Assert.assertEquals(message, "This title has been denied.");
     }
@@ -139,6 +148,32 @@ public class MediaManagementSteps {
         String title = TestRunner.webDriver.getTitle();
         Assert.assertEquals(title, "Bookshelf Moderator Home");
     }
+
+
+
+    @When("the moderator goes to the pending media tab.")
+    public void the_moderator_goes_to_the_pending_media_tab() {
+        TestRunner.pom.pendingMediaTab.click();
+    }
+
+    @When("the moderator fills in the wrong media id in the input field.")
+    public void the_moderator_fills_in_the_wrong_media_id_in_the_input_field() {
+        TestRunner.pom.mediaIdInput.sendKeys("100");
+    }
+
+    @When("the moderator clicks the approve button with the wrong id.")
+    public void the_moderator_clicks_the_approve_button_with_the_wrong_id() {
+        TestRunner.pom.approveMediaButton.click();
+    }
+
+    @Then("a does not exist message will appear.")
+    public void a_does_not_exist_message_will_appear() {
+        TestRunner.explicitWait.until(ExpectedConditions.textToBePresentInElement(TestRunner.pom.approveDenyMessage,
+                "This title does not exist."));
+        String message = TestRunner.pom.approveDenyMessage.getText();
+        Assert.assertEquals(message, "This title does not exist.");
+    }
+
 
 
 }
