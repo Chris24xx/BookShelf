@@ -284,9 +284,10 @@ async function createReviews(mediaId) {
         if(response.status == 201){
             let body = await response.json();
 
-            message.textContent = 'Your review has been submitted and waiting on approval';
+            alert("Success");
+            message.textContent = "your review has been sent and awaiting review";
         } else {
-            message.textContent = 'Something went wrong.';
+            alert("Something went wrong");
         };
     
     

@@ -2,6 +2,7 @@ package dev.project2.POM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -30,6 +31,40 @@ public class POM {
 
     @FindBy(id = "Deny")
     public WebElement denyButton;
+
+    @FindBy(id = "movies")
+    public WebElement movieTab;
+
+    @FindBy(id = "games")
+    public WebElement gameTab;
+
+    @FindBy(id = "books")
+    public WebElement bookTab;
+
+    @FindBy(id = "user-review-table")
+    public WebElement reviewTable;
+
+    @FindBy(id = "rating")
+    public WebElement ratingField;
+
+    @FindBy(id = "userReview")
+    public WebElement userReviewField;
+
+    @FindBy(id = "books-reviews-table")
+    public WebElement bookTable;
+
+    @FindBy(id = "movie-review-table")
+    public WebElement movieTable;
+
+    @FindBy(id = "game-review-table")
+    public WebElement gameTable;
+
+    @FindBy(id = "submit-new-review")
+    public WebElement newReviewButton;
+
+    @FindBy(css ="#books-info > tr:nth-child(4) > td:nth-child(1)")
+    public WebElement clickableText;
+
 
 
     // MEDIA POM
