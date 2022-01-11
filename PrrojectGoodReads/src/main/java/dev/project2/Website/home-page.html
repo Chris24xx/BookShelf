@@ -215,9 +215,10 @@
         <div class="new-review-content">
             <span class="close" onclick="closeReviewBox();">&times;</span>
             <h3 class="media-header">Add a review!</h3>
-            <input type="number" max="5" placeholder="Rating">
-            <textarea name="review" id="" cols="30" rows="4" placeholder="Your honest review"></textarea>
+            <input type="number" max="5" placeholder="Rating" id="rating">
+            <textarea name="review" id="userReview" cols="30" rows="4" placeholder="Your honest review"></textarea>
             <button id="submit-new-review" class="add-new-media-button">Add New Review</button>
+            <p id = "message_generated"></p>
         </div>
     </section>
 
@@ -229,15 +230,15 @@
             <p>Fill out this section to add new media to your collection.</p>
             <select id="media-type">
                 <option value=""></option>
-                <option value="Book">Book</option>
-                <option value="Movie">Movie</option>
+                <option value="Book" id="book-type">Book</option>
+                <option value="Movie" id="movie-type">Movie</option>
                 <option value="Game">Game</option>
             </select>
             <input type="text" placeholder="Title" id="media-title">
             <input type="text" placeholder="Creator" id="media-creator">
             <input type="text" placeholder="Genre" id="media-genre">
             <textarea id="synopsis" cols="30" rows="4" placeholder="A synopsis"></textarea>
-            <button class="add-new-media-button" onclick="createMedia();">Submit new media</button>
+            <button id="add-a-new-title" class="add-new-media-button" onclick="createMedia();">Submit new media</button>
             <p id="submit-message"></p>
         </div>
     </section>
