@@ -69,11 +69,9 @@ async function updateContactRequestStatus(){
     }
    )
 
-   if (response.status === 200 || response.status === 201){
+   if (response.status === 200 ){
        document.location.reload(true)
        let body = await response.json()
-
-    
    } else {
        alert("your contact request update failed")
        document.location.reload(true)
@@ -98,7 +96,7 @@ async function deleteContactRequest(){
     }
    )
 
-   if (response.status === 200 || response.status === 201){
+   if (response.status === 200){
        document.location.reload(true)
        let body = await response.json()
 

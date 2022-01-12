@@ -4,7 +4,6 @@ import dev.project2.runner.TestRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -14,8 +13,7 @@ public class MediaManagementSteps {
 
     @Given("the user is on the login page.")
     public void the_user_is_on_the_login_page() {
-        TestRunner.webDriver.get("C:/Users/chris/Onedrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
-                "project2/Website/login.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/login.html");
     }
 
     @When("the user enters wherever@yahoo.com in the email field.")
@@ -84,7 +82,7 @@ public class MediaManagementSteps {
 
 
 
-        @Given("the user clicks on the profile tab.")
+    @Given("the user clicks on the profile tab.")
     public void the_user_clicks_on_the_profile_tab() {
         TestRunner.pom.profileTab.click();
     }
@@ -97,6 +95,7 @@ public class MediaManagementSteps {
     @When("the user selects type from the drop down options.")
     public void the_user_selects_type_from_the_drop_down_options() {
         TestRunner.pom.mediaType.isSelected();
+//        TestRunner.explicitWait.until(ExpectedConditions.elementSelectionStateToBe(TestRunner.pom.mediaType, true));
     }
 
     @When("the user enters Snow White in the input field.")
@@ -137,8 +136,7 @@ public class MediaManagementSteps {
 
     @Given("the moderator is on the moderator page.")
     public void the_moderator_is_on_the_moderator_page() {
-        TestRunner.webDriver.get("C:/Users/chris/OneDrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
-                "project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
     }
 
     @When("the moderator clicks the pending media button.")
@@ -148,7 +146,7 @@ public class MediaManagementSteps {
 
     @When("the moderator fills in approved media id in the input field.")
     public void the_moderator_fills_in_approved_media_id_in_the_input_field() {
-        TestRunner.pom.mediaIdInput.sendKeys("31");
+        TestRunner.pom.mediaIdInput.sendKeys("65");
     }
 
     @When("the moderator clicks the approve button.")
@@ -167,7 +165,7 @@ public class MediaManagementSteps {
 
     @When("the moderator fills in denied media id in the input field.")
     public void the_moderator_fills_in_denied_media_id_in_the_input_field() {
-        TestRunner.pom.mediaIdInput.sendKeys("37");
+        TestRunner.pom.mediaIdInput.sendKeys("64");
     }
 
     @When("the moderator clicks the deny button.")
@@ -209,7 +207,7 @@ public class MediaManagementSteps {
         TestRunner.pom.approveMediaButton.click();
     }
 
-    @Then("a does not exist message will appear.")
+    @Then("the title does not exist message will appear.")
     public void a_does_not_exist_message_will_appear() {
         TestRunner.explicitWait.until(ExpectedConditions.textToBePresentInElement(TestRunner.pom.approveDenyMessage,
                 "This title does not exist."));

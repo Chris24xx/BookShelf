@@ -14,10 +14,10 @@ Feature: Media management
     Then the user is redirected to the <media> section.
 
     Examples:
-    | media  | media  |
-    | books  | books  |
-    | movies | movies |
-    | games  | games  |
+      | media  | media  |
+      | books  | books  |
+      | movies | movies |
+      | games  | games  |
 
 
   Scenario: As a user I want to add media to my collection so that I can make reviews on it.
@@ -58,4 +58,4 @@ Feature: Media management
     When the moderator goes to the pending media tab.
     When the moderator fills in the wrong media id in the input field.
     When the moderator clicks the approve button with the wrong id.
-    Then a does not exist message will appear.
+    Then the title does not exist message will appear.

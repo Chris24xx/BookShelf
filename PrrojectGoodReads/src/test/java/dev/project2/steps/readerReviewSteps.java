@@ -16,9 +16,7 @@ public class readerReviewSteps {
 
     @Given("reader is on the homepage")
     public void readerIsOnTheHomepage() {
-        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop" +
-                "/Revature/Project-2/PrrojectGoodReads/src/main/java" +
-                "/dev/project2/Website/home-page.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
     }
 
     @When("the reader selects the book tab")
@@ -67,7 +65,7 @@ public class readerReviewSteps {
     @When("the user selects a title from the games tab")
     public void theUserSelectsATitleFromTheGamesTab() {
         //may fail due to multiple test being ran and info moved
-        TestRunner.webDriver.findElement(By.cssSelector("#games-info > tr:nth-child(3) > td:nth-child(1)")).click();
+        TestRunner.webDriver.findElement(By.cssSelector("#games-info > tr:nth-child(4) > td:nth-child(1)")).click();
     }
 
     @When("reader selects profile tab")
@@ -109,7 +107,7 @@ public class readerReviewSteps {
 
     @When("reader selects a piece of media title")
     public void readerSelectsAPieceOfMediaTitle() {
-        TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(7) > td:nth-child(2)")).click();
+        TestRunner.webDriver.findElement(By.xpath("//*[@id='user-media-body']/tr[7]/td[2]")).click();
     }
 
     @Then("a list is generated for the user")

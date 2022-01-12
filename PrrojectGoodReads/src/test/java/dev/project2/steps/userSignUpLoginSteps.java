@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class userSignUpLoginSteps {
-    String compFilePath = "C:/Users/arroy/Desktop/RevatureProjects/Project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/";
+    String compFilePath = "file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/";
 
     @Given("the user is on the Login page")
     public void the_user_is_on_the_login_page() {
@@ -33,7 +33,7 @@ public class userSignUpLoginSteps {
 
     @When("the user inputs their email in the Email field")
     public void the_user_inputs_their_email_in_the_email_field() {
-        TestRunner.signUpPOM.emailInput.sendKeys("newselenium@testemail.com");
+        TestRunner.signUpPOM.emailInput.sendKeys("realestatesssssssssss@testemail.com");
     }
 
     @When("the user inputs their password in the Password field")
@@ -48,6 +48,7 @@ public class userSignUpLoginSteps {
 
     @Then("the user has created their account and redirected to the Home page")
     public void the_user_has_created_their_account_and_redirected_to_the_home_page() {
+        TestRunner.explicitWait.until(ExpectedConditions.titleIs("Bookshelf Home"));
         String title = TestRunner.webDriver.getTitle();
         Assert.assertEquals(title, "Bookshelf Home");
     }
