@@ -177,8 +177,10 @@ function populateReviews(respoonseBody) {
     let table = document.getElementById("user-review-table");
     for (let reviews of respoonseBody) {
         let tableRow = document.createElement("tr")
-        tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
-        table.appendChild(tableRow);
+        if(reviews.status === true){
+            tableRow.innerHTML = `<td>${reviews.reviewId}</td><td>${reviews.userReview}</td>`
+            table.appendChild(tableRow);
+        }
       }
 
 }
