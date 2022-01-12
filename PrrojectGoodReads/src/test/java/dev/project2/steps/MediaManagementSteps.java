@@ -13,8 +13,7 @@ public class MediaManagementSteps {
 
     @Given("the user is on the login page.")
     public void the_user_is_on_the_login_page() {
-        TestRunner.webDriver.get("C:/Users/chris/Onedrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
-                "project2/Website/login.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/login.html");
     }
 
     @When("the user enters wherever@yahoo.com in the email field.")
@@ -96,6 +95,7 @@ public class MediaManagementSteps {
     @When("the user selects type from the drop down options.")
     public void the_user_selects_type_from_the_drop_down_options() {
         TestRunner.pom.mediaType.isSelected();
+//        TestRunner.explicitWait.until(ExpectedConditions.elementSelectionStateToBe(TestRunner.pom.mediaType, true));
     }
 
     @When("the user enters Snow White in the input field.")
@@ -136,8 +136,7 @@ public class MediaManagementSteps {
 
     @Given("the moderator is on the moderator page.")
     public void the_moderator_is_on_the_moderator_page() {
-        TestRunner.webDriver.get("C:/Users/chris/OneDrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
-                "project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
     }
 
     @When("the moderator clicks the pending media button.")

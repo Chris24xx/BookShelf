@@ -16,9 +16,7 @@ public class readerReviewSteps {
 
     @Given("reader is on the homepage")
     public void readerIsOnTheHomepage() {
-        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop" +
-                "/Revature/Project-2/PrrojectGoodReads/src/main/java" +
-                "/dev/project2/Website/home-page.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
     }
 
     @When("the reader selects the book tab")
