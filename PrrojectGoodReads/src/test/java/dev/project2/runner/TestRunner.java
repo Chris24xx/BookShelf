@@ -1,6 +1,7 @@
 package dev.project2.runner;
 
 import dev.project2.POM.POM;
+import dev.project2.POM.userSignUpLoginPOM;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -21,6 +22,7 @@ import java.time.Duration;
 public class TestRunner{
     public static WebDriver webDriver;
     public static POM pom;
+    public static userSignUpLoginPOM signUpPOM;
     public static WebDriverWait explicitWait;
 
     @BeforeClass
@@ -29,6 +31,7 @@ public class TestRunner{
         System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
         webDriver = new EdgeDriver();
         pom = new POM(webDriver);
+        signUpPOM = new userSignUpLoginPOM(webDriver);
         System.out.println("setup complete!");
         //SETUP IMPLICIT WAIT
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
