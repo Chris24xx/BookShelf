@@ -242,11 +242,45 @@ async function getAllUsers(){
 // Populate data for all users
 function populateUserData(responseBody){
   for (let web_user of responseBody){
-      let tableRow = document.createElement("tr");
-      tableRow.innerHTML = `<td>${web_user.userId}</td><td>${web_user.firstName}</td><td>${web_user.lastName}</td><td>${web_user.userEmail}</td>`;
-      userTable.appendChild(tableRow);
+      let ismod = web_user.moderator;
+      if(ismod){
+        ismod = "Yes";
+
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `<td>${web_user.userId}</td><td>${web_user.firstName}</td><td>${web_user.lastName}</td><td>${web_user.userEmail}</td><td>${ismod}</td>`;
+        userTable.appendChild(tableRow);
+      }
+        
+      else{
+        ismod = "No";
+        
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `<td>${web_user.userId}</td><td>${web_user.firstName}</td><td>${web_user.lastName}</td><td>${web_user.userEmail}</td><td>${ismod}</td>
+                              <td><button id="${"makeModButton" + web_user.userId}" onclick="makeModeratorFunction(${web_user.userId})">${"Make Moderator"}</button></td>`;
+        userTable.appendChild(tableRow);
+      }   
   }
 }
+
+//Allow Moderator to make other users moderators
+async function makeModeratorFunction(userId){
+  let url = "http://localhost:8080/webUser/mod/" + userId;
+
+  let response = await fetch(url,
+    {headers:{'Content-Type': 'application/json'}, 
+    method: "PATCH", 
+    body:JSON.stringify({"value": true}) 
+    });
+
+  if(response.status === 201){
+    alert("With Great Power Comes Great Responsibility");
+    location.reload();
+  }
+  else{
+    console.log("Something wrong happened here no mods");
+  }
+}
+
 
  getAllUsers()
 
