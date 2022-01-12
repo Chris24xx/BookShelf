@@ -67,7 +67,7 @@ public class readerReviewSteps {
     @When("the user selects a title from the games tab")
     public void theUserSelectsATitleFromTheGamesTab() {
         //may fail due to multiple test being ran and info moved
-        TestRunner.webDriver.findElement(By.cssSelector("#games-info > tr:nth-child(3) > td:nth-child(1)")).click();
+        TestRunner.webDriver.findElement(By.cssSelector("#games-info > tr:nth-child(4) > td:nth-child(1)")).click();
     }
 
     @When("reader selects profile tab")
@@ -109,7 +109,7 @@ public class readerReviewSteps {
 
     @When("reader selects a piece of media title")
     public void readerSelectsAPieceOfMediaTitle() {
-        TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(7) > td:nth-child(2)")).click();
+        TestRunner.webDriver.findElement(By.xpath("//*[@id='user-media-body']/tr[7]/td[2]")).click();
     }
 
     @Then("a list is generated for the user")
