@@ -23,7 +23,7 @@ async function createMedia(){
         mediaCreator.value = '';
         mediaGenre.value = '';
         mediaSynopsis.value = '';
-        submitMessage.textContent = 'Your media has been added and is awaiting approval';
+        submitMessage.textContent = 'Your media has been added and is awaiting approval.';
     } else {
         submitMessage.textContent = 'There was an issue. Your media was not added.';
     };
