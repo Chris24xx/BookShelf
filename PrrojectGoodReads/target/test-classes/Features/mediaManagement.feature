@@ -58,4 +58,4 @@ Feature: Media management
     When the moderator goes to the pending media tab.
     When the moderator fills in the wrong media id in the input field.
     When the moderator clicks the approve button with the wrong id.
-    Then a does not exist message will appear.
+    Then the title does not exist message will appear.
