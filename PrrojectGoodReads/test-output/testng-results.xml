@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="42" passed="42" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-12T18:18:57 EST" name="Default Suite" finished-at="2022-01-12T18:19:24 EST" duration-ms="26756">
+    <groups>
+    </groups>
+    <test started-at="2022-01-12T18:18:57 EST" name="PrrojectGoodReads" finished-at="2022-01-12T18:19:24 EST" duration-ms="26756">
+      <class name="dev.project2.Service.Implementation.WebUserServiceTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="setup" finished-at="2022-01-12T18:19:10 EST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testMakeModeratorFail()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="testMakeModeratorFail" finished-at="2022-01-12T18:19:10 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.WebUserNotFound">
+            <message>
+              <![CDATA[WebUser not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.WebUserNotFound: WebUser not found
+at dev.project2.Service.Implementation.WebUserServiceImp.getWebUserByIdService(WebUserServiceImp.java:35)
+at dev.project2.Service.Implementation.WebUserServiceImp.makeModerator(WebUserServiceImp.java:19)
+at dev.project2.Service.Implementation.WebUserServiceTests.testMakeModeratorFail(WebUserServiceTests.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.WebUserNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMakeModeratorFail -->
+        <test-method signature="testMakeModeratorPass()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="testMakeModeratorPass" finished-at="2022-01-12T18:19:10 EST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMakeModeratorPass -->
+        <test-method signature="testWebUserLoginCheckEmailFail()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="testWebUserLoginCheckEmailFail" finished-at="2022-01-12T18:19:10 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.WebUserNotFound">
+            <message>
+              <![CDATA[Incorrect email or Password]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:83)
+at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckEmailFail(WebUserServiceTests.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.WebUserNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWebUserLoginCheckEmailFail -->
+        <test-method signature="testWebUserLoginCheckPass()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="testWebUserLoginCheckPass" finished-at="2022-01-12T18:19:10 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWebUserLoginCheckPass -->
+        <test-method signature="testWebUserLoginCheckPasswordFail()[pri:0, instance:dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b]" started-at="2022-01-12T18:19:10 EST" name="testWebUserLoginCheckPasswordFail" finished-at="2022-01-12T18:19:10 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.WebUserNotFound">
+            <message>
+              <![CDATA[Incorrect email or Password]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:87)
+at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckPasswordFail(WebUserServiceTests.java:64)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.WebUserNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWebUserLoginCheckPasswordFail -->
+      </class> <!-- dev.project2.Service.Implementation.WebUserServiceTests -->
+      <class name="dev.project2.Service.Implementation.ContactUsImpTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b]" started-at="2022-01-12T18:19:04 EST" name="setup" finished-at="2022-01-12T18:19:04 EST" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getAllContactRequestsFail()[pri:0, instance:dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b]" started-at="2022-01-12T18:19:04 EST" name="getAllContactRequestsFail" finished-at="2022-01-12T18:19:04 EST" duration-ms="12" status="PASS">
+          <exception class="dev.project2.Exception.ListCanNotBeGenerated">
+            <message>
+              <![CDATA[List cannot be generated at this time]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+at dev.project2.Service.Implementation.ContactUsServiceImp.getAllContactRequests(ContactUsServiceImp.java:39)
+at dev.project2.Service.Implementation.ContactUsImpTest.getAllContactRequestsFail(ContactUsImpTest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ListCanNotBeGenerated -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllContactRequestsFail -->
+        <test-method signature="getCompletedContactRequestsFail()[pri:0, instance:dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b]" started-at="2022-01-12T18:19:04 EST" name="getCompletedContactRequestsFail" finished-at="2022-01-12T18:19:04 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.ListCanNotBeGenerated">
+            <message>
+              <![CDATA[List cannot be generated at this time]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+at dev.project2.Service.Implementation.ContactUsServiceImp.getCompletedContactRequests(ContactUsServiceImp.java:59)
+at dev.project2.Service.Implementation.ContactUsImpTest.getCompletedContactRequestsFail(ContactUsImpTest.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ListCanNotBeGenerated -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCompletedContactRequestsFail -->
+        <test-method signature="getContactRequestFail()[pri:0, instance:dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b]" started-at="2022-01-12T18:19:04 EST" name="getContactRequestFail" finished-at="2022-01-12T18:19:04 EST" duration-ms="3" status="PASS">
+          <exception class="dev.project2.Exception.ContactUsNotFound">
+            <message>
+              <![CDATA[Contact Request Not Found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ContactUsNotFound: Contact Request Not Found
+at dev.project2.Service.Implementation.ContactUsServiceImp.getContactUsById(ContactUsServiceImp.java:29)
+at dev.project2.Service.Implementation.ContactUsImpTest.getContactRequestFail(ContactUsImpTest.java:28)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ContactUsNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContactRequestFail -->
+        <test-method signature="getPendingContactRequestsFail()[pri:0, instance:dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b]" started-at="2022-01-12T18:19:04 EST" name="getPendingContactRequestsFail" finished-at="2022-01-12T18:19:04 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.ListCanNotBeGenerated">
+            <message>
+              <![CDATA[List cannot be generated at this time]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+at dev.project2.Service.Implementation.ContactUsServiceImp.getPendingContactRequests(ContactUsServiceImp.java:49)
+at dev.project2.Service.Implementation.ContactUsImpTest.getPendingContactRequestsFail(ContactUsImpTest.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ListCanNotBeGenerated -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingContactRequestsFail -->
+      </class> <!-- dev.project2.Service.Implementation.ContactUsImpTest -->
+      <class name="dev.project2.DAO.Implementation.WebUserDAOTests">
+        <test-method signature="testCreateWebUser()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:04 EST" name="testCreateWebUser" finished-at="2022-01-12T18:19:05 EST" duration-ms="920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateWebUser -->
+        <test-method signature="testDeleteWebUser()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:05 EST" name="testDeleteWebUser" finished-at="2022-01-12T18:19:06 EST" duration-ms="869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteWebUser -->
+        <test-method signature="testGetAllWebUsers()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:06 EST" name="testGetAllWebUsers" finished-at="2022-01-12T18:19:07 EST" duration-ms="884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllWebUsers -->
+        <test-method signature="testGetWebUserByEmail()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:07 EST" name="testGetWebUserByEmail" finished-at="2022-01-12T18:19:08 EST" duration-ms="782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetWebUserByEmail -->
+        <test-method signature="testGetWebUserById()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:08 EST" name="testGetWebUserById" finished-at="2022-01-12T18:19:09 EST" duration-ms="859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetWebUserById -->
+        <test-method signature="testUpdateWebUser()[pri:0, instance:dev.project2.DAO.Implementation.WebUserDAOTests@45018215]" started-at="2022-01-12T18:19:09 EST" name="testUpdateWebUser" finished-at="2022-01-12T18:19:10 EST" duration-ms="864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateWebUser -->
+      </class> <!-- dev.project2.DAO.Implementation.WebUserDAOTests -->
+      <class name="dev.project2.Service.Implementation.ReviewImpTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.project2.Service.Implementation.ReviewImpTest@4278a03f]" started-at="2022-01-12T18:19:24 EST" name="setup" finished-at="2022-01-12T18:19:24 EST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getReviewFail()[pri:0, instance:dev.project2.Service.Implementation.ReviewImpTest@4278a03f]" started-at="2022-01-12T18:19:24 EST" name="getReviewFail" finished-at="2022-01-12T18:19:24 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.ReviewNotFound">
+            <message>
+              <![CDATA[Review not Found!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ReviewNotFound: Review not Found!
+at dev.project2.Service.Implementation.ReviewImp.getReviewService(ReviewImp.java:34)
+at dev.project2.Service.Implementation.ReviewImpTest.getReviewFail(ReviewImpTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ReviewNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getReviewFail -->
+        <test-method signature="testGetPendingReviews()[pri:0, instance:dev.project2.Service.Implementation.ReviewImpTest@4278a03f]" started-at="2022-01-12T18:19:24 EST" name="testGetPendingReviews" finished-at="2022-01-12T18:19:24 EST" duration-ms="0" status="PASS">
+          <exception class="dev.project2.Exception.ListCanNotBeGenerated">
+            <message>
+              <![CDATA[No list can be generated]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+at dev.project2.Service.Implementation.ReviewImp.getPendingReviewsService(ReviewImp.java:54)
+at dev.project2.Service.Implementation.ReviewImpTest.testGetPendingReviews(ReviewImpTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ListCanNotBeGenerated -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPendingReviews -->
+        <test-method signature="testNotNullReviews()[pri:0, instance:dev.project2.Service.Implementation.ReviewImpTest@4278a03f]" started-at="2022-01-12T18:19:24 EST" name="testNotNullReviews" finished-at="2022-01-12T18:19:24 EST" duration-ms="1" status="PASS">
+          <exception class="dev.project2.Exception.ListCanNotBeGenerated">
+            <message>
+              <![CDATA[No list can be generated]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+at dev.project2.Service.Implementation.ReviewImp.notNullReviewsService(ReviewImp.java:64)
+at dev.project2.Service.Implementation.ReviewImpTest.testNotNullReviews(ReviewImpTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ListCanNotBeGenerated -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotNullReviews -->
+      </class> <!-- dev.project2.Service.Implementation.ReviewImpTest -->
+      <class name="dev.project2.DAO.Implementation.ContactUsImpTest">
+        <test-method signature="getAllContactRequests()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:18:57 EST" name="getAllContactRequests" finished-at="2022-01-12T18:18:58 EST" duration-ms="1098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllContactRequests -->
+        <test-method signature="getCompletedContactRequests()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:18:58 EST" name="getCompletedContactRequests" finished-at="2022-01-12T18:18:59 EST" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCompletedContactRequests -->
+        <test-method signature="getPendingContactRequests()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:18:59 EST" name="getPendingContactRequests" finished-at="2022-01-12T18:19:00 EST" duration-ms="1136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPendingContactRequests -->
+        <test-method signature="selectContactRequestById()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:19:00 EST" name="selectContactRequestById" finished-at="2022-01-12T18:19:01 EST" duration-ms="896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectContactRequestById -->
+        <test-method signature="testCreateContactUs()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:19:01 EST" name="testCreateContactUs" finished-at="2022-01-12T18:19:02 EST" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateContactUs -->
+        <test-method signature="testDeleteContactRequest()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:19:02 EST" name="testDeleteContactRequest" finished-at="2022-01-12T18:19:03 EST" duration-ms="894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteContactRequest -->
+        <test-method signature="testUpdateContactRequest()[pri:0, instance:dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0]" started-at="2022-01-12T18:19:03 EST" name="testUpdateContactRequest" finished-at="2022-01-12T18:19:04 EST" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateContactRequest -->
+      </class> <!-- dev.project2.DAO.Implementation.ContactUsImpTest -->
+      <class name="dev.project2.DAO.Implementation.ReviewDaoImpTest">
+        <test-method signature="testCreateReview()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:18 EST" name="testCreateReview" finished-at="2022-01-12T18:19:18 EST" duration-ms="841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateReview -->
+        <test-method signature="testDeleteReview()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:18 EST" name="testDeleteReview" finished-at="2022-01-12T18:19:19 EST" duration-ms="999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteReview -->
+        <test-method signature="testGetAllReviews()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:19 EST" name="testGetAllReviews" finished-at="2022-01-12T18:19:20 EST" duration-ms="894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllReviews -->
+        <test-method signature="testGetPendingReviews()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:20 EST" name="testGetPendingReviews" finished-at="2022-01-12T18:19:21 EST" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPendingReviews -->
+        <test-method signature="testGetReview()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:21 EST" name="testGetReview" finished-at="2022-01-12T18:19:22 EST" duration-ms="905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetReview -->
+        <test-method signature="testNotNullReviews()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:22 EST" name="testNotNullReviews" finished-at="2022-01-12T18:19:23 EST" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNotNullReviews -->
+        <test-method signature="testUpdateReview()[pri:0, instance:dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b]" started-at="2022-01-12T18:19:23 EST" name="testUpdateReview" finished-at="2022-01-12T18:19:24 EST" duration-ms="913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateReview -->
+      </class> <!-- dev.project2.DAO.Implementation.ReviewDaoImpTest -->
+      <class name="dev.project2.DAO.Implementation.MediaDAOImpTest">
+        <test-method signature="testApproveMedia()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:10 EST" name="testApproveMedia" finished-at="2022-01-12T18:19:11 EST" duration-ms="873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveMedia -->
+        <test-method signature="testCreateNewMedia()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:11 EST" name="testCreateNewMedia" finished-at="2022-01-12T18:19:11 EST" duration-ms="944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewMedia -->
+        <test-method signature="testDeleteMedia()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:11 EST" name="testDeleteMedia" finished-at="2022-01-12T18:19:12 EST" duration-ms="848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMedia -->
+        <test-method signature="testGetAllBooks()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:12 EST" name="testGetAllBooks" finished-at="2022-01-12T18:19:13 EST" duration-ms="841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllBooks -->
+        <test-method signature="testGetAllGames()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:13 EST" name="testGetAllGames" finished-at="2022-01-12T18:19:14 EST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllGames -->
+        <test-method signature="testGetAllMovies()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:14 EST" name="testGetAllMovies" finished-at="2022-01-12T18:19:15 EST" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllMovies -->
+        <test-method signature="testGetApprovedMedia()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:15 EST" name="testGetApprovedMedia" finished-at="2022-01-12T18:19:16 EST" duration-ms="923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetApprovedMedia -->
+        <test-method signature="testGetMediaByUserId()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:16 EST" name="testGetMediaByUserId" finished-at="2022-01-12T18:19:17 EST" duration-ms="824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMediaByUserId -->
+        <test-method signature="testGetPendingMedia()[pri:0, instance:dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d]" started-at="2022-01-12T18:19:17 EST" name="testGetPendingMedia" finished-at="2022-01-12T18:19:18 EST" duration-ms="851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPendingMedia -->
+      </class> <!-- dev.project2.DAO.Implementation.MediaDAOImpTest -->
+      <class name="dev.project2.Service.Implementation.MediaServiceTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:dev.project2.Service.Implementation.MediaServiceTests@2928854b]" started-at="2022-01-12T18:19:18 EST" name="setup" finished-at="2022-01-12T18:19:18 EST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="approveMediaFail()[pri:0, instance:dev.project2.Service.Implementation.MediaServiceTests@2928854b]" started-at="2022-01-12T18:19:18 EST" name="approveMediaFail" finished-at="2022-01-12T18:19:18 EST" duration-ms="0" status="PASS">
+          <exception class="dev.project2.Exception.ItemNotFound">
+            <message>
+              <![CDATA[This piece of media does not exist]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[dev.project2.Exception.ItemNotFound: This piece of media does not exist
+at dev.project2.Service.Implementation.MediaServiceImp.approveMediaService(MediaServiceImp.java:60)
+at dev.project2.Service.Implementation.MediaServiceTests.approveMediaFail(MediaServiceTests.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- dev.project2.Exception.ItemNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveMediaFail -->
+      </class> <!-- dev.project2.Service.Implementation.MediaServiceTests -->
+    </test> <!-- PrrojectGoodReads -->
+  </suite> <!-- Default Suite -->
+</testng-results>

@@ -1,0 +1,698 @@
+<html>
+<head>
+<title>TestNG:  PrrojectGoodReads</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>PrrojectGoodReads</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>42/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 12 18:18:57 EST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>26 seconds (26756 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetPendingMedia()'><b>testGetPendingMedia</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testCreateNewMedia()'><b>testCreateNewMedia</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.getPendingContactRequests()'><b>getPendingContactRequests</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>1</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ReviewImpTest.getReviewFail()'><b>getReviewFail</b><br>Test class: dev.project2.Service.Implementation.ReviewImpTest</td>
+<td><div><pre>dev.project2.Exception.ReviewNotFound: Review not Found!
+	at dev.project2.Service.Implementation.ReviewImp.getReviewService(ReviewImp.java:34)
+	at dev.project2.Service.Implementation.ReviewImpTest.getReviewFail(ReviewImpTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1897368146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1897368146'><pre>dev.project2.Exception.ReviewNotFound: Review not Found!
+	at dev.project2.Service.Implementation.ReviewImp.getReviewService(ReviewImp.java:34)
+	at dev.project2.Service.Implementation.ReviewImpTest.getReviewFail(ReviewImpTest.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ReviewImpTest@4278a03f</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testCreateWebUser()'><b>testCreateWebUser</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testGetWebUserByEmail()'><b>testGetWebUserByEmail</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.WebUserServiceTests.testMakeModeratorFail()'><b>testMakeModeratorFail</b><br>Test class: dev.project2.Service.Implementation.WebUserServiceTests</td>
+<td><div><pre>dev.project2.Exception.WebUserNotFound: WebUser not found
+	at dev.project2.Service.Implementation.WebUserServiceImp.getWebUserByIdService(WebUserServiceImp.java:35)
+	at dev.project2.Service.Implementation.WebUserServiceImp.makeModerator(WebUserServiceImp.java:19)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testMakeModeratorFail(WebUserServiceTests.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2123846943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2123846943'><pre>dev.project2.Exception.WebUserNotFound: WebUser not found
+	at dev.project2.Service.Implementation.WebUserServiceImp.getWebUserByIdService(WebUserServiceImp.java:35)
+	at dev.project2.Service.Implementation.WebUserServiceImp.makeModerator(WebUserServiceImp.java:19)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testMakeModeratorFail(WebUserServiceTests.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testApproveMedia()'><b>testApproveMedia</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetAllBooks()'><b>testGetAllBooks</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testDeleteWebUser()'><b>testDeleteWebUser</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.testCreateContactUs()'><b>testCreateContactUs</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckPass()'><b>testWebUserLoginCheckPass</b><br>Test class: dev.project2.Service.Implementation.WebUserServiceTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testGetWebUserById()'><b>testGetWebUserById</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testGetReview()'><b>testGetReview</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.getAllContactRequests()'><b>getAllContactRequests</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>1</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.MediaServiceTests.approveMediaFail()'><b>approveMediaFail</b><br>Test class: dev.project2.Service.Implementation.MediaServiceTests</td>
+<td><div><pre>dev.project2.Exception.ItemNotFound: This piece of media does not exist
+	at dev.project2.Service.Implementation.MediaServiceImp.approveMediaService(MediaServiceImp.java:60)
+	at dev.project2.Service.Implementation.MediaServiceTests.approveMediaFail(MediaServiceTests.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace775574071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace775574071'><pre>dev.project2.Exception.ItemNotFound: This piece of media does not exist
+	at dev.project2.Service.Implementation.MediaServiceImp.approveMediaService(MediaServiceImp.java:60)
+	at dev.project2.Service.Implementation.MediaServiceTests.approveMediaFail(MediaServiceTests.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.MediaServiceTests@2928854b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetApprovedMedia()'><b>testGetApprovedMedia</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.testUpdateContactRequest()'><b>testUpdateContactRequest</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testDeleteMedia()'><b>testDeleteMedia</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ContactUsImpTest.getAllContactRequestsFail()'><b>getAllContactRequestsFail</b><br>Test class: dev.project2.Service.Implementation.ContactUsImpTest</td>
+<td><div><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getAllContactRequests(ContactUsServiceImp.java:39)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getAllContactRequestsFail(ContactUsImpTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2024945312", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2024945312'><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getAllContactRequests(ContactUsServiceImp.java:39)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getAllContactRequestsFail(ContactUsImpTest.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testGetAllReviews()'><b>testGetAllReviews</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.getCompletedContactRequests()'><b>getCompletedContactRequests</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckPasswordFail()'><b>testWebUserLoginCheckPasswordFail</b><br>Test class: dev.project2.Service.Implementation.WebUserServiceTests</td>
+<td><div><pre>dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+	at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:87)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckPasswordFail(WebUserServiceTests.java:64)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1857007886", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1857007886'><pre>dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+	at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:87)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckPasswordFail(WebUserServiceTests.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testGetAllWebUsers()'><b>testGetAllWebUsers</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetAllMovies()'><b>testGetAllMovies</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.testDeleteContactRequest()'><b>testDeleteContactRequest</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ContactUsImpTest.getPendingContactRequestsFail()'><b>getPendingContactRequestsFail</b><br>Test class: dev.project2.Service.Implementation.ContactUsImpTest</td>
+<td><div><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getPendingContactRequests(ContactUsServiceImp.java:49)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getPendingContactRequestsFail(ContactUsImpTest.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace817490653", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817490653'><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getPendingContactRequests(ContactUsServiceImp.java:49)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getPendingContactRequestsFail(ContactUsImpTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testDeleteReview()'><b>testDeleteReview</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ContactUsImpTest.getCompletedContactRequestsFail()'><b>getCompletedContactRequestsFail</b><br>Test class: dev.project2.Service.Implementation.ContactUsImpTest</td>
+<td><div><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getCompletedContactRequests(ContactUsServiceImp.java:59)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getCompletedContactRequestsFail(ContactUsImpTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace62739928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace62739928'><pre>dev.project2.Exception.ListCanNotBeGenerated: List cannot be generated at this time
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getCompletedContactRequests(ContactUsServiceImp.java:59)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getCompletedContactRequestsFail(ContactUsImpTest.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testUpdateReview()'><b>testUpdateReview</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ReviewImpTest.testNotNullReviews()'><b>testNotNullReviews</b><br>Test class: dev.project2.Service.Implementation.ReviewImpTest</td>
+<td><div><pre>dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+	at dev.project2.Service.Implementation.ReviewImp.notNullReviewsService(ReviewImp.java:64)
+	at dev.project2.Service.Implementation.ReviewImpTest.testNotNullReviews(ReviewImpTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace161982472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace161982472'><pre>dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+	at dev.project2.Service.Implementation.ReviewImp.notNullReviewsService(ReviewImp.java:64)
+	at dev.project2.Service.Implementation.ReviewImpTest.testNotNullReviews(ReviewImpTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ReviewImpTest@4278a03f</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.WebUserServiceTests.testMakeModeratorPass()'><b>testMakeModeratorPass</b><br>Test class: dev.project2.Service.Implementation.WebUserServiceTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetAllGames()'><b>testGetAllGames</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testNotNullReviews()'><b>testNotNullReviews</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.MediaDAOImpTest.testGetMediaByUserId()'><b>testGetMediaByUserId</b><br>Test class: dev.project2.DAO.Implementation.MediaDAOImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.MediaDAOImpTest@79efed2d</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ContactUsImpTest.getContactRequestFail()'><b>getContactRequestFail</b><br>Test class: dev.project2.Service.Implementation.ContactUsImpTest</td>
+<td><div><pre>dev.project2.Exception.ContactUsNotFound: Contact Request Not Found
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getContactUsById(ContactUsServiceImp.java:29)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getContactRequestFail(ContactUsImpTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2114687352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114687352'><pre>dev.project2.Exception.ContactUsNotFound: Contact Request Not Found
+	at dev.project2.Service.Implementation.ContactUsServiceImp.getContactUsById(ContactUsServiceImp.java:29)
+	at dev.project2.Service.Implementation.ContactUsImpTest.getContactRequestFail(ContactUsImpTest.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ContactUsImpTest@4c1d9d4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.WebUserDAOTests.testUpdateWebUser()'><b>testUpdateWebUser</b><br>Test class: dev.project2.DAO.Implementation.WebUserDAOTests</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.WebUserDAOTests@45018215</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.ReviewImpTest.testGetPendingReviews()'><b>testGetPendingReviews</b><br>Test class: dev.project2.Service.Implementation.ReviewImpTest</td>
+<td><div><pre>dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+	at dev.project2.Service.Implementation.ReviewImp.getPendingReviewsService(ReviewImp.java:54)
+	at dev.project2.Service.Implementation.ReviewImpTest.testGetPendingReviews(ReviewImpTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace180078856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180078856'><pre>dev.project2.Exception.ListCanNotBeGenerated: No list can be generated
+	at dev.project2.Service.Implementation.ReviewImp.getPendingReviewsService(ReviewImp.java:54)
+	at dev.project2.Service.Implementation.ReviewImpTest.testGetPendingReviews(ReviewImpTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.ReviewImpTest@4278a03f</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ContactUsImpTest.selectContactRequestById()'><b>selectContactRequestById</b><br>Test class: dev.project2.DAO.Implementation.ContactUsImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ContactUsImpTest@1460a8c0</td></tr>
+<tr>
+<td title='dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckEmailFail()'><b>testWebUserLoginCheckEmailFail</b><br>Test class: dev.project2.Service.Implementation.WebUserServiceTests</td>
+<td><div><pre>dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+	at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:83)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckEmailFail(WebUserServiceTests.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1835316563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1835316563'><pre>dev.project2.Exception.WebUserNotFound: Incorrect email or Password
+	at dev.project2.Service.Implementation.WebUserServiceImp.webUserLoginCheck(WebUserServiceImp.java:83)
+	at dev.project2.Service.Implementation.WebUserServiceTests.testWebUserLoginCheckEmailFail(WebUserServiceTests.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>dev.project2.Service.Implementation.WebUserServiceTests@65d6b83b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testGetPendingReviews()'><b>testGetPendingReviews</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+<tr>
+<td title='dev.project2.DAO.Implementation.ReviewDaoImpTest.testCreateReview()'><b>testCreateReview</b><br>Test class: dev.project2.DAO.Implementation.ReviewDaoImpTest</td>
+<td></td>
+<td>0</td>
+<td>dev.project2.DAO.Implementation.ReviewDaoImpTest@2f177a4b</td></tr>
+</table><p>
+</body>
+</html>
