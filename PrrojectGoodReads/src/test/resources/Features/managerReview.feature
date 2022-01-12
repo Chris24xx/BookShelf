@@ -20,6 +20,6 @@ Feature:Review Management
   Scenario: as a moderator I should be able to deny a review
     Given Moderator is on the moderator home page
     When the Moderator clicks the pending review tab
-    When the moderator inputs a mediaId into a field
+    When the moderator inputs a mediaId into a field to be deleted
     When the moderator clicks the deny button
     Then an alert will appear
