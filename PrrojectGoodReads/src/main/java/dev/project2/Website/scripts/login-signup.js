@@ -45,7 +45,13 @@ async function signUp(){
     let signUpEmailInput = document.getElementById("emailInput");
     let signUpPasswordInput = document.getElementById("passwordInput");
 
-    let response = await fetch(url + urlAttach, {
+    //If check so users won't input empty fields for their account creation
+    ///^\s*$/.test() checks to see if string has whitespaces or is empty
+    if(/^\s*$/.test(signUpFirstNameInput.value) || /^\s*$/.test(signUpLastNameInput.value) || /^\s*$/.test(signUpEmailInput.value) || /^\s*$/.test(signUpPasswordInput.value)){
+        alert("One of the inputs is empty");
+    }
+    else{
+        let response = await fetch(url + urlAttach, {
         headers: {'Content-Type': 'application/json'},
         method: "POST", 
         body: JSON.stringify({
@@ -55,22 +61,25 @@ async function signUp(){
             ["userEmail"]: signUpEmailInput.value, 
             ["password"]: signUpPasswordInput.value,
             ["moderator"]: false})
-    });
+        });
 
-    if(response.status === 201){
-        let info = await response.json();
-        console.log(info);
-        sessionStorage.setItem("webUserId", info.userId);
-        window.location.href = "home-page.html";
+        if(response.status === 201){
+            let info = await response.json();
+            console.log(info);
+            sessionStorage.setItem("webUserId", info.userId);
+            window.location.href = "home-page.html";
+        }
+        else if(response.status === 404){
+            let info = await response.json();
+            console.log(info);
+            alert(info);
+        }
+        else{
+            console.log("This ain't working");
+        }
     }
-    else if(response.status === 404){
-        let info = await response.json();
-        console.log(info);
-        alert(info);
-    }
-    else{
-        console.log("This ain't working");
-    }
+
+    
 }
 
 function loginOrSignUp(){
