@@ -37,4 +37,10 @@ public class userSignUpLoginPOM {
 
     @FindBy(id = "homeLogoutButton")
     public WebElement homeLogoutButton;
+
+    @FindBy(id = "users")
+    public WebElement profileSearchButton;
+
+    @FindBy(id = "makeModButton16")
+    public WebElement makeModButton;
 }
