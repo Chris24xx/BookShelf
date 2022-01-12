@@ -15,9 +15,7 @@ public class managerReviewSteps {
     @Given("Moderator is on the moderator home page")
     public void moderator_is_on_the_moderator_home_page() {
         // Write code here that turns the phrase above into concrete actions
-        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/" +
-                "Revature/Project-2/PrrojectGoodReads/" +
-                "src/main/java/dev/project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
     }
     @When("the Moderator clicks the pending review tab")
     public void the_moderator_clicks_the_pending_review_tab() {

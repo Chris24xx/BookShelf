@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class userSignUpLoginSteps {
-    String compFilePath = "file:///C:/Users/chris/OneDrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/";
+    String compFilePath = "file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/";
 
     @Given("the user is on the Login page")
     public void the_user_is_on_the_login_page() {
@@ -33,7 +33,7 @@ public class userSignUpLoginSteps {
 
     @When("the user inputs their email in the Email field")
     public void the_user_inputs_their_email_in_the_email_field() {
-        TestRunner.signUpPOM.emailInput.sendKeys("realsel@testemail.com");
+        TestRunner.signUpPOM.emailInput.sendKeys("realestatesssssssssss@testemail.com");
     }
 
     @When("the user inputs their password in the Password field")

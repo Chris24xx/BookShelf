@@ -15,14 +15,14 @@ public class ContactUsImpTest {
     public void testCreateContactUs(){
         ContactUs contactUs = new ContactUs(1, false, "yayasisterhood@yahoo.com", "Jennifer Jones", "I am having..." );
         ContactUs returnedContactUs = dao.createContact(contactUs);
-        Assert.assertTrue(returnedContactUs.getContactId()==20);
+        Assert.assertTrue(returnedContactUs.getContactId()==39);
     }
 
     @Test
     void selectContactRequestById(){
-        ContactUs contactUs =dao.getContactUsById(2);
+        ContactUs contactUs =dao.getContactUsById(9);
         System.out.println(contactUs);
-        Assert.assertEquals(contactUs.getContactId(), 2);
+        Assert.assertEquals(contactUs.getContactId(), 9);
     }
 
     @Test
