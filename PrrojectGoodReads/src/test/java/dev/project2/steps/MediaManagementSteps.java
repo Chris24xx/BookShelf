@@ -137,7 +137,7 @@ public class MediaManagementSteps {
 
     @Given("the moderator is on the moderator page.")
     public void the_moderator_is_on_the_moderator_page() {
-        TestRunner.webDriver.get("C:/Users/kckar/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
+        TestRunner.webDriver.get("C:/Users/chris/OneDrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
                 "project2/Website/moderator.html");
     }
 
