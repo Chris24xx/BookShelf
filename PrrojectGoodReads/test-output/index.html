@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
+              <span class="suite-name border-passed">Default Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_Suite" class="navigator-link ">
+                    <span>C:\Users\chris\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">42 methods,   42 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods passed suite-Default_Suite"> (hide)</a> <!-- hide-methods passed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.MediaServiceTests" class="method navigator-link" hash-for-method="approveMediaFail">approveMediaFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getAllContactRequests">getAllContactRequests</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getAllContactRequestsFail">getAllContactRequestsFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getCompletedContactRequests">getCompletedContactRequests</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getCompletedContactRequestsFail">getCompletedContactRequestsFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getContactRequestFail">getContactRequestFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getPendingContactRequests">getPendingContactRequests</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="getPendingContactRequestsFail">getPendingContactRequestsFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ReviewImpTest" class="method navigator-link" hash-for-method="getReviewFail">getReviewFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="selectContactRequestById">selectContactRequestById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testApproveMedia">testApproveMedia</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="testCreateContactUs">testCreateContactUs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testCreateNewMedia">testCreateNewMedia</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testCreateReview">testCreateReview</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testCreateWebUser">testCreateWebUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="testDeleteContactRequest">testDeleteContactRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testDeleteMedia">testDeleteMedia</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testDeleteReview">testDeleteReview</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testDeleteWebUser">testDeleteWebUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetAllBooks">testGetAllBooks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetAllGames">testGetAllGames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetAllMovies">testGetAllMovies</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testGetAllReviews">testGetAllReviews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testGetAllWebUsers">testGetAllWebUsers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetApprovedMedia">testGetApprovedMedia</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetMediaByUserId">testGetMediaByUserId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.MediaDAOImpTest" class="method navigator-link" hash-for-method="testGetPendingMedia">testGetPendingMedia</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ReviewImpTest" class="method navigator-link" hash-for-method="testGetPendingReviews">testGetPendingReviews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testGetPendingReviews">testGetPendingReviews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testGetReview">testGetReview</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testGetWebUserByEmail">testGetWebUserByEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testGetWebUserById">testGetWebUserById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.WebUserServiceTests" class="method navigator-link" hash-for-method="testMakeModeratorFail">testMakeModeratorFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.WebUserServiceTests" class="method navigator-link" hash-for-method="testMakeModeratorPass">testMakeModeratorPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.ReviewImpTest" class="method navigator-link" hash-for-method="testNotNullReviews">testNotNullReviews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testNotNullReviews">testNotNullReviews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ContactUsImpTest" class="method navigator-link" hash-for-method="testUpdateContactRequest">testUpdateContactRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.ReviewDaoImpTest" class="method navigator-link" hash-for-method="testUpdateReview">testUpdateReview</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.DAO.Implementation.WebUserDAOTests" class="method navigator-link" hash-for-method="testUpdateWebUser">testUpdateWebUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.WebUserServiceTests" class="method navigator-link" hash-for-method="testWebUserLoginCheckEmailFail">testWebUserLoginCheckEmailFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.WebUserServiceTests" class="method navigator-link" hash-for-method="testWebUserLoginCheckPass">testWebUserLoginCheckPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="dev.project2.Service.Implementation.WebUserServiceTests" class="method navigator-link" hash-for-method="testWebUserLoginCheckPasswordFail">testWebUserLoginCheckPasswordFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_Suite" class="panel Default_Suite">
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.DAO.Implementation.MediaDAOImpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testApproveMedia">
+                  </a> <!-- testApproveMedia -->
+                  <span class="method-name">testApproveMedia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNewMedia">
+                  </a> <!-- testCreateNewMedia -->
+                  <span class="method-name">testCreateNewMedia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteMedia">
+                  </a> <!-- testDeleteMedia -->
+                  <span class="method-name">testDeleteMedia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllBooks">
+                  </a> <!-- testGetAllBooks -->
+                  <span class="method-name">testGetAllBooks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllGames">
+                  </a> <!-- testGetAllGames -->
+                  <span class="method-name">testGetAllGames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllMovies">
+                  </a> <!-- testGetAllMovies -->
+                  <span class="method-name">testGetAllMovies</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetApprovedMedia">
+                  </a> <!-- testGetApprovedMedia -->
+                  <span class="method-name">testGetApprovedMedia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetMediaByUserId">
+                  </a> <!-- testGetMediaByUserId -->
+                  <span class="method-name">testGetMediaByUserId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPendingMedia">
+                  </a> <!-- testGetPendingMedia -->
+                  <span class="method-name">testGetPendingMedia</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.DAO.Implementation.ReviewDaoImpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateReview">
+                  </a> <!-- testCreateReview -->
+                  <span class="method-name">testCreateReview</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteReview">
+                  </a> <!-- testDeleteReview -->
+                  <span class="method-name">testDeleteReview</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllReviews">
+                  </a> <!-- testGetAllReviews -->
+                  <span class="method-name">testGetAllReviews</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPendingReviews">
+                  </a> <!-- testGetPendingReviews -->
+                  <span class="method-name">testGetPendingReviews</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetReview">
+                  </a> <!-- testGetReview -->
+                  <span class="method-name">testGetReview</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNotNullReviews">
+                  </a> <!-- testNotNullReviews -->
+                  <span class="method-name">testNotNullReviews</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateReview">
+                  </a> <!-- testUpdateReview -->
+                  <span class="method-name">testUpdateReview</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.Service.Implementation.ReviewImpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getReviewFail">
+                  </a> <!-- getReviewFail -->
+                  <span class="method-name">getReviewFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPendingReviews">
+                  </a> <!-- testGetPendingReviews -->
+                  <span class="method-name">testGetPendingReviews</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNotNullReviews">
+                  </a> <!-- testNotNullReviews -->
+                  <span class="method-name">testNotNullReviews</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.DAO.Implementation.ContactUsImpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllContactRequests">
+                  </a> <!-- getAllContactRequests -->
+                  <span class="method-name">getAllContactRequests</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getCompletedContactRequests">
+                  </a> <!-- getCompletedContactRequests -->
+                  <span class="method-name">getCompletedContactRequests</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPendingContactRequests">
+                  </a> <!-- getPendingContactRequests -->
+                  <span class="method-name">getPendingContactRequests</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectContactRequestById">
+                  </a> <!-- selectContactRequestById -->
+                  <span class="method-name">selectContactRequestById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateContactUs">
+                  </a> <!-- testCreateContactUs -->
+                  <span class="method-name">testCreateContactUs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteContactRequest">
+                  </a> <!-- testDeleteContactRequest -->
+                  <span class="method-name">testDeleteContactRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateContactRequest">
+                  </a> <!-- testUpdateContactRequest -->
+                  <span class="method-name">testUpdateContactRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.DAO.Implementation.WebUserDAOTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateWebUser">
+                  </a> <!-- testCreateWebUser -->
+                  <span class="method-name">testCreateWebUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteWebUser">
+                  </a> <!-- testDeleteWebUser -->
+                  <span class="method-name">testDeleteWebUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllWebUsers">
+                  </a> <!-- testGetAllWebUsers -->
+                  <span class="method-name">testGetAllWebUsers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetWebUserByEmail">
+                  </a> <!-- testGetWebUserByEmail -->
+                  <span class="method-name">testGetWebUserByEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetWebUserById">
+                  </a> <!-- testGetWebUserById -->
+                  <span class="method-name">testGetWebUserById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateWebUser">
+                  </a> <!-- testUpdateWebUser -->
+                  <span class="method-name">testUpdateWebUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.Service.Implementation.WebUserServiceTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMakeModeratorFail">
+                  </a> <!-- testMakeModeratorFail -->
+                  <span class="method-name">testMakeModeratorFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMakeModeratorPass">
+                  </a> <!-- testMakeModeratorPass -->
+                  <span class="method-name">testMakeModeratorPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWebUserLoginCheckEmailFail">
+                  </a> <!-- testWebUserLoginCheckEmailFail -->
+                  <span class="method-name">testWebUserLoginCheckEmailFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWebUserLoginCheckPass">
+                  </a> <!-- testWebUserLoginCheckPass -->
+                  <span class="method-name">testWebUserLoginCheckPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWebUserLoginCheckPasswordFail">
+                  </a> <!-- testWebUserLoginCheckPasswordFail -->
+                  <span class="method-name">testWebUserLoginCheckPasswordFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.Service.Implementation.ContactUsImpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllContactRequestsFail">
+                  </a> <!-- getAllContactRequestsFail -->
+                  <span class="method-name">getAllContactRequestsFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getCompletedContactRequestsFail">
+                  </a> <!-- getCompletedContactRequestsFail -->
+                  <span class="method-name">getCompletedContactRequestsFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getContactRequestFail">
+                  </a> <!-- getContactRequestFail -->
+                  <span class="method-name">getContactRequestFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPendingContactRequestsFail">
+                  </a> <!-- getPendingContactRequestsFail -->
+                  <span class="method-name">getPendingContactRequestsFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dev.project2.Service.Implementation.MediaServiceTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="approveMediaFail">
+                  </a> <!-- approveMediaFail -->
+                  <span class="method-name">approveMediaFail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+        </div> <!-- panel Default_Suite -->
+        <div panel-name="test-xml-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\chris\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;PrrojectGoodReads&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;dev.project2.DAO.Implementation.ContactUsImpTest&quot;/&gt;
+      &lt;class name=&quot;dev.project2.Service.Implementation.ContactUsImpTest&quot;/&gt;
+      &lt;class name=&quot;dev.project2.DAO.Implementation.WebUserDAOTests&quot;/&gt;
+      &lt;class name=&quot;dev.project2.Service.Implementation.WebUserServiceTests&quot;/&gt;
+      &lt;class name=&quot;dev.project2.DAO.Implementation.MediaDAOImpTest&quot;/&gt;
+      &lt;class name=&quot;dev.project2.Service.Implementation.MediaServiceTests&quot;/&gt;
+      &lt;class name=&quot;dev.project2.DAO.Implementation.ReviewDaoImpTest&quot;/&gt;
+      &lt;class name=&quot;dev.project2.Service.Implementation.ReviewImpTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- PrrojectGoodReads --&gt;
+&lt;/suite&gt; &lt;!-- Default Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">PrrojectGoodReads (8 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_Suite');
+function tableData_Default_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(42);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'getPendingContactRequests')
+data.setCell(0, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(0, 3, 1136);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'getAllContactRequests')
+data.setCell(1, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(1, 3, 1098);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testDeleteReview')
+data.setCell(2, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(2, 3, 999);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testCreateNewMedia')
+data.setCell(3, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(3, 3, 944);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGetApprovedMedia')
+data.setCell(4, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(4, 3, 923);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testCreateWebUser')
+data.setCell(5, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(5, 3, 920);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testUpdateReview')
+data.setCell(6, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(6, 3, 913);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testGetPendingReviews')
+data.setCell(7, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(7, 3, 912);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testGetReview')
+data.setCell(8, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(8, 3, 905);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testNotNullReviews')
+data.setCell(9, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(9, 3, 898);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'selectContactRequestById')
+data.setCell(10, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(10, 3, 896);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testGetAllReviews')
+data.setCell(11, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(11, 3, 894);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testDeleteContactRequest')
+data.setCell(12, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(12, 3, 894);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testGetAllMovies')
+data.setCell(13, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(13, 3, 888);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testGetAllWebUsers')
+data.setCell(14, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(14, 3, 884);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testCreateContactUs')
+data.setCell(15, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(15, 3, 875);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testApproveMedia')
+data.setCell(16, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(16, 3, 873);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testDeleteWebUser')
+data.setCell(17, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(17, 3, 869);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testGetAllGames')
+data.setCell(18, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(18, 3, 868);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testUpdateWebUser')
+data.setCell(19, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(19, 3, 864);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'getCompletedContactRequests')
+data.setCell(20, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(20, 3, 863);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testGetWebUserById')
+data.setCell(21, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(21, 3, 859);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testGetPendingMedia')
+data.setCell(22, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(22, 3, 851);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testUpdateContactRequest')
+data.setCell(23, 2, 'dev.project2.DAO.Implementation.ContactUsImpTest')
+data.setCell(23, 3, 850);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testDeleteMedia')
+data.setCell(24, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(24, 3, 848);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testGetAllBooks')
+data.setCell(25, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(25, 3, 841);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testCreateReview')
+data.setCell(26, 2, 'dev.project2.DAO.Implementation.ReviewDaoImpTest')
+data.setCell(26, 3, 841);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testGetMediaByUserId')
+data.setCell(27, 2, 'dev.project2.DAO.Implementation.MediaDAOImpTest')
+data.setCell(27, 3, 824);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testGetWebUserByEmail')
+data.setCell(28, 2, 'dev.project2.DAO.Implementation.WebUserDAOTests')
+data.setCell(28, 3, 782);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'getAllContactRequestsFail')
+data.setCell(29, 2, 'dev.project2.Service.Implementation.ContactUsImpTest')
+data.setCell(29, 3, 12);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testMakeModeratorPass')
+data.setCell(30, 2, 'dev.project2.Service.Implementation.WebUserServiceTests')
+data.setCell(30, 3, 9);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'getContactRequestFail')
+data.setCell(31, 2, 'dev.project2.Service.Implementation.ContactUsImpTest')
+data.setCell(31, 3, 3);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'getReviewFail')
+data.setCell(32, 2, 'dev.project2.Service.Implementation.ReviewImpTest')
+data.setCell(32, 3, 1);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testMakeModeratorFail')
+data.setCell(33, 2, 'dev.project2.Service.Implementation.WebUserServiceTests')
+data.setCell(33, 3, 1);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testWebUserLoginCheckPass')
+data.setCell(34, 2, 'dev.project2.Service.Implementation.WebUserServiceTests')
+data.setCell(34, 3, 1);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testWebUserLoginCheckPasswordFail')
+data.setCell(35, 2, 'dev.project2.Service.Implementation.WebUserServiceTests')
+data.setCell(35, 3, 1);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'getPendingContactRequestsFail')
+data.setCell(36, 2, 'dev.project2.Service.Implementation.ContactUsImpTest')
+data.setCell(36, 3, 1);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'getCompletedContactRequestsFail')
+data.setCell(37, 2, 'dev.project2.Service.Implementation.ContactUsImpTest')
+data.setCell(37, 3, 1);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testNotNullReviews')
+data.setCell(38, 2, 'dev.project2.Service.Implementation.ReviewImpTest')
+data.setCell(38, 3, 1);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testWebUserLoginCheckEmailFail')
+data.setCell(39, 2, 'dev.project2.Service.Implementation.WebUserServiceTests')
+data.setCell(39, 3, 1);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'approveMediaFail')
+data.setCell(40, 2, 'dev.project2.Service.Implementation.MediaServiceTests')
+data.setCell(40, 3, 0);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testGetPendingReviews')
+data.setCell(41, 2, 'dev.project2.Service.Implementation.ReviewImpTest')
+data.setCell(41, 3, 0);
+window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <div id="times-div-Default_Suite">
+              </div> <!-- times-div-Default_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.DAO.Implementation.ContactUsImpTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getAllContactRequests</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getCompletedContactRequests</span>
+                <span class="method-start">1100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPendingContactRequests</span>
+                <span class="method-start">1963 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectContactRequestById</span>
+                <span class="method-start">3100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateContactUs</span>
+                <span class="method-start">3996 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteContactRequest</span>
+                <span class="method-start">4871 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateContactRequest</span>
+                <span class="method-start">5766 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.Service.Implementation.ContactUsImpTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6618 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">getAllContactRequestsFail</span>
+                <span class="method-start">7194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getCompletedContactRequestsFail</span>
+                <span class="method-start">7207 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getContactRequestFail</span>
+                <span class="method-start">7208 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPendingContactRequestsFail</span>
+                <span class="method-start">7212 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.DAO.Implementation.WebUserDAOTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateWebUser</span>
+                <span class="method-start">7214 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteWebUser</span>
+                <span class="method-start">8135 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllWebUsers</span>
+                <span class="method-start">9005 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetWebUserByEmail</span>
+                <span class="method-start">9890 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetWebUserById</span>
+                <span class="method-start">10673 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateWebUser</span>
+                <span class="method-start">11533 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.Service.Implementation.WebUserServiceTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">12398 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testMakeModeratorFail</span>
+                <span class="method-start">12420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMakeModeratorPass</span>
+                <span class="method-start">12422 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWebUserLoginCheckEmailFail</span>
+                <span class="method-start">12431 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWebUserLoginCheckPass</span>
+                <span class="method-start">12432 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testWebUserLoginCheckPasswordFail</span>
+                <span class="method-start">12433 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.DAO.Implementation.MediaDAOImpTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testApproveMedia</span>
+                <span class="method-start">12434 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateNewMedia</span>
+                <span class="method-start">13308 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteMedia</span>
+                <span class="method-start">14253 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllBooks</span>
+                <span class="method-start">15101 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllGames</span>
+                <span class="method-start">15943 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllMovies</span>
+                <span class="method-start">16811 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetApprovedMedia</span>
+                <span class="method-start">17700 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetMediaByUserId</span>
+                <span class="method-start">18624 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetPendingMedia</span>
+                <span class="method-start">19448 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.Service.Implementation.MediaServiceTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">20299 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">approveMediaFail</span>
+                <span class="method-start">20326 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.DAO.Implementation.ReviewDaoImpTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testCreateReview</span>
+                <span class="method-start">20327 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteReview</span>
+                <span class="method-start">21168 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAllReviews</span>
+                <span class="method-start">22167 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetPendingReviews</span>
+                <span class="method-start">23062 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetReview</span>
+                <span class="method-start">23974 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNotNullReviews</span>
+                <span class="method-start">24879 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateReview</span>
+                <span class="method-start">25778 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dev.project2.Service.Implementation.ReviewImpTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">26691 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">getReviewFail</span>
+                <span class="method-start">26719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetPendingReviews</span>
+                <span class="method-start">26721 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNotNullReviews</span>
+                <span class="method-start">26722 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -69,7 +69,7 @@ public class MediaDAOImpTest {
 
     @Test
     public void testApproveMedia() {
-        Boolean approvedAMedia = mediaDAO.approveMedia(62);
+        Boolean approvedAMedia = mediaDAO.approveMedia(80);
         Assert.assertTrue(true);
     }
 

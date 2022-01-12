@@ -16,20 +16,20 @@ public class ReviewDaoImpTest {
 
     @Test
     public void testCreateReview() {
-        Review review = new Review(1,null,"now",1,1,5,"test");
+        Review review = new Review(1,null,"now",30,1,5,"test");
         Review returnedReview = dao.createReview(review);
         Assert.assertTrue(returnedReview.getReviewId() != 0);
     }
 
     @Test
     public void testGetReview() {
-        Review review = dao.getReview(7,1);
+        Review review = dao.getReview(30,3);
         Assert.assertEquals(review.getRating(),5);
     }
 
     @Test
     public void testGetAllReviews() {
-        List<Review> reviews = dao.getAllReviews(1, 2);
+        List<Review> reviews = dao.getAllReviews(3, 29);
         for(Review r: reviews){
             System.out.println(r);
         }

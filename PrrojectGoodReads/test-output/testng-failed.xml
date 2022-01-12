@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="PrrojectGoodReads(failed)">
+    <classes>
+      <class name="dev.project2.DAO.Implementation.ReviewDaoImpTest">
+        <methods>
+          <include name="testCreateReview"/>
+        </methods>
+      </class> <!-- dev.project2.DAO.Implementation.ReviewDaoImpTest -->
+      <class name="dev.project2.DAO.Implementation.MediaDAOImpTest">
+        <methods>
+          <include name="testApproveMedia"/>
+        </methods>
+      </class> <!-- dev.project2.DAO.Implementation.MediaDAOImpTest -->
+      <class name="dev.project2.DAO.Implementation.ContactUsImpTest">
+        <methods>
+          <include name="testCreateContactUs"/>
+        </methods>
+      </class> <!-- dev.project2.DAO.Implementation.ContactUsImpTest -->
+    </classes>
+  </test> <!-- PrrojectGoodReads(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
