@@ -13,26 +13,26 @@ public class POM {
 
         PageFactory.initElements(webDriver, this);
     }
-//    @FindBy(xpath = "/html/body/header/nav/button[3]")
-//    public WebElement reviewButton;
-//
-//    @FindBy(id = "pending-review-table")
-//    public WebElement pendingReviewList;
-//
-//    @FindBy(id = "approved-review-table")
-//    public WebElement approveReviewList;
-//
-//    @FindBy(id = "updateReview")
-//    public WebElement reviewInputField;
-//
-//    @FindBy(id = "Approve")
-//    public WebElement approveButton;
-//
-//    @FindBy(id = "Deny")
-//    public WebElement denyButton;
-//
-//
-//    // MEDIA POM
+    @FindBy(xpath = "/html/body/header/nav/button[3]")
+    public WebElement reviewButton;
+
+    @FindBy(id = "pending-review-table")
+    public WebElement pendingReviewList;
+
+    @FindBy(id = "approved-review-table")
+    public WebElement approveReviewList;
+
+    @FindBy(id = "updateReview")
+    public WebElement reviewInputField;
+
+    @FindBy(id = "Approve")
+    public WebElement approveButton;
+
+    @FindBy(id = "Deny")
+    public WebElement denyButton;
+
+
+    // MEDIA POM
     // To log in (needed for temp testing of creating media items)
     @FindBy(id = "loginEmailInput")
     public WebElement emailField;
@@ -43,52 +43,51 @@ public class POM {
     @FindBy(id = "loginButton")
     public WebElement loginButton;
 
-//
-//    // To create new media
-//    @FindBy(id = "profile")
-//    public WebElement profileTab;
-//
-//    @FindBy(id = "media-button")
-//    public WebElement newMediaButton;
-//
-//    @FindBy(id = "movie-type")
-//    public WebElement mediaType;
-//
-//    @FindBy(id = "media-title")
-//    public WebElement titleInput;
-//
-//    @FindBy(id = "media-creator")
-//    public WebElement creatorInput;
-//
-//    @FindBy(id = "media-genre")
-//    public WebElement genreInput;
-//
-//    @FindBy(id = "synopsis")
-//    public WebElement synopsis;
-//
-//    @FindBy(id = "add-a-new-title")
-//    public WebElement addMediaButton;
-//
-//    @FindBy(id = "submit-message")
-//    public WebElement addedMediaMessage;
-//
-//
-//    // To approve and deny media insertions
-//    @FindBy(id = "pending-media")
-//    public WebElement pendingMediaTab;
-//
-//    @FindBy(id = "media-id-input")
-//    public WebElement mediaIdInput;
-//
-//    @FindBy(id = "media-approval-btn")
-//    public WebElement approveMediaButton;
-//
-//    @FindBy(id = "media-deny-btn")
-//    public WebElement denyMediaButton;
-//
-//    @FindBy(id = "approve-deny-message")
-//    public WebElement approveDenyMessage;
-//
+
+    // To create new media
+    @FindBy(id = "profile")
+    public WebElement profileTab;
+
+    @FindBy(id = "media-button")
+    public WebElement newMediaButton;
+
+    @FindBy(id = "movie-type")
+    public WebElement mediaType;
+
+    @FindBy(id = "media-title")
+    public WebElement titleInput;
+
+    @FindBy(id = "media-creator")
+    public WebElement creatorInput;
+
+    @FindBy(id = "media-genre")
+    public WebElement genreInput;
+
+    @FindBy(id = "synopsis")
+    public WebElement synopsis;
+
+    @FindBy(id = "add-a-new-title")
+    public WebElement addMediaButton;
+
+    @FindBy(id = "submit-message")
+    public WebElement addedMediaMessage;
+
+
+    // To approve and deny media insertions
+    @FindBy(id = "pending-media")
+    public WebElement pendingMediaTab;
+
+    @FindBy(id = "media-id-input")
+    public WebElement mediaIdInput;
+
+    @FindBy(id = "media-approval-btn")
+    public WebElement approveMediaButton;
+
+    @FindBy(id = "media-deny-btn")
+    public WebElement denyMediaButton;
+
+    @FindBy(id = "approve-deny-message")
+    public WebElement approveDenyMessage;
 
 
     // create contact us request
@@ -96,6 +95,12 @@ public class POM {
     public WebElement openContactUsRequestPageButton;
     @FindBy(id = "contactUsCreateButton")
     public WebElement createContactUsRequestsSubmitButton;
+    @FindBy(id = "contactUsEmailInput")
+    public WebElement inputEmailForCreateContactRequest;
+    @FindBy(id = "contactUsNameInput")
+    public WebElement inputNameForCreateContactRequest;
+    @FindBy(id = "contactUsIssueInput")
+    public WebElement inputIssueForCreateContactRequest;
 
     // view pending and completed contact requests
     @FindBy(id = "pending-messages-table")

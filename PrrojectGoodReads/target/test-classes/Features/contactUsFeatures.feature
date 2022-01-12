@@ -21,15 +21,15 @@ Feature: Contact us
 
   Scenario: As a moderator I want verify I am alerted when an update a pending contact us request is unsuccessful.
     Given the moderator is on the moderator home page.
-    When the moderator enters a pending contact request id
+    When the moderator enters a non existing pending contact request id
     When the moderator clicks on the update button
-    When the update request fails
+#    When the update request fails
     Then the moderator is able to see an alert stating your update pending request failed
 
-  Scenario: As a moderator I want verify I am alerted when loading pending contact requests fail.
+  Scenario: As a moderator I want verify I am alerted when a delete completed contact us request is unsuccessful.
     Given the moderator is on the moderator home page.
-    When the page does not load correctly
-    Then the moderator is able to see an alert stating your pending requests did not load
+    When the moderator enters a non existing completed contact request id
+    Then the moderator is able to see an alert stating your completed requests was unsuccessful
 
   Scenario: As a moderator I want to delete a completed contact us requests.
     Given the moderator is on the moderator home page.
