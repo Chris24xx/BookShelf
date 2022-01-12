@@ -92,7 +92,7 @@ public class readerReviewSteps {
 
     @When("user enters review in the review field")
     public void userEntersReviewInTheReviewField() {
-        TestRunner.pom.reviewInputField.sendKeys("selenium test");
+        TestRunner.pom.userReviewField.sendKeys("selenium test");
     }
 
     @When("user submits Review")
