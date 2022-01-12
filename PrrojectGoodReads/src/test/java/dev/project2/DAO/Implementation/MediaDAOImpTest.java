@@ -14,18 +14,18 @@ public class MediaDAOImpTest {
 
     @Test
     void testCreateNewMedia(){
-        Media newMedia = new Media(0, "Test To Approve", "Test",
+        Media newMedia = new Media(0, "Test Media", "Test",
                 "Testing test delete.", "Game", "Action",
-                false, 1);
+                false, 4);
         Media returnedMedia = mediaDAO.createNewMedia(newMedia);
-        Assert.assertEquals(returnedMedia.getTitle(), "Test To Approve");
+        Assert.assertEquals(returnedMedia.getTitle(), "Test Media");
     }
 
 
     @Test
     void testGetMediaByUserId(){
-        List<Media> allMedia = mediaDAO.getMediaByUserId(6);
-        Assert.assertTrue(allMedia.size() >= 1);
+        List<Media> allMedia = mediaDAO.getMediaByUserId(3);
+        Assert.assertTrue(allMedia.size() >= 2);
     }
 
 
@@ -63,13 +63,13 @@ public class MediaDAOImpTest {
     @Test
     void testGetApprovedMedia() {
         List<Media> approvedMedia = mediaDAO.getApprovedMedia();
-        Assert.assertTrue(approvedMedia.size() >= 0);
+        Assert.assertTrue(approvedMedia.size() >= 1);
     }
 
 
     @Test
     public void testApproveMedia() {
-        Boolean approvedAMedia = mediaDAO.approveMedia(7);
+        Boolean approvedAMedia = mediaDAO.approveMedia(62);
         Assert.assertTrue(true);
     }
 
@@ -77,7 +77,7 @@ public class MediaDAOImpTest {
 
     @Test
     void testDeleteMedia() {
-        boolean deletedMedia = mediaDAO.deleteMedia(1);
+        boolean deletedMedia = mediaDAO.deleteMedia(63);
         Assert.assertTrue(deletedMedia);
     }
 
