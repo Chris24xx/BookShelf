@@ -241,7 +241,7 @@ public class MediaDAOImp implements MediaDAO {
     @Override
     public boolean deleteMedia(int mediaId) {
         try (Connection connection = DBConn.createConnection()) {
-            String sql = "delete from project2.media where media_id = ?";
+            String sql = "delete from project2.media where media_id = ? and status is null";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, mediaId);
             preparedStatement.execute();
