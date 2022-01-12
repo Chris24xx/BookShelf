@@ -15,7 +15,7 @@ public class contactUsSteps {
 
     @Given("the moderator is on the login page.")
     public void the_moderator_is_on_the_login_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/login.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/login.html");
     }
     @When("the moderator enters wherever@yahoo.com in the email field.")
     public void the_moderator_enters_wherever_yahoo_com_in_the_email_field() {
@@ -31,13 +31,13 @@ public class contactUsSteps {
     }
     @When("the moderator is redirected to the moderator home page.")
     public void the_moderator_is_redirected_to_the_moderator_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
 
     }
 
     @Given("the moderator is on the moderator home page.")
     public void the_moderator_is_on_the_moderator_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
     }
 
     @When("the moderator enters a pending contact request id")
@@ -76,7 +76,7 @@ public class contactUsSteps {
 
     @Given("the user is on the website home page.")
     public void the_user_is_on_the_website_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
 
     }
     @When("the user clicks on contact us button")
@@ -102,12 +102,12 @@ public class contactUsSteps {
     }
     @Then("the user recieves a message and is directed to the home page")
     public void the_user_recieves_a_message_and_is_directed_to_the_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
 
     }
     @When("the moderator views the home page")
     public void the_moderator_views_the_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
 
     }
 
@@ -119,7 +119,7 @@ public class contactUsSteps {
 
     @Then("the user receives a message and is directed to the home page")
     public void the_user_receives_a_message_and_is_directed_to_the_home_page() {
-        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
+        TestRunner.webDriver.get("file:///C:/Users/chris/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/home-page.html");
 
     }
 
