@@ -129,7 +129,7 @@ button:active {
 .completed-messages {
     background-color: rgb(2, 2, 78);
     width: 99%;
-    height: 5rem;
+    height: 15rem;
     box-shadow: 0 10px 10px rgb(2, 2, 78);
     overflow-y: scroll;
 }
@@ -250,4 +250,14 @@ button:active {
 
 table {
     margin-top: 1rem;
+}
+
+#pendingIdInput, #deleteIdInput {
+    width: 7rem;
+    padding: 7px 15px;
+    color: rgb(1, 1, 58);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1rem 1rem;
 }
