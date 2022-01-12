@@ -192,3 +192,7 @@ button:active {
 .add-new-review {
     cursor: pointer;
 }
+
+.new-r {
+    cursor: pointer;
+}
