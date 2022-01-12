@@ -47,7 +47,7 @@ public class contactUsSteps {
 
     @When("the moderator enters a non existing pending contact request id")
     public void the_moderator_enters_a_non_existing_pending_contact_request_id() {
-        TestRunner.pom.updateContactUsRequestsInput.sendKeys("1");
+        TestRunner.pom.updateContactUsRequestsInput.sendKeys("1000000");
     }
 
     @When("the moderator clicks on the update button")
@@ -140,6 +140,8 @@ public class contactUsSteps {
         Alert result = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
         Assert.assertEquals("your contact request update failed", result.getText());
         result.accept();
+//        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+
     }
 
     @When("the moderator enters a non existing completed contact request id")
@@ -152,6 +154,8 @@ public class contactUsSteps {
         Alert result = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
         Assert.assertEquals("your have not deleted your contact request", result.getText());
         result.accept();
+//        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+
     }
 
 
