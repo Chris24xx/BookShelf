@@ -13,7 +13,7 @@ public class MediaManagementSteps {
 
     @Given("the user is on the login page.")
     public void the_user_is_on_the_login_page() {
-        TestRunner.webDriver.get("C:/Users/kckar/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
+        TestRunner.webDriver.get("C:/Users/chris/Onedrive/Desktop/Revature/Project-2/PrrojectGoodReads/src/main/java/dev/" +
                 "project2/Website/login.html");
     }
 

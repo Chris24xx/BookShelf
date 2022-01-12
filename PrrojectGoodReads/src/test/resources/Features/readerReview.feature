@@ -1,5 +1,14 @@
 Feature: Review Management
 
+  Scenario: as a reader I should be able to create a review
+    Given the user clicks on the profile tab.
+    When reader selects add review
+    When reader scrolls down to new review
+    When user enters rating in the rating field
+    When user enters review in the review field
+    When user submits Review
+    Then user gets an alert
+
   Scenario: as a reader I can get a list of review from a piece of media from the book tab
     Given reader is on the homepage
     When the reader selects the book tab
@@ -18,18 +27,9 @@ Feature: Review Management
     When the user selects a title from the games tab
     Then a list is returned with approved reviews from game tab
 
-  Scenario: as a reader I should be able to create a review
-    Given the user is on the login page
-    When the user inputs email in the email field
-    When the user inputs password in the password field
-    When the user clicks the login button
-    When reader is on the homepage
-    When reader selects profile tab
-    When reader selects add review
-    When reader scrolls down to new review
-    When user enters rating in the rating field
-    When user enters review in the review field
-    When user submits Review
-    Then user gets an alert
+
 
   Scenario: as a reader I can view my own reviews for a selected media
+    Given the user clicks on the profile tab.
+    When reader selects a piece of media title
+    Then a list is generated for the user

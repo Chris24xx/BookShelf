@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -71,29 +72,49 @@ public class readerReviewSteps {
 
     @When("reader selects profile tab")
     public void readerSelectsProfileTab() {
+        TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.id("profile"))).click();
     }
 
     @When("reader selects add review")
     public void readerSelectsAddReview() {
+        TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(1) > td:nth-child(6)")).click();
     }
 
     @When("reader scrolls down to new review")
     public void readerScrollsDownToNewReview() {
+        actions.moveToElement(TestRunner.pom.ratingField);
     }
 
     @When("user enters rating in the rating field")
     public void userEntersRatingInTheRatingField() {
+        TestRunner.pom.ratingField.sendKeys("5");
     }
 
     @When("user enters review in the review field")
     public void userEntersReviewInTheReviewField() {
+        TestRunner.pom.reviewInputField.sendKeys("selenium test");
     }
 
     @When("user submits Review")
     public void userSubmitsReview() {
+        TestRunner.pom.newReviewButton.click();
     }
 
     @Then("user gets an alert")
     public void userGetsAnAlert() {
+        Alert alert = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
+        Assert.assertEquals("Success",alert.getText());
+        alert.accept();
+    }
+
+    @When("reader selects a piece of media title")
+    public void readerSelectsAPieceOfMediaTitle() {
+        TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(7) > td:nth-child(2)")).click();
+    }
+
+    @Then("a list is generated for the user")
+    public void aListIsGeneratedForTheUser() {
+        WebElement webElement = TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#user-review-table > tr:nth-child(3) > td:nth-child(1)")));
+        Assert.assertTrue(webElement.isDisplayed());
     }
 }
