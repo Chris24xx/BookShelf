@@ -56,7 +56,7 @@ const profileTableBody = document.getElementById("user-media-body");
 function populateUserMedia(jsonBody){
     for(let um of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick="userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td button onclick="openNewReviewBox(${um.mediaId})">add review</td>`;
+        tableRow.innerHTML = `<td>${um.mediaType}</td><td onclick="userReviewList(${um.mediaId})">${um.title}</td><td>${um.creator}</td><td>${um.synopsis}</td><td>${um.genre}</td><td class="new-r" onclick="openNewReviewBox(${um.mediaId})">add review</td>`;
 
         profileTableBody.appendChild(tableRow);
     };
@@ -89,7 +89,7 @@ const bookTableBody = document.getElementById("books-info");
 function populateBooks(jsonBody){
     for(let bb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td button onclick="openNewReviewBox(${bb.mediaId});"> add review</td>`;
+        tableRow.innerHTML = `<td onclick = "generalBookReviews(${bb.mediaId})">${bb.title}</td><td>${bb.creator}</td><td>${bb.synopsis}</td><td>${bb.genre}</td><td class="new-r" onclick="openNewReviewBox(${bb.mediaId});"> add review</td>`;
         bookTableBody.appendChild(tableRow);
     };
 };
@@ -121,7 +121,7 @@ const movieTableBody = document.getElementById("movies-info");
 function populateMovies(jsonBody){
     for(let mb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick ="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td button onclick="openNewReviewBox(${mb.mediaId});">add review</td>`;
+        tableRow.innerHTML = `<td onclick ="generalMovieReviews(${mb.mediaId})">${mb.title}</td><td>${mb.creator}</td><td>${mb.synopsis}</td><td>${mb.genre}</td><td class="new-r" onclick="openNewReviewBox(${mb.mediaId});">add review</td>`;
         movieTableBody.appendChild(tableRow);
     };
 };
@@ -152,7 +152,7 @@ const gameTableBody = document.getElementById("games-info");
 function populateGames(jsonBody){
     for(let gb of jsonBody){
         let tableRow = document.createElement("tr");
-        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td button onclick = "openNewReviewBox(${gb.mediaId});">add review</td>`;
+        tableRow.innerHTML = `<td onclick = "generalGamesReviews(${gb.mediaId})">${gb.title}</td><td>${gb.creator}</td><td>${gb.synopsis}</td><td>${gb.genre}</td><td class="new-r" onclick = "openNewReviewBox(${gb.mediaId});">add review</td>`;
         gameTableBody.appendChild(tableRow);
     };
 };

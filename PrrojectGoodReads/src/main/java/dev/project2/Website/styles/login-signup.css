@@ -117,3 +117,7 @@ button {
 button:active {
     transform: translateY(4px);
 }
+
+#new-r {
+    cursor: pointer;
+}
