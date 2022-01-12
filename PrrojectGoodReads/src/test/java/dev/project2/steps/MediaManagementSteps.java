@@ -4,6 +4,7 @@ import dev.project2.runner.TestRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -34,14 +35,56 @@ public class MediaManagementSteps {
 
     @Then("the user is redirected to the home page.")
     public void the_user_is_redirected_to_the_home_page() {
+        TestRunner.explicitWait.until(ExpectedConditions.titleIs("Bookshelf Home"));
         String title = TestRunner.webDriver.getTitle();
-        TestRunner.explicitWait.until(ExpectedConditions.titleIs(title));
-        Assert.assertEquals(title, "Bookshelf Sign In");
+        Assert.assertEquals(title, "Bookshelf Home");
     }
 
 
 
-    @Given("the user clicks on the profile tab.")
+    @Given("the user is on the home page.")
+    public void the_user_is_on_the_home_page() {
+        String title = TestRunner.webDriver.getTitle();
+        Assert.assertEquals(title, "Bookshelf Home");
+    }
+
+    @When("the user clicks the books tab.")
+    public void the_user_clicks_the_books_tab() {
+        TestRunner.pom.booksTab.click();
+    }
+
+    @Then("the user is redirected to the books section.")
+    public void the_user_is_redirected_to_the_media_section_with_id_general_books() {
+        String message = TestRunner.pom.bookHeader.getText();
+        Assert.assertEquals(message, "BOOK TITLES");
+    }
+
+    @When("the user clicks the movies tab.")
+    public void the_user_clicks_the_movies_tab() {
+        TestRunner.pom.moviesTab.click();
+    }
+
+    @Then("the user is redirected to the movies section.")
+    public void the_user_is_redirected_to_the_media_section_with_id_general_movies() {
+        String message = TestRunner.pom.movieHeader.getText();
+        Assert.assertEquals(message, "MOVIE TITLES");
+    }
+
+    @When("the user clicks the games tab.")
+    public void the_user_clicks_the_games_tab() {
+        TestRunner.pom.gamesTab.click();
+    }
+
+    @Then("the user is redirected to the games section.")
+    public void the_user_is_redirected_to_the_media_section_with_id_general_games() {
+        String message = TestRunner.pom.gameHeader.getText();
+        Assert.assertEquals(message, "GAME TITLES");
+    }
+
+
+
+
+        @Given("the user clicks on the profile tab.")
     public void the_user_clicks_on_the_profile_tab() {
         TestRunner.pom.profileTab.click();
     }

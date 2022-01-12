@@ -80,6 +80,26 @@ public class POM {
     public WebElement loginButton;
 
 
+    // To search through media
+    @FindBy(id = "title-book")
+    public WebElement bookHeader;
+
+    @FindBy(id = "title-movie")
+    public WebElement movieHeader;
+
+    @FindBy(id = "title-game")
+    public WebElement gameHeader;
+
+    @FindBy(id = "books")
+    public WebElement booksTab;
+
+    @FindBy(id = "movies")
+    public WebElement moviesTab;
+
+    @FindBy(id = "games")
+    public WebElement gamesTab;
+
+
     // To create new media
     @FindBy(id = "profile")
     public WebElement profileTab;
