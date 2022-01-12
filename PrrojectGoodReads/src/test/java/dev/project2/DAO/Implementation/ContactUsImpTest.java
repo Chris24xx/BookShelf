@@ -15,7 +15,7 @@ public class ContactUsImpTest {
     public void testCreateContactUs(){
         ContactUs contactUs = new ContactUs(1, false, "yayasisterhood@yahoo.com", "Jennifer Jones", "I am having..." );
         ContactUs returnedContactUs = dao.createContact(contactUs);
-        Assert.assertTrue(returnedContactUs.getContactId()==7);
+        Assert.assertTrue(returnedContactUs.getContactId()==20);
     }
 
     @Test

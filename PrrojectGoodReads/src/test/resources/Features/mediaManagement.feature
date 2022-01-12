@@ -14,10 +14,10 @@ Feature: Media management
     Then the user is redirected to the <media> section.
 
     Examples:
-    | media  | media  |
-    | books  | books  |
-    | movies | movies |
-    | games  | games  |
+      | media  | media  |
+      | books  | books  |
+      | movies | movies |
+      | games  | games  |
 
 
   Scenario: As a user I want to add media to my collection so that I can make reviews on it.

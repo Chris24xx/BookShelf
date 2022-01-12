@@ -145,4 +145,36 @@ public class POM {
     @FindBy(id = "approve-deny-message")
     public WebElement approveDenyMessage;
 
+    // create contact us request
+    @FindBy(id = "contact")
+    public WebElement openContactUsRequestPageButton;
+    @FindBy(id = "contactUsCreateButton")
+    public WebElement createContactUsRequestsSubmitButton;
+    @FindBy(id = "contactUsEmailInput")
+    public WebElement inputEmailForCreateContactRequest;
+    @FindBy(id = "contactUsNameInput")
+    public WebElement inputNameForCreateContactRequest;
+    @FindBy(id = "contactUsIssueInput")
+    public WebElement inputIssueForCreateContactRequest;
+
+    // view pending and completed contact requests
+    @FindBy(id = "pending-messages-table")
+    public WebElement pendingContactUsRequests;
+    @FindBy(id = "completed-messages-table")
+    public WebElement completedContactUsRequests;
+
+    // update pending contact request
+    @FindBy(id = "updateCRButton")
+    public WebElement updateContactUsRequestsButton;
+    @FindBy(id = "pendingIdInput")
+    public WebElement updateContactUsRequestsInput;
+
+
+    // delete completed contact request
+    @FindBy(id = "deleteCRButton")
+    public WebElement deleteContactUsRequestButton;
+    @FindBy(id = "deleteIdInput")
+    public WebElement deleteContactUsRequestInput;
+
 }
+
