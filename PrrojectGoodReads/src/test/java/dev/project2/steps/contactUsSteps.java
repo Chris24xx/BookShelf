@@ -14,7 +14,7 @@ public class contactUsSteps {
     }
     @When("the moderator enters wherever@yahoo.com in the email field.")
     public void the_moderator_enters_wherever_yahoo_com_in_the_email_field() {
-        TestRunner.pom.emailField.sendKeys("whatever@yahoo.com");
+        TestRunner.pom.emailField.sendKeys("hellowworld@aol.com");
     }
     @When("the moderator enters password in the password field.")
     public void the_moderator_enters_password_in_the_password_field() {
