@@ -42,7 +42,7 @@ public class contactUsSteps {
 
     @When("the moderator enters a pending contact request id")
     public void the_moderator_enters_a_pending_contact_request_id() {
-        TestRunner.pom.updateContactUsRequestsInput.sendKeys("7");
+        TestRunner.pom.updateContactUsRequestsInput.sendKeys("24");
     }
 
     @When("the moderator enters a non existing pending contact request id")
@@ -62,7 +62,7 @@ public class contactUsSteps {
 
     @When("the moderator enters a completed contact request id")
     public void the_moderator_enters_a_completed_contact_request_id() {
-        TestRunner.pom.deleteContactUsRequestInput.sendKeys("6");
+        TestRunner.pom.deleteContactUsRequestInput.sendKeys("22");
     }
     @When("the moderator clicks on the delete button")
     public void the_moderator_clicks_on_the_delete_button() {
@@ -129,11 +129,11 @@ public class contactUsSteps {
         Assert.assertTrue(result.isDisplayed());
     }
 
-    @When("the update request fails")
-    public void the_update_request_fails() {
-        Alert result = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
-//        Assert.assertEquals("your contact request update failed", result.getText());
-    }
+//    @When("the update request fails")
+//    public void the_update_request_fails() {
+//        Alert result = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
+////        Assert.assertEquals("your contact request update failed", result.getText());
+//    }
 
     @Then("the moderator is able to see an alert stating your update pending request failed")
     public void the_moderator_is_able_to_see_an_alert_stating_your_update_pending_request_failed() {

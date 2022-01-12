@@ -7,6 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.Objects;
 
@@ -25,20 +26,22 @@ public class managerReviewSteps {
     }
     @Then("a pending list is returned to the moderator")
     public void a_pending_list_is_returned_to_the_moderator() {
-        WebElement result = TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\r'pending-review-table\r']/tr[1]/td[2]")));
+        WebElement result = TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#pending-review-table > tr:nth-child(3) > td:nth-child(1)")));
         Assert.assertTrue(result.isDisplayed());
     }
 
     @Then("an approved list is returned to the moderator")
     public void an_approved_list_is_returned_to_the_moderator() {
-        WebElement result = TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\r'approved-review-table\r']/tr[1]/td[2]")));
+        WebElement result = TestRunner.explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#approved-review-table > tr:nth-child(3)")));
         Assert.assertTrue(result.isDisplayed());
     }
 
 
     @When("the moderator inputs a mediaId into a field")
     public void theModeratorInputsAMediaIdIntoAField() {
-        TestRunner.pom.reviewInputField.sendKeys("16");
+        Actions actions = new Actions(TestRunner.webDriver);
+        actions.moveToElement(TestRunner.pom.reviewInputField);
+        TestRunner.pom.reviewInputField.sendKeys("22");
     }
 
     @When("the moderator clicks the approve button")
@@ -50,6 +53,13 @@ public class managerReviewSteps {
     public void anAlertWillAppear() {
         Alert result = TestRunner.explicitWait.until(ExpectedConditions.alertIsPresent());
         Assert.assertEquals("Success", result.getText());
+        result.accept();
+    }
+
+
+    @When("the moderator inputs a mediaId into a field to be deleted")
+    public void theModeratorInputsAMediaIdIntoAFieldToBeDeleted() {
+        TestRunner.pom.reviewInputField.sendKeys("23");
     }
 
     @When("the moderator clicks the deny button")

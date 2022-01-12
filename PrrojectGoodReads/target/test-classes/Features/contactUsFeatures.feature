@@ -29,6 +29,7 @@ Feature: Contact us
   Scenario: As a moderator I want verify I am alerted when a delete completed contact us request is unsuccessful.
     Given the moderator is on the moderator home page.
     When the moderator enters a non existing completed contact request id
+    When the moderator clicks on the delete button
     Then the moderator is able to see an alert stating your completed requests was unsuccessful
 
   Scenario: As a moderator I want to delete a completed contact us requests.
