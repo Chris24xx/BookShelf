@@ -84,7 +84,7 @@ public class MediaManagementSteps {
 
 
 
-        @Given("the user clicks on the profile tab.")
+    @Given("the user clicks on the profile tab.")
     public void the_user_clicks_on_the_profile_tab() {
         TestRunner.pom.profileTab.click();
     }
