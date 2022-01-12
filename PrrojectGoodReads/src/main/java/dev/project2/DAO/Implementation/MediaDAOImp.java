@@ -2,7 +2,6 @@ package dev.project2.DAO.Implementation;
 import dev.project2.DAO.Abstract.MediaDAO;
 import dev.project2.Entities.Media;
 import dev.project2.Exception.ItemNotFound;
-import dev.project2.Exception.TitleNotFound;
 import dev.project2.dbcon.DBConn;
 import java.sql.*;
 import java.util.ArrayList;
@@ -254,7 +253,4 @@ public class MediaDAOImp implements MediaDAO {
     }
 
 
-
-    // MIGHT NEED A SEPARATE METHOD FOR DUPLICATING A PIECE OF MEDIA, BUT POSSIBLY CAN COMBINE THE GET MEDIA BY TITLE,
-    // CREATE NEW MEDIA, AND GET MEDIA BY ID.
 }

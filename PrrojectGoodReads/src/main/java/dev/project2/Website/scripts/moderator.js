@@ -332,7 +332,7 @@ async function approveMedia(){
         console.log(approveMediaBody);
         approveDenyMessage.textContent = "This title has been approved.";
     } else if(response.status == 404){
-        alert("Could not approve this media!");
+        approveDenyMessage.textContent = "This title does not exist.";
     };
 };
 
