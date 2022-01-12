@@ -17,7 +17,7 @@ import java.time.Duration;
 @RunWith(Cucumber.class)
 
 
-@CucumberOptions(features = "classpath:Features/readerReview.feature", glue = "dev/project2/steps", publish = true)
+@CucumberOptions(features = "classpath:Features", glue = "dev/project2/steps", plugin = {"pretty", "html:src/test/resources/reports/html-reports.html"})
 public class TestRunner{
     public static WebDriver webDriver;
     public static POM pom;
