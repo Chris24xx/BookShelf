@@ -119,24 +119,6 @@
     background: rgb(2, 2, 78);
 }
 
-.search-container {
-    margin-top: 1rem;
-}
-
-.search-container input {
-    padding: 6px 10px;
-    font-size: 13px;
-}
-
-.search-container button {
-    padding: 6px 10px;
-    margin-right: 16px;
-    background-color: rgb(248, 244, 244);
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-}
-
 table {
     margin-top: 1rem;
 }
