@@ -33,7 +33,7 @@ public class userSignUpLoginSteps {
 
     @When("the user inputs their email in the Email field")
     public void the_user_inputs_their_email_in_the_email_field() {
-        TestRunner.signUpPOM.emailInput.sendKeys("realselssss@testemail.com");
+        TestRunner.signUpPOM.emailInput.sendKeys("realestatesssssssssss@testemail.com");
     }
 
     @When("the user inputs their password in the Password field")

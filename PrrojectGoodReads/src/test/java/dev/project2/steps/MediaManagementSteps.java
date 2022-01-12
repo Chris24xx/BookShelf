@@ -95,6 +95,7 @@ public class MediaManagementSteps {
     @When("the user selects type from the drop down options.")
     public void the_user_selects_type_from_the_drop_down_options() {
         TestRunner.pom.mediaType.isSelected();
+//        TestRunner.explicitWait.until(ExpectedConditions.elementSelectionStateToBe(TestRunner.pom.mediaType, true));
     }
 
     @When("the user enters Snow White in the input field.")
