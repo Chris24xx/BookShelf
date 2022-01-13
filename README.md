@@ -1,2 +1,2 @@
 # Project-2
-GoodsRead inspired application
+catalogue of Books, Movies, and Games. Our project has users and moderators, the users gets list which they can view media theirs or others depending on tabs clicked. the moderator can approve or deny request, usually based on whether its appropriate or not. Finally the user can create reviews and media if they so pleased. if a user has an issue they are able to contact us, we also have functionality to have a user become a moderator. 
