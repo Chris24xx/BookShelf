@@ -11,7 +11,7 @@ import org.testng.Assert;
 public class makeUserIntoModSteps {
     @Given("the moderator is on the Moderator Page")
     public void theModeratorIsOnTheModeratorPage() {
-        TestRunner.webDriver.get("C:/Users/arroy/Desktop/RevatureProjects/Project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
+        TestRunner.webDriver.get("file:///C:/Users/track/OneDrive/Desktop/Revature/project2/Project-2/PrrojectGoodReads/src/main/java/dev/project2/Website/moderator.html");
     }
 
     @When("the moderator clicks the Profile Search button")
