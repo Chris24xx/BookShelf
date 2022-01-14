@@ -10,10 +10,10 @@ import dev.project2.Service.Implementation.ContactUsServiceImp;
 import dev.project2.Service.Implementation.MediaServiceImp;
 import dev.project2.Service.Implementation.ReviewImp;
 import dev.project2.Service.Implementation.WebUserServiceImp;
-import dev.project2.controllers.ContactUsController;
-import dev.project2.controllers.MediaController;
-import dev.project2.controllers.ReviewController;
-import dev.project2.controllers.WebUserController;
+import dev.project2.Controllers.ContactUsController;
+import dev.project2.Controllers.MediaController;
+import dev.project2.Controllers.ReviewController;
+import dev.project2.Controllers.WebUserController;
 import io.javalin.Javalin;
 
 public class App {
