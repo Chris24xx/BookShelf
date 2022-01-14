@@ -17,12 +17,31 @@ Catalogue of Books, Movies, and Games.
 - JavaScript
 
 # Features
+* Users can signup
+* Prevent Duplicated Emails from being created
+* Users can Login and Logout
+* Login Validation
+* Users can contact Moderators about Issues
+* Media can be Inserted
+* Reviews can be Inserted
+* Moderators can Approve Media or Deny
+* Moderators can Approve or Deny Reviews
+* if Denied for either Media or Reviews they will be deleted
+* List of pending Reviews or Media
+* Moderator can state when a issue is resolved and delete resolved requests
+* Moderators can make users Moderators
 
 
-# To Do List
+To Do list:
+* remove alerts
+* add automatic refresh functionality
+* handle duplicate media displaying on website
+* allow more than 1 user to have a media on a coollection within the Database
+* add a webpage to properly view synopsis of a piece of media and reviews of said media
 
 
 # Setup
+* git clone
 
 
 # Usage
