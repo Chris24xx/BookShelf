@@ -2,8 +2,7 @@ package dev.project2.DAO.Implementation;
 
 import dev.project2.DAO.Abstract.WebUserDAO;
 import dev.project2.Entities.WebUser;
-import dev.project2.Exception.WebUserNotFound;
-import dev.project2.dbcon.DBConn;
+import dev.project2.Util.DBConn;
 
 import java.sql.*;
 import java.util.ArrayList;
