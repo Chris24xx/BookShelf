@@ -41,9 +41,25 @@ To Do list:
 
 
 # Setup
-* git clone
+* git clone https://github.com/Chris24xx/BookShelf.git
+* with in maven pom file
+* click build dependcies if not built
+* in the Schema file copy the code to build the database
+* in the seeds file is the nesscary code to insert into database
+* in your database paste these codes so you can run your project
+* click on API folder
+* on APP class click run app
+
+![image](https://user-images.githubusercontent.com/94495502/149589057-2f9a6ba9-5457-47e4-8cb9-f0ec14bf2659.png)
+
+* Within Website package on login.html
+* copy login path reference and click absolute file path
+![image](https://user-images.githubusercontent.com/94495502/149589413-62a9fb1b-66a7-496e-be8c-585291cf8e6c.png)
+* once there you can login 
+
 
 
 # Usage
+use to store catalouge of books, movies, and games which can then be reviewed or added to your own collection
 
 
