@@ -2,7 +2,7 @@
 Catalogue of Books, Movies, and Games.
 
 # Contributers
-
+- Kyla Karnoski
 
 # Technologies
 - Java - ver 17
