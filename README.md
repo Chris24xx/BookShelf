@@ -4,6 +4,7 @@ Catalogue of Books, Movies, and Games.
 # Contributers
 - Kyla Karnoski
 - Angel Arroyo
+- Amanda Gonzalez
 
 # Technologies
 - Java - ver 17
