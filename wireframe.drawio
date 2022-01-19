@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="z-UZiGT43cMe-RsQEHF_" name="Login Page">
-        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="958" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -608,7 +608,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Contact form" id="RNYdh6Buk4ETX-nQCWie">
-        <mxGraphModel dx="1132" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="958" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="n-VgrL4TSSB8cFmch9BB-0"/>
                 <mxCell id="n-VgrL4TSSB8cFmch9BB-1" parent="n-VgrL4TSSB8cFmch9BB-0"/>

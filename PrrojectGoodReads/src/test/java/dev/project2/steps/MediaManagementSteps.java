@@ -199,7 +199,7 @@ public class MediaManagementSteps {
 
     @When("the moderator fills in the wrong media id in the input field.")
     public void the_moderator_fills_in_the_wrong_media_id_in_the_input_field() {
-        TestRunner.pom.mediaIdInput.sendKeys("100");
+        TestRunner.pom.mediaIdInput.sendKeys("300");
     }
 
     @When("the moderator clicks the approve button with the wrong id.")

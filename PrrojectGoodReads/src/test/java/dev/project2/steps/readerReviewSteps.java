@@ -108,6 +108,7 @@ public class readerReviewSteps {
     @When("reader selects a piece of media title")
     public void readerSelectsAPieceOfMediaTitle() {
         TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(9) > td:nth-child(2)")).click();
+                                                        // #user-media-body > tr:nth-child(11) > td:nth-child(2)
     }
 
     @Then("a list is generated for the user")
