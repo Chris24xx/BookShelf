@@ -41,6 +41,6 @@ public class userSignUpLoginPOM {
     @FindBy(id = "users")
     public WebElement profileSearchButton;
 
-    @FindBy(id = "makeModButton16")
+    @FindBy(id = "makeModButton2")
     public WebElement makeModButton;
 }

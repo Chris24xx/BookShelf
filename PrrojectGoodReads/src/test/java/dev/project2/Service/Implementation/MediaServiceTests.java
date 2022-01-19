@@ -27,8 +27,8 @@ public class MediaServiceTests {
 
     @Test (expectedExceptions = ItemNotFound.class, expectedExceptionsMessageRegExp = "This piece of media does not exist")
     void approveMediaFail(){
-        Mockito.when(mediaDao.approveMedia(100)).thenThrow(new ItemNotFound("This piece of media does not exist"));
-        boolean media = mediaService.approveMediaService(100);
+        Mockito.when(mediaDao.approveMedia(200)).thenThrow(new ItemNotFound("This piece of media does not exist"));
+        boolean media = mediaService.approveMediaService(200);
         Assert.assertTrue(media);
     }
 

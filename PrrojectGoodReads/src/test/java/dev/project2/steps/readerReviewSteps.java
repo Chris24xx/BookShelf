@@ -107,7 +107,7 @@ public class readerReviewSteps {
 
     @When("reader selects a piece of media title")
     public void readerSelectsAPieceOfMediaTitle() {
-        TestRunner.webDriver.findElement(By.xpath("//*[@id='user-media-body']/tr[7]/td[2]")).click();
+        TestRunner.webDriver.findElement(By.cssSelector("#user-media-body > tr:nth-child(9) > td:nth-child(2)")).click();
     }
 
     @Then("a list is generated for the user")
