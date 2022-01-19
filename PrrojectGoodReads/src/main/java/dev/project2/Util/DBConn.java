@@ -1,4 +1,4 @@
-package dev.project2.dbcon;
+package dev.project2.Util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

@@ -3,7 +3,7 @@ package dev.project2.DAO.Implementation;
 import dev.project2.DAO.Abstract.ReviewAbstract;
 import dev.project2.Entities.Review;
 import dev.project2.Exception.ReviewNotFound;
-import dev.project2.dbcon.DBConn;
+import dev.project2.Util.DBConn;
 
 import java.sql.*;
 import java.util.ArrayList;

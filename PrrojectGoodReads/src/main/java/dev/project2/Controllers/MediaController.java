@@ -1,4 +1,4 @@
-package dev.project2.controllers;
+package dev.project2.Controllers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dev.project2.Entities.Media;
