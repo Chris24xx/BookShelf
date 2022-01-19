@@ -41,44 +41,6 @@ issue_message varchar(300),
 status boolean
 );
 
--- adding web user--
-insert into web_user values(default, 'Amanda', 'Gonzalez', 'amandue10@gmail.com', 'password', false);
-
-insert into web_user values(default, 'Henry', 'Lionela', 'wherever@yahoo.com', 'password', false);
-
-insert into web_user values(default, 'Jessica', 'Green', 'boonesfarm@gmail.com', 'password', false);
-
-insert into web_user values(default, 'Elyse', 'Barnes', 'wakamole@yahoo.com', 'password', false);
-
-insert into web_user values(default, 'Lauren', 'Jones', 'hellowworld@aol.com', 'password', true);
-
-insert into web_user values(default, 'Jennifer', 'Hussane', 'whatever@mega.com', 'password', true);
-
--- adding contact request--
-insert into contact_us values(default, false, 'yayasisterhood@yahoo.com', 'Jennifer Jones', 'I am having...' );
-
-insert into contact_us values(default, false, 'sunkist@yahoo.com', 'Sally Fields', 'I am having...' );
-
-insert into contact_us values(default, false, "prettywoman12@aol.com", 'Julia Roberts', 'I am having...' );
-
-insert into contact_us values(default, false, "timegoeson@yahoo.com", "Robert Deniro", 'I am having...' );
-
---adding media--
-
-insert into media values(default, 'Test Media', 'Test','Testing test delete.', 'Game', 'Action',false, 4);
-
-insert into media values(default, 'Test Media', 'Test','Testing test delete.', 'Book', 'Action',false, 4);
-
-insert into media values(default, 'Test Media', 'Test','Testing test delete.', 'Movie', 'Action',false, 4);
-
--- adding review to media
-insert into review(default , null, 'now', 30, 1, 5,'test');
-
-insert into review(default , null, 'now', 30, 1, 5,'test');
-
-insert into review(default , null, 'now', 30, 1, 5,'test');
-
-
 
 
 
